@@ -17,7 +17,7 @@
 pages.  JDBCRealm used for authentication (users, users_roles, and roles table).
 1. If authentication fails, show error message/page.
 
-### Please note: Users must be logged in to see schedules, scores, stats, and leagues
+##### Please note: Users must be logged in to see schedules, scores, stats, and leagues
 
 ### View Schedules
 

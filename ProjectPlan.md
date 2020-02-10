@@ -1,16 +1,16 @@
 # Project Plan
 
 ### Week 3
-- [ ] Create project repository on GitHub
-- [ ] Create project structure in intellij and push
-- [ ] Add link to list of indie projects in student repo.
-- [ ] Complete Problem Statement
-- [ ] Determine possible Web Services or APIs to use
-- [ ] List technologies, versions and how they will be used
-- [ ] Weekly journal entry
-- [ ] Write project plan
-- [ ] Document application flow in text and pictures - I'll use wireframes that have clickable links for the screen design. Use Mockflow? 
-- [ ] Triple-check for Checkpoint 1: Problem statement, project plan, screen design and time log pushed to GitHub. 
+- [X] Create project repository on GitHub
+- [X] Create project structure in intellij and push
+- [X] Add link to list of indie projects in student repo.
+- [X] Complete Problem Statement
+- [X] Determine possible Web Services or APIs to use
+- [X] List technologies, versions and how they will be used
+- [X] Weekly Time Log
+- [X] Write project plan
+- [X] Document application flow
+- [X] Checkpoint 1: Problem statement, project plan, screen design and time log pushed to GitHub. 
 
 ### Week 4
 - [ ] Complete database design
@@ -19,7 +19,7 @@
 - [ ] Create user dao
 - [ ] Create the test database
 - [ ] Create user dao unit tests
-- [ ] Weekly journal entry
+- [ ] Weekly time log
 - [ ] Set up logging
 - [ ] Create class uml diagram
 - [ ] Prepare for Week 5 peer design/code review
@@ -28,7 +28,7 @@
 ### Week 5
 
 - [ ] Create the template for all jsps using bootstrap or materialize
-- [ ] Weekly journal entry
+- [ ] Weekly Time Log
 - [ ] Add the role table
 - [ ] Add the role entity
 - [ ] Create the role dao
@@ -41,18 +41,19 @@
 - [ ] Create db on AWS
 - [ ] Deploy to AWS for first time
 - [ ] Weekly journal entry
-- [ ] Create trail table
-- [ ] Add the trail entity (test, dev and prod dbs)
+- [ ] Create league table
+- [ ] Add the league entity (test, dev and prod dbs)
 - [ ] Realize that these daos are repetitive. Refactor into a generic dao!
 - [ ] Add update and delete functionality in jsp for user and role
-- [ ] Build the trail search jsp
-- [ ] Build the trail add/update/delete jsp
+- [ ] Build the view scores jsp
+- [ ] Build the view schedules and leagues jsp
 - [ ] Prepare for Checkpoint 2: Database designed and created, at least one DAO implemented with Hibernate, DAO is unit tested, Log4J is implemented (no System.out.printlns), class design and any other diagrams you plan to use have been created. 
 
 
+#####Still need to complete Plan for the rest of the weeks
 ### Week 7
 
-- [ ] Weekly journal entry
+- [ ] Weekly Time Log
 - [ ] Set up authentication locally
 - [ ] Set up authentication on AWS
 - [ ] Add the Trail Type and Grooming Tables, populate with data, (test, dev and prod dbs)

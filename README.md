@@ -16,18 +16,17 @@ randomized tables where each player must be partners with every player on the le
 * Security/Authentication
   * Tomcat's JDBC Realm Authentication
   * Admin role: create/read/update/delete (crud) of all data
-  * User role: create trail, create trail report, edit data they have entered previously
-  * All: anyone can view trail information (no login)
+  * User role: view schedules, view score data, view stat data
 * Database
   * MySQL
   * Store users and roles
-  * Store all data for the trails and reports
+  * Store all data for the leagues
 * ORM Framework
   * Hibernate 5
 * Dependency Management
   * Maven
 * Web Services consumed using Java
-  * NOAA for weather conditions at a trail location, including snow depth
+  * NEED TO UPDATE
 * CSS 
   * Bootstrap or Materialize
 * Data Validation
@@ -38,11 +37,7 @@ randomized tables where each player must be partners with every player on the le
 * Hosting
   * AWS
 * Independent Research Topic/s
-  * CI tools in AWS
-  * Materialize
-  * Google Maps API
-  * Hibernate Validation
-  * Hibernat Search
+  * NEED TO UPDATE
 * Project Lombok to eliminate boilerplate code like getters/setters/equals
 * Unit Testing
   * JUnit tests to achieve 80%+ code coverage 
@@ -57,8 +52,6 @@ randomized tables where each player must be partners with every player on the le
 * [Database Design](DesignDocuments/databaseDiagram.png)
 
 ### [Project Plan](ProjectPlan.md)
-
-### [Weekly Refelection](WeeklyReflection.md)
 
 
 

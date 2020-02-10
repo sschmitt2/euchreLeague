@@ -1,71 +1,90 @@
-# Application Flow - Need to edit, use current as an example 
+# Application Flow
 
 
-### User Sign up
+### User Create Account
 
-1. User chooses sign up on the menu (available on all pages, unless the user 
-is signed in already).
+1. User chooses create account on the menu (available on homepage)
 1. User fills out the sign up form and submits.
-1. Request goes to sign up servlet.
+1. Request goes to create account servlet.
 1. Servlet creates a user object and then creates user in the database.
 1. Response to user confirming addition (show a message on the jsp)
 
-### User Sign In
+### User Login
 
-1. User chooses sign in on the menu (available on all pages, unless the user 
-is signed in already).
+1. User chooses login on the menu (available on homepage)
 1. User enters username and password on form and submits. 
 1. If user is authenticated, the server will handle allowing access to edit 
 pages.  JDBCRealm used for authentication (users, users_roles, and roles table).
 1. If authentication fails, show error message/page.
 
-### View Trail Report
+### Please note: Users must be logged in to see schedules, scores, stats, and leagues
 
-1. Page sends a request to view trail reports servlet along with criteria 
-(all, region, date, name, etc).
-1. Servlet uses the trailreports dao to select reports according to criteria
+### View Schedules
+
+1. Page sends a request to view schedule reports servlet for users enrolled in a specific league
+1. Servlet uses the league dao to select reports according to criteria
 1. Dao performs select and creates report objects from results.
 1. Dao returns list of report matching criteria to servlet.
-1. Servlet sends list back to trail reports jsp.
-1. Trail reports jsp displays the reports.
+1. Servlet sends list back to schedules jsp.
+1. Schedules jsp displays the leagues schedule.
 1. Consider paging results so page does not get super long and too much data 
 is sent.
 
-### View Trail
+### View Scores
 
-1. Page sends a request to view trail servlet along with criteria 
-(all, region, name, etc).
-1. Servlet uses the trail dao to select trails according to criteria
-1. Dao performs select and creates trail objects from results.
-1. Dao returns list of trails matching criteria to servlet.
-1. Servlet sends list back to trail  jsp.
-1. Trail reports jsp displays the trails.
+1. Page sends a request to view score servlet along with criteria 
+(League, Table, id, first name, last name, week, game 1, game 2, game 3).
+1. Servlet uses the leagues dao to select scores according to the criteria
+1. Dao performs select and creates score objects from results.
+1. Dao returns list of scores matching criteria to servlet.
+1. Servlet sends list back to scores jsp.
+1. Scores jsp displays the scores according to the criteria.
 1. Consider paging results so page does not get super long and too much data 
 is sent.
 
-### About
+### View Stats
 
-1. Static page - html only? 
-1. Consider making contact info configurable.
+1. Page sends a request to view stat servlet along with criteria
+(League, Table, id, first name, last name, week, total score, total points).
+1. Servlet uses the leagues dao to select stats according to the criteria
+1. Dao performs select and creates stat objects from results.
+1. Dao returns list of stats matching criteria to servlet.
+1. Servlet sends list back to stats jsp.
+1. Stats jsp displays the stats according to the criteria.
+1. Consider paging results so page does not get super long and too much data 
+is sent.
 
-### Add Trail Report
-1. Option only available to logged in users with proper role
-1. User selects trail to report on
-1. User enters trail report details
-1. Details are sent to Add Trail Report servlet
-1. Servlet creates trail report object
+
+### Leagues
+
+1. Page sends a request to view league servlet along with criteria
+(leagues).
+1. Servlet uses the leagues dao to select upcoming leagues according to the criteria
+1. Dao performs select and creates league objects from results.
+1. Dao returns list of leagues matching criteria to servlet.
+1. Servlet sends list back to leagues jsp.
+1. Leagues jsp displays the leagues according to the criteria.
+1. Consider paging results so page does not get super long and too much data 
+is sent.
+
+### Add Scores
+1. Option only available to logged in users with proper role(admin)
+1. User selects week# to report scores on
+1. User enters score details
+1. Details are sent to Add Scores servlet
+1. Servlet creates score object
 1. Servlet sends object to dao
-1. Dao adds report to the database
-1. Servlet sends confirmation to report page that report has been added.
+1. Dao adds scores to the database
+1. Servlet sends confirmation to score page that scores has been added.
 
-### Add Trail 
+### Add Leagues
 1. Option only available to logged in users with proper role
-1. User enters trail  details
-1. Details are sent to Add Trail  servlet
-1. Servlet creates trail  object
+1. User enters league details
+1. Details are sent to Add League servlet
+1. Servlet creates League object
 1. Servlet sends object to dao
-1. Dao adds trail to the database
-1. Servlet sends confirmation to trail page that trail has been added.
+1. Dao adds league to the database
+1. Servlet sends confirmation to league page that a league has been added.
 
 
 

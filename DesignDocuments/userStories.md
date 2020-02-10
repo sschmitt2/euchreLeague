@@ -3,11 +3,12 @@
 
 ### Sign up
 
-As a new user I want to create an account so that I can add or edit trails and reports.
+As a new user I want to create an account so I can join an upcoming euchre league, edit personal information,
+view schedules, scores and stats. 
 
 ### Sign In
 
-As a registered user I want to log in so that I can add or edit trails and reports.
+As a registered user I want to log in so that I can join a new league and see league information.
 
 ### Find Trails
 

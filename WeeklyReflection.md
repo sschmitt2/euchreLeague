@@ -5,11 +5,11 @@ Document how your week in Ent Java went. You may use whatever format suits you, 
 
 ### Week 1
 
-1/18/2016 - 7.5 hours
+1/18/2016 - 2.5 hours
 
 Tasks Completed:
  * Chose a project goal
- * Reviewed SkinnySki.com 
+ * Reviewed current Euchre League spreadsheet
  * Created this repository 
  * Wrote the problem statement
  * Started documenting the project plan

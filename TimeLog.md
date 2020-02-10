@@ -8,3 +8,5 @@
 | 2/07/20 | Started screen designs in draw.io | 1 | |
 | 2/08/20 | Decided to switch my screen designs to mockflow | 2 | |
 | 2/08/20 | Updated the README.md | .5 | |
+| 2/09/20 | Worked on screen designs, created logo | 3 | |
+| 2/09/20 | Updated the README.md | .5 | |

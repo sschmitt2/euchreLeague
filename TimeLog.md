@@ -22,3 +22,5 @@
 | 2/09/20 | Continued working on Week 3 exercise | 2.5 |Still not completed, running out of time with checkpoint 1 due|
 | 2/10/20 | Updated ProjectPlan.md | .5 | |
 | 2/10/20 | Added additional screen designs | .5 | |
+| 2/10/20 | Continued working on exercise 3 | 2 | |
+| 2/11/20 | Finished exercise 3 | 1 | |

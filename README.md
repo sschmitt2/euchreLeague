@@ -26,7 +26,7 @@ randomized tables where each player must be partners with every player on the le
 * Dependency Management
   * Maven
 * Web Services consumed using Java
-  * NEED TO UPDATE
+  * Javamail
 * CSS 
   * Bootstrap or Materialize
 * Data Validation
@@ -37,19 +37,18 @@ randomized tables where each player must be partners with every player on the le
 * Hosting
   * AWS
 * Independent Research Topic/s
-  * NEED TO UPDATE
+  * TODO
 * Project Lombok to eliminate boilerplate code like getters/setters/equals
 * Unit Testing
   * JUnit tests to achieve 80%+ code coverage 
 * IDE: IntelliJ IDEA
-
 
 ### Design
 
 * [User Stories](DesignDocuments/userStories.md)
 * [Screen Design](DesignDocuments/wireframes/)
 * [Application Flow](DesignDocuments/applicationFlow.md)
-* [Database Design](DesignDocuments/databaseDiagram.png)
+* [Database Design](DesignDocuments/databaseDiagram.png)TODO
 
 ### [Project Plan](ProjectPlan.md)
 

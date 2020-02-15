@@ -24,3 +24,5 @@
 | 2/10/20 | Added additional screen designs | .5 | |
 | 2/10/20 | Continued working on exercise 3 | 2 | |
 | 2/11/20 | Finished exercise 3 | 1 | |
+| 2/12/20 | Started watching week 4 videos | 1 | |
+| 2/15/20 | Continued week 4 videos and started on hibernate demo | 2.5 | |

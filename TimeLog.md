@@ -26,3 +26,5 @@
 | 2/11/20 | Finished exercise 3 | 1 | |
 | 2/12/20 | Started watching week 4 videos | 1 | |
 | 2/15/20 | Continued week 4 videos and started on hibernate demo | 2.5 | |
+| 2/16/20 | Continued videos and demo for week 4 | 1.5 | |
+| 2/17/20 | Continued hibernate demo started week4 exercise| 2.5 | Note to self: get ahead for next week so you're not behind again! |

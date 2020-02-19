@@ -28,3 +28,5 @@
 | 2/15/20 | Continued week 4 videos and started on hibernate demo | 2.5 | |
 | 2/16/20 | Continued videos and demo for week 4 | 1.5 | |
 | 2/17/20 | Continued hibernate demo started week4 exercise| 2.5 | Note to self: get ahead for next week so you're not behind again! |
+| 2/18/20 | Finished up week4 exercise | 1 | |
+| 2/18/20 | Fixed up issues with week4 exercise based on instructor feedback, Started week 5 videos | 1 | |

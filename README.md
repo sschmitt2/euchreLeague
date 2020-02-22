@@ -26,7 +26,7 @@ randomized tables where each player must be partners with every player on the le
 * Dependency Management
   * Maven
 * Web Services consumed using Java
-  * Javamail
+  * JavaMail
 * CSS 
   * Bootstrap or Materialize
 * Data Validation

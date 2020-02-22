@@ -30,3 +30,5 @@
 | 2/17/20 | Continued hibernate demo started week4 exercise| 2.5 | Note to self: get ahead for next week so you're not behind again! |
 | 2/18/20 | Finished up week4 exercise | 1 | |
 | 2/18/20 | Fixed up issues with week4 exercise based on instructor feedback, Started week 5 videos | 1 | |
+| 2/21/20 | Started implementing the week4 exercise into indie project | 1 | |
+| 2/22/20 | Continued implementing the week4 exercise into indie project, Starting on week5 exercise | 2 | |

@@ -1,16 +1,34 @@
 package edu.matc.entity;
 
 import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+
 /**
  * A class to represent a user.
  *
  * @author sschmitt
  */
-
+@Entity(name = "User")
+@Table(name = "users")
 public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native" , strategy = "native")
     private int id;
+
+    @Column(name = "user_name")
     private String userName;
+
+    @Column(name = "user_password")
     private String userPassword;
+
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
 
     /**
      * Instantiates a new User.
@@ -21,14 +39,16 @@ public class User {
     /**
      * Instantiates a new User.
      *
-     * @param id           the id
      * @param userName     the user name
      * @param userPassword the user password
+     * @param firstName    the first name
+     * @param lastName     the last name
      */
-    public User(int id, String userName, String userPassword) {
-        this.id = id;
+    public User(String userName, String userPassword, String firstName, String lastName) {
         this.userName = userName;
         this.userPassword = userPassword;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     /**
@@ -68,6 +88,42 @@ public class User {
     }
 
     /**
+     * Gets first name.
+     *
+     * @return the first name
+     */
+    public String getFirstName() {
+        return firstName;
+    }
+
+    /**
+     * Sets first name.
+     *
+     * @param firstName the first name
+     */
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    /**
+     * Gets last name.
+     *
+     * @return the last name
+     */
+    public String getLastName() {
+        return lastName;
+    }
+
+    /**
+     * Sets last name.
+     *
+     * @param lastName the last name
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    /**
      * Gets user password.
      *
      * @return the user password
@@ -83,5 +139,16 @@ public class User {
      */
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
     }
 }

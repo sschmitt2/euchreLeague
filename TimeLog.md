@@ -33,3 +33,4 @@
 | 2/21/20 | Started implementing the week4 exercise into indie project | 1 | |
 | 2/22/20 | Continued implementing the week4 exercise into indie project, Starting on week5 exercise | 4 | |
 | 2/23/20 | Continued on week5 exercise, added feedback for Elspeth, signed up for PDP | 6 | |
+| 2/23/20 | Watched the .equals and generic dao videos. Signed up for AWS account | 1 | |

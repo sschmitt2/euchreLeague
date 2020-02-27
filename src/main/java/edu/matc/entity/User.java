@@ -10,12 +10,13 @@ import javax.persistence.*;
  * @author sschmitt
  */
 @Entity(name = "User")
-@Table(name = "users")
+@Table(name = "user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native" , strategy = "native")
+    @Column(name = "user_id")
     private int id;
 
     @Column(name = "user_name")

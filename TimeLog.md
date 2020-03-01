@@ -36,4 +36,4 @@
 | 2/24/20 | Watched the .equals and generic dao videos. Signed up for AWS account | 1 | |
 | 2/27/20 | Added database tables to indie project, setting up aws | 2 | |
 | 2/29/20 | Continued aws exercise | 3.5 | Note to self: one thing at a time! |
-| 3/01/20 | Deployed user display exercise to AWS | 1 | |
+| 3/01/20 | Deployed user display exercise to AWS, Added peer review feedback | 2.5 | |

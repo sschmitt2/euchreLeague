@@ -3,6 +3,7 @@ package edu.matc.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * A class to represent a user.
@@ -31,6 +32,12 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
+    @Column(name = "create_date")
+    private Date creationDate;
+
+    @Column(name = "update_date")
+    private Date updateDate;
+
     /**
      * Instantiates a new User.
      */
@@ -44,12 +51,52 @@ public class User {
      * @param userPassword the user password
      * @param firstName    the first name
      * @param lastName     the last name
+     * @param creationDate the creation date
+     * @param updateDate   the update date
      */
-    public User(String userName, String userPassword, String firstName, String lastName) {
+    public User(String userName, String userPassword, String firstName, String lastName, Date creationDate, Date updateDate) {
         this.userName = userName;
         this.userPassword = userPassword;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.creationDate = creationDate;
+        this.updateDate = updateDate;
+    }
+
+    /**
+     * Gets creation date.
+     *
+     * @return the creation date
+     */
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    /**
+     * Sets creation date.
+     *
+     * @param creationDate the creation date
+     */
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    /**
+     * Gets update date.
+     *
+     * @return the update date
+     */
+    public Date getUpdateDate() {
+        return updateDate;
+    }
+
+    /**
+     * Sets update date.
+     *
+     * @param updateDate the update date
+     */
+    public void setUpdateDate(Date updateDate) {
+        this.updateDate = updateDate;
     }
 
     /**
@@ -150,6 +197,8 @@ public class User {
                 ", userPassword='" + userPassword + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", creationDate=" + creationDate +
+                ", updateDate=" + updateDate +
                 '}';
     }
 }

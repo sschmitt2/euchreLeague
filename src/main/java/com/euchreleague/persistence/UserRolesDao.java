@@ -1,6 +1,8 @@
-package edu.matc.persistence;
+package com.euchreleague.persistence;
 
-import edu.matc.entity.User;
+
+import com.euchreleague.entity.User;
+import com.euchreleague.entity.UserRoles;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
@@ -13,9 +15,9 @@ import javax.persistence.criteria.Root;
 import java.util.List;
 
 /**
- * The type User dao.
+ * The type User roles dao.
  */
-public class UserDao {
+public class UserRolesDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     /**
@@ -24,27 +26,27 @@ public class UserDao {
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
     /**
-     * Get Author by id
+     * Get Book by id
      *
      * @param id the id
      * @return the by id
      */
-    public User getById(int id) {
+    public UserRoles getById(int id) {
         Session session = sessionFactory.openSession();
-        User users = session.get( User.class, id );
+        UserRoles userRoles = session.get( UserRoles.class, id );
         session.close();
-        return users;
+        return userRoles;
     }
 
     /**
-     * update Author
+     * update Book
      *
-     * @param user the user
+     * @param userRoles the user roles
      */
-    public void saveOrUpdate(User user) {
+    public void saveOrUpdate(UserRoles userRoles) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        session.saveOrUpdate(user);
+        session.saveOrUpdate(userRoles);
         transaction.commit();
         session.close();
     }
@@ -52,14 +54,14 @@ public class UserDao {
     /**
      * insert Book
      *
-     * @param user the user
+     * @param userRoles the user roles
      * @return the int
      */
-    public int insert(User user) {
+    public int insert(UserRoles userRoles) {
         int id = 0;
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        id = (int)session.save(user);
+        id = (int)session.save(userRoles);
         transaction.commit();
         session.close();
         return id;
@@ -68,12 +70,12 @@ public class UserDao {
     /**
      * Delete a Book
      *
-     * @param user the user
+     * @param userRoles the user roles
      */
-    public void delete(User user) {
+    public void delete(UserRoles userRoles) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        session.delete(user);
+        session.delete(userRoles);
         transaction.commit();
         session.close();
     }
@@ -84,22 +86,21 @@ public class UserDao {
      *
      * @return All Books
      */
-    public List<User> getAll() {
+    public List<UserRoles> getAll() {
 
         Session session = sessionFactory.openSession();
 
         CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<User> query = builder.createQuery( User.class );
-        Root<User> root = query.from( User.class );
-        List<User> users = session.createQuery( query ).getResultList();
+        CriteriaQuery<UserRoles> query = builder.createQuery( UserRoles.class );
+        Root<UserRoles> root = query.from( UserRoles.class );
+        List<UserRoles> userRoles = session.createQuery( query ).getResultList();
 
-        logger.debug("The list of users " + users);
+        logger.debug("The list of Books " + userRoles);
         session.close();
 
-        return users;
+        return userRoles;
     }
 
 }
-
 
 

@@ -22,8 +22,8 @@ public class UserRoles {
     private String roleName;
 
     @ManyToOne
-    @JoinColumn(name = "user_name",
-            foreignKey = @ForeignKey(name = "user_name_FK")
+    @JoinColumn(name = "user_id",
+            foreignKey = @ForeignKey(name = "user_id_FK")
     )
     private User user;
 

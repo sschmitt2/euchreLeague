@@ -37,7 +37,7 @@ public class User {
      * The User.
      */
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    List<UserRoles> users = new ArrayList<>();
+    private List<UserRoles> userRoles = new ArrayList<>();
 
     /**
      * Instantiates a new User.
@@ -45,16 +45,33 @@ public class User {
     public User() {
     }
 
+    /**
+     * Instantiates a new User.
+     *
+     * @param firstName the first name
+     * @param lastName  the last name
+     * @param userName  the user name
+     */
     public User(String firstName, String lastName, String userName) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
     }
 
+    /**
+     * Gets user name.
+     *
+     * @return the user name
+     */
     public String getUserName() {
         return userName;
     }
 
+    /**
+     * Sets user name.
+     *
+     * @param userName the user name
+     */
     public void setUserName(String userName) {
         this.userName = userName;
     }
@@ -122,12 +139,12 @@ public class User {
         return userPassword;
     }
 
-    public List<UserRoles> getUsers() {
-        return users;
+    public List<UserRoles> getUserRoles() {
+        return userRoles;
     }
 
-    public void setUsers(List<UserRoles> users) {
-        this.users = users;
+    public void setUserRoles(List<UserRoles> userRoles) {
+        this.userRoles = userRoles;
     }
 
     /**

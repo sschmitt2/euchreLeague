@@ -38,7 +38,7 @@ class UserDaoTest {
     @Test
     void getById() {
         User retrievedUser = userDao.getById(1);
-        
+
         assertEquals("John", retrievedUser.getFirstName());
         assertEquals("Doe", retrievedUser.getLastName());
         assertEquals("jdoe", retrievedUser.getUserName());
@@ -86,7 +86,7 @@ class UserDaoTest {
      */
     @Test
     void getAll() {
-        List<UserRoles> userRoles = userDao.getAll();
-        assertEquals(2, userRoles.size());
+        List<UserRoles> userRoles = userRolesDao.getAll();
+        assertEquals(1, userRoles.size());
     }
 }

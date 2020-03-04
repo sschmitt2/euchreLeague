@@ -46,11 +46,13 @@ class UserDaoTest {
      */
     @Test
     void getById() {
+        String firstName = "John";
+        String lastName = "Doe";
+        String userName = "jdoe";
         User retrievedUser = userDao.getById(1);
-
-        assertEquals("John", retrievedUser.getFirstName());
-        assertEquals("Doe", retrievedUser.getLastName());
-        assertEquals("jdoe", retrievedUser.getUserName());
+        assertEquals(firstName, retrievedUser.getFirstName());
+        assertEquals(lastName, retrievedUser.getLastName());
+        assertEquals(userName, retrievedUser.getUserName());
     }
 
     /**
@@ -59,11 +61,17 @@ class UserDaoTest {
     @Test
     void saveOrUpdate() {
         String newFirstName = "Sarah";
+        String newLastName = "Schmitt";
+        String newUserName = "sschmitt";
         User userToUpdate = userDao.getById(1);
         userToUpdate.setFirstName(newFirstName);
+        userToUpdate.setLastName(newLastName);
+        userToUpdate.setUserName(newUserName);
         userDao.saveOrUpdate(userToUpdate);
         User retrievedUser = userDao.getById(1);
         assertEquals(newFirstName, retrievedUser.getFirstName());
+        assertEquals(newLastName, retrievedUser.getLastName());
+        assertEquals(newUserName, retrievedUser.getUserName());
     }
 
     /**
@@ -71,13 +79,16 @@ class UserDaoTest {
      */
     @Test
     void insert() {
-        User newUser = new User("Sarah", "Schmitt", "sschmitt");
+        String newFirstName = "Bob The";
+        String newLastName = "Builder";
+        String newUserName = "bbuilder";
+        User newUser = new User(newFirstName, newLastName, newUserName);
         int id = userDao.insert(newUser);
         assertNotEquals(0,id);
         User insertedUser = userDao.getById(id);
-        assertEquals("Sarah", insertedUser.getFirstName());
-        assertEquals("Schmitt", insertedUser.getLastName());
-        assertEquals("sschmitt", insertedUser.getUserName());
+        assertEquals(newFirstName, insertedUser.getFirstName());
+        assertEquals(newLastName, insertedUser.getLastName());
+        assertEquals(newUserName, insertedUser.getUserName());
     }
 
     /**

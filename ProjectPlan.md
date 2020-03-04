@@ -13,46 +13,37 @@
 - [X] Checkpoint 1: Problem statement, project plan, screen design and time log pushed to GitHub. 
 
 ### Week 4
-- [ ] Complete database design
-- [ ] Create the database and user table
-- [ ] Create the user entity class and annotate for hibernate
-- [ ] Create user dao
-- [ ] Create the test database
-- [ ] Create user dao unit tests
-- [ ] Weekly time log
-- [ ] Set up logging
-- [ ] Create class uml diagram
-- [ ] Prepare for Week 5 peer design/code review
+- [X] Started database design
+- [X] Create the database and user table
+- [X] Create the user entity class and annotate for hibernate
+- [X] Create user dao
+- [X] Create the test database
+- [X] Create user dao unit tests
+- [X] Weekly time log
+- [X] Set up logging
+- [X] Prepare for Week 5 peer design/code review
+
 
 
 ### Week 5
+- [X] Weekly Time Log
+- [X] Add the role table
+- [X] Add the role entity
+- [X] Create the role dao
+- [X] Create the role dao unit tests
 
-- [ ] Create the template for all jsps using bootstrap or materialize
-- [ ] Weekly Time Log
-- [ ] Add the role table
-- [ ] Add the role entity
-- [ ] Create the role dao
-- [ ] Create the role dao unit tests
-- [ ] Add a jsp to display user and role
-- [ ] Add jsp to add a user
 
 ### Week 6
-
-- [ ] Create db on AWS
-- [ ] Deploy to AWS for first time
-- [ ] Weekly journal entry
-- [ ] Create league table
-- [ ] Add the league entity (test, dev and prod dbs)
-- [ ] Realize that these daos are repetitive. Refactor into a generic dao!
-- [ ] Add update and delete functionality in jsp for user and role
-- [ ] Build the view scores jsp
-- [ ] Build the view schedules and leagues jsp
-- [ ] Prepare for Checkpoint 2: Database designed and created, at least one DAO implemented with Hibernate, DAO is unit tested, Log4J is implemented (no System.out.printlns), class design and any other diagrams you plan to use have been created. 
+- [X] Create class uml diagram
+- [X] Weekly Time Log
+- [X] Prepare for Checkpoint 2: Database designed and created, at least one DAO implemented with Hibernate, DAO is unit tested, Log4J is implemented (no System.out.printlns), class design and any other diagrams you plan to use have been created. 
 
 
 #####Still need to complete Plan for the rest of the weeks
 ### Week 7
-
+- [ ] Create the template for all jsps using bootstrap or materialize
+- [ ] Add a jsp to display user and role
+- [ ] Add jsp to add a user
 - [ ] Weekly Time Log
 - [ ] Set up authentication locally
 - [ ] Set up authentication on AWS
@@ -61,8 +52,14 @@
 - [ ] Update Trail and Trail report to use trail type and grooming
 - [ ] Update Trail and Trail report tests to be sure they work with the new relationships
 - [ ] Review and incorporate any feedback from Checkpoint 2.
-
-
+- [ ] Create league table
+- [ ] Add the league entity (test, dev and prod dbs)
+- [ ] Realize that these daos are repetitive. Refactor into a generic dao!
+- [ ] Add update and delete functionality in jsp for user and role
+- [ ] Build the view scores jsp
+- [ ] Build the view schedules and leagues jsp
+- [ ] Create db on AWS
+- [ ] Deploy to AWS for first time
 ### Week 8
 
 - [ ] Weekly journal entry

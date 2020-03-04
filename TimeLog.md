@@ -37,3 +37,5 @@
 | 2/27/20 | Added database tables to indie project, setting up aws | 2 | |
 | 2/29/20 | Continued aws exercise | 3.5 | Note to self: one thing at a time! |
 | 3/01/20 | Deployed user display exercise to AWS, Added peer review feedback | 2.5 | |
+| 3/03/20 | Working on indie project and implementing onetomany relationship | 2.5 | |
+| 3/04/20 | Working on indie project and implementing onetomany relationship | 3 | Had a lot of issues with using user_name as a fk. Had to use user_id instead |

@@ -25,7 +25,7 @@ public class UserDao {
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
     /**
-     * Get Author by id
+     * Gets by id.
      *
      * @param id the id
      * @return the by id
@@ -38,7 +38,7 @@ public class UserDao {
     }
 
     /**
-     * update Author
+     * Save or update.
      *
      * @param user the user
      */
@@ -51,7 +51,7 @@ public class UserDao {
     }
 
     /**
-     * insert Book
+     * Insert int.
      *
      * @param user the user
      * @return the int
@@ -67,7 +67,7 @@ public class UserDao {
     }
 
     /**
-     * Delete a Book
+     * Delete.
      *
      * @param user the user
      */
@@ -81,9 +81,9 @@ public class UserDao {
 
 
     /**
-     * Return a list of all Books
+     * Gets all.
      *
-     * @return All Books
+     * @return the all
      */
     public List<UserRoles> getAll() {
 

@@ -26,7 +26,7 @@ public class UserRolesDao {
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
     /**
-     * Get Book by id
+     * Gets by id.
      *
      * @param id the id
      * @return the by id
@@ -39,7 +39,7 @@ public class UserRolesDao {
     }
 
     /**
-     * update Book
+     * Save or update.
      *
      * @param userRoles the user roles
      */
@@ -52,7 +52,7 @@ public class UserRolesDao {
     }
 
     /**
-     * insert Book
+     * Insert int.
      *
      * @param userRoles the user roles
      * @return the int
@@ -68,7 +68,7 @@ public class UserRolesDao {
     }
 
     /**
-     * Delete a Book
+     * Delete.
      *
      * @param userRoles the user roles
      */
@@ -82,9 +82,9 @@ public class UserRolesDao {
 
 
     /**
-     * Return a list of all Books
+     * Gets all.
      *
-     * @return All Books
+     * @return the all
      */
     public List<UserRoles> getAll() {
 
@@ -95,7 +95,7 @@ public class UserRolesDao {
         Root<UserRoles> root = query.from( UserRoles.class );
         List<UserRoles> userRoles = session.createQuery( query ).getResultList();
 
-        logger.debug("The list of Books " + userRoles);
+        logger.debug("The list of Users " + userRoles);
         session.close();
 
         return userRoles;

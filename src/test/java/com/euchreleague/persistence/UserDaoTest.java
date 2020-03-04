@@ -10,18 +10,27 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * The type User dao test.
+ */
 // add unit tests to achieve 100% code coverage of your dao.
 // You should run these tests repeatedly, in any order, and they should all pass every time!
 // Javadoc comments
 class UserDaoTest {
 
+    /**
+     * The User dao.
+     */
     UserDao userDao;
 
+    /**
+     * The User roles dao.
+     */
     UserRolesDao userRolesDao;
 
 
     /**
-     * Sets up the book table with fresh data and creates database instance
+     * Sets up the User and User Role table with fresh data and creates database instance
      */
     @BeforeEach
     void setUp() {
@@ -45,7 +54,7 @@ class UserDaoTest {
     }
 
     /**
-     * verifies that you can save and update a new book
+     * verifies that you can save and update a new user
      */
     @Test
     void saveOrUpdate() {
@@ -56,8 +65,9 @@ class UserDaoTest {
         User retrievedUser = userDao.getById(1);
         assertEquals(newFirstName, retrievedUser.getFirstName());
     }
+
     /**
-     * verifies that you insert a new book
+     * verifies that you insert a new user
      */
     @Test
     void insert() {
@@ -71,7 +81,7 @@ class UserDaoTest {
     }
 
     /**
-     * verifies that you can delete a book
+     * verifies that you can delete a user
      */
     @Test
     void delete() {
@@ -82,7 +92,7 @@ class UserDaoTest {
     }
 
     /**
-     * verifies that you can retrieve all books
+     * verifies that you can retrieve all users
      */
     @Test
     void getAll() {

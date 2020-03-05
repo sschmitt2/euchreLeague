@@ -39,3 +39,4 @@
 | 3/01/20 | Deployed user display exercise to AWS, Added peer review feedback | 2.5 | |
 | 3/03/20 | Working on indie project and implementing onetomany relationship | 2.5 | |
 | 3/04/20 | Working on indie project and implementing onetomany relationship | 3 | Had a lot of issues with using user_name as a fk. Had to use user_id instead |
+| 3/04/20 | Made changes final changes for checkpoint 2 based on instructor feedback. Implemented .equals in the User and User Roles | 1.5 | |

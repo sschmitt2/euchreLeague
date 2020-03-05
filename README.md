@@ -37,7 +37,7 @@ randomized tables where each player must be partners with every player on the le
 * Hosting
   * AWS
 * Independent Research Topic/s
-  * TODO
+  * AWS Cognito 
 * Project Lombok to eliminate boilerplate code like getters/setters/equals
 * Unit Testing
   * JUnit tests to achieve 80%+ code coverage 

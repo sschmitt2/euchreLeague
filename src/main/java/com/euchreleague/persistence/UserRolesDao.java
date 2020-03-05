@@ -1,7 +1,6 @@
 package com.euchreleague.persistence;
 
 
-import com.euchreleague.entity.User;
 import com.euchreleague.entity.UserRoles;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

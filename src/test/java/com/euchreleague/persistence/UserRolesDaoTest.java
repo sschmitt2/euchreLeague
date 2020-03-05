@@ -58,20 +58,18 @@ class UserRolesDaoTest {
      */
     @Test
     void insertSuccess() {
-
-        User newUser = new User("Jen", "Sincero", "jsincero");
+        String firstName = "Jen";
+        String lastName = "Sincero";
+        String userName = "jsincero";
+        User newUser = new User(firstName, lastName, userName);
         int userId = userDao.insert(newUser);
-        UserRoles newUserRole = new UserRoles("player", newUser);
+        String roleName = "player";
+        UserRoles newUserRole = new UserRoles(roleName, newUser);
         int id = userRolesDao.insert(newUserRole);
         assertNotEquals(0,id);
         UserRoles insertedUserRole = userRolesDao.getById(id);
         User insertedUser = userDao.getById(userId);
-        assertEquals("player", insertedUserRole.getRoleName());
-        assertEquals("Jen", insertedUser.getFirstName());
-        assertEquals("Sincero", insertedUser.getLastName());
-        // Could continue comparing all values, but
-        // it may make sense to use .equals()
-        // review .equals recommendations http://docs.jboss.org/hibernate/orm/5.2/Bookguide/html_single/Hibernate_Book_Guide.html#mapping-model-pojo-equalshashcode
+        assertEquals(newUserRole, insertedUserRole);
     }
 
     /**
@@ -93,7 +91,7 @@ class UserRolesDaoTest {
         roleToUpdate.setRoleName(newRole);
         userRolesDao.saveOrUpdate(roleToUpdate);
         UserRoles roleAfterUpdate = userRolesDao.getById(1);
-        assertEquals(newRole, roleAfterUpdate.getRoleName());
+        assertEquals(roleToUpdate, roleAfterUpdate);
     }
 
     /**

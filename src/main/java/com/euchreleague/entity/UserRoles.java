@@ -3,6 +3,7 @@ package com.euchreleague.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 /**
  * A class to represent a role
@@ -81,5 +82,19 @@ public class UserRoles {
                 ", roleName='" + roleName + '\'' +
                 ", user=" + user +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UserRoles userRoles = (UserRoles) o;
+        return id == userRoles.id &&
+                roleName.equals(userRoles.roleName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, roleName);
     }
 }

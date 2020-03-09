@@ -1,0 +1,9 @@
+<Context docBase="euchreLeagueDemo" path="/euchreLeague" reloadable="true">
+    <Realm className="org.apache.catalina.realm.JDBCRealm"
+           driverName="com.mysql.cj.jdbc.Driver"
+           connectionURL="jdbc:mysql://localhost:3306/test_EuchreLeague?user=tomcat&amp;password=euchre"
+           userTable="user" userNameCol="user_name" userCredCol="user_password"
+           userRoleTable="user_roles" roleNameCol="role_name" >
+    </Realm>
+</Context>
+

@@ -18,7 +18,6 @@
 
         <mapping class="com.euchreleague.entity.User"/>
         <mapping class="com.euchreleague.entity.UserRoles"/>
-        <mapping class="com.euchreleague.entity.Team"/>
 
     </session-factory>
 

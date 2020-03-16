@@ -22,16 +22,12 @@
         </web-resource-collection>
         <auth-constraint>
             <role-name>admin</role-name>
-            <role-name>player</role-name>
         </auth-constraint>
-
     </security-constraint>
 
     <security-role>
         <role-name>admin</role-name>
     </security-role>
-    <security-role>
-        <role-name>player</role-name>
-    </security-role>
+
 </web-app>
 

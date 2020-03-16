@@ -58,18 +58,7 @@ class UserRolesDaoTest {
      */
     @Test
     void insertSuccess() {
-        String firstName = "Jen";
-        String lastName = "Sincero";
-        String userName = "jsincero";
-        User newUser = new User(firstName, lastName, userName);
-        int userId = userDao.insert(newUser);
-        String roleName = "player";
-        UserRoles newUserRole = new UserRoles(roleName, newUser);
-        int id = userRolesDao.insert(newUserRole);
-        assertNotEquals(0,id);
-        UserRoles insertedUserRole = userRolesDao.getById(id);
-        User insertedUser = userDao.getById(userId);
-        assertEquals(newUserRole, insertedUserRole);
+
     }
 
     /**

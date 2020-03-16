@@ -161,7 +161,6 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", userPassword='" + userPassword + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", userName='" + userName + '\'' +
@@ -174,7 +173,6 @@ public class User {
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
         return id == user.id &&
-                Objects.equals(userPassword, user.userPassword) &&
                 firstName.equals(user.firstName) &&
                 lastName.equals(user.lastName) &&
                 userName.equals(user.userName);
@@ -182,6 +180,6 @@ public class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, userPassword, firstName, lastName, userName);
+        return Objects.hash(id, firstName, lastName, userName);
     }
 }

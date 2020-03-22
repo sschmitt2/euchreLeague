@@ -140,10 +140,20 @@ public class User {
         return userPassword;
     }
 
+    /**
+     * Gets user roles.
+     *
+     * @return the user roles
+     */
     public List<UserRoles> getUserRoles() {
         return userRoles;
     }
 
+    /**
+     * Sets user roles.
+     *
+     * @param userRoles the user roles
+     */
     public void setUserRoles(List<UserRoles> userRoles) {
         this.userRoles = userRoles;
     }
@@ -156,6 +166,8 @@ public class User {
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
     }
+
+
 
     @Override
     public String toString() {

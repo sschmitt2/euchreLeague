@@ -26,10 +26,6 @@ class UserRolesDaoTest {
     UserRolesDao userRolesDao;
 
 
-    /**
-     * The Author dao.
-     */
-    UserDao userDao;
 
     /**
      * Run set up tasks before each test:
@@ -38,10 +34,10 @@ class UserRolesDaoTest {
      */
     @BeforeEach
     void setUp() {
+        userRolesDao = new UserRolesDao();
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
-        userDao = new UserDao();
-        userRolesDao = new UserRolesDao();
+
     }
 
     /**
@@ -58,6 +54,9 @@ class UserRolesDaoTest {
      */
     @Test
     void insertSuccess() {
+        UserDao userDao = new UserDao();
+        User user = userDao.getById(1);
+        UserRoles newRole = new UserRoles("admin", user);
 
     }
 

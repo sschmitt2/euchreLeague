@@ -89,6 +89,7 @@ public class UserRoles {
         return "UserRoles{" +
                 "id=" + id +
                 ", roleName='" + roleName + '\'' +
+                ", user=" + user +
                 '}';
     }
 

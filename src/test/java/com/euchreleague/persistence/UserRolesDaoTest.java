@@ -60,7 +60,9 @@ class UserRolesDaoTest {
     void insertSuccess() {
 
         String newUserName = "rgourlie";
-        User newUser = userDao.getById(1);
+        User newUser = new User("Roger", "Gourlie", newUserName);
+        int userId = userDao.insert(newUser);
+        assertNotEquals(0, userId);
 
         String roleName = "admin";
         UserRoles role = new UserRoles(roleName, newUserName, newUser);

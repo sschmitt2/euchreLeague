@@ -25,6 +25,8 @@ class UserRolesDaoTest {
      */
     UserRolesDao userRolesDao;
 
+    UserDao userDao;
+
 
 
     /**
@@ -34,6 +36,7 @@ class UserRolesDaoTest {
      */
     @BeforeEach
     void setUp() {
+        userDao = new UserDao();
         userRolesDao = new UserRolesDao();
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
@@ -45,8 +48,9 @@ class UserRolesDaoTest {
      */
     @Test
     void getByIdSuccess() {
+        String roleName = "admin";
         UserRoles retrievedUser = userRolesDao.getById(1);
-        assertEquals("admin", retrievedUser.getRoleName());
+        assertEquals(roleName, retrievedUser.getRoleName());
     }
 
     /**
@@ -54,9 +58,22 @@ class UserRolesDaoTest {
      */
     @Test
     void insertSuccess() {
-        UserDao userDao = new UserDao();
-        User user = userDao.getById(1);
-        UserRoles newRole = new UserRoles("admin", user);
+
+        String newUserName = "rgourlie";
+        User newUser = userDao.getById(1);
+
+        String roleName = "admin";
+        UserRoles role = new UserRoles(roleName, newUserName, newUser);
+        newUser.addRole(role);
+
+        int id = userRolesDao.insert(role);
+
+        assertNotEquals(0, id);
+
+        UserRoles insertedRole = userRolesDao.getById(id);
+        assertEquals(roleName, insertedRole.getRoleName());
+        assertNotNull(insertedRole.getUser());
+        assertEquals(role, insertedRole);
 
     }
 

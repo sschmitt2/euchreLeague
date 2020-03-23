@@ -22,9 +22,12 @@ public class UserRoles {
     @Column(name = "role_name")
     private String roleName;
 
+    @Column(name = "user_name")
+    private String userName;
+
     @ManyToOne
     @JoinColumn(name = "user_id",
-            foreignKey = @ForeignKey(name = "user_id_FK")
+            foreignKey = @ForeignKey(name = "user_roles_user_id_fk")
     )
     private User user;
 
@@ -34,11 +37,19 @@ public class UserRoles {
     public UserRoles() {
     }
 
-    public UserRoles(String roleName, User user) {
+    public UserRoles(String roleName, String userName, User user) {
         this.roleName = roleName;
+        this.userName = userName;
         this.user = user;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public User getUser() {
         return user;
@@ -89,7 +100,7 @@ public class UserRoles {
         return "UserRoles{" +
                 "id=" + id +
                 ", roleName='" + roleName + '\'' +
-                ", user=" + user +
+                ", userName='" + userName + '\'' +
                 '}';
     }
 
@@ -99,11 +110,12 @@ public class UserRoles {
         if (o == null || getClass() != o.getClass()) return false;
         UserRoles userRoles = (UserRoles) o;
         return id == userRoles.id &&
-                roleName.equals(userRoles.roleName);
+                Objects.equals(roleName, userRoles.roleName) &&
+                Objects.equals(userName, userRoles.userName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, roleName);
+        return Objects.hash(id, roleName, userName);
     }
 }

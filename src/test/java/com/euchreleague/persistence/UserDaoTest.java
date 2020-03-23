@@ -80,6 +80,7 @@ class UserDaoTest {
         String newFirstName = "Bob The";
         String newLastName = "Builder";
         String newUserName = "bbuilder";
+
         User newUser = new User(newFirstName, newLastName, newUserName);
         int id = userDao.insert(newUser);
         assertNotEquals(0,id);

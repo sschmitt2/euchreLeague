@@ -41,12 +41,10 @@
 
 #####Still need to complete Plan for the rest of the weeks
 ### Week 7
-- [ ] Create the template for all jsps using bootstrap or materialize
-- [ ] Add a jsp to display user and role
-- [ ] Add jsp to add a user
-- [ ] Weekly Time Log
-- [ ] Set up authentication locally
-- [ ] Set up authentication on AWS
+
+- [X] Weekly Time Log
+- [X] Set up authentication locally
+- [X] Set up authentication on AWS
 - [ ] Add the Trail Type and Grooming Tables, populate with data, (test, dev and prod dbs)
 - [ ] Create the Trail Type and Grooming entities
 - [ ] Update Trail and Trail report to use trail type and grooming
@@ -73,6 +71,9 @@
 - [ ] Prepare for Checkpoint 3: Deployed to AWS, at least one JSP that displays data from the database is implemented. 
 
 ### Week 9
+- [ ] Create the template for all jsps using bootstrap or materialize
+- [ ] Add a jsp to display user and role
+- [ ] Add jsp to add a user
 - [ ] Weekly journal entry
 - [ ] Integration with weather service and/or snow depth data
 - [ ] Review and incorporate feedback from Checkpoint 3.

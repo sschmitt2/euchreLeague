@@ -21,9 +21,6 @@ public class User {
     @GenericGenerator(name = "native" , strategy = "native")
     private int id;
 
-    @Column(name = "user_password")
-    private String userPassword;
-
     @Column(name = "first_name")
     private String firstName;
 
@@ -32,6 +29,9 @@ public class User {
 
     @Column(name = "user_name")
     private String userName;
+
+    @Column(name = "user_password")
+    private String userPassword;
 
 
     /**
@@ -46,13 +46,6 @@ public class User {
     public User() {
     }
 
-    /**
-     * Instantiates a new User.
-     *
-     * @param firstName the first name
-     * @param lastName  the last name
-     * @param userName  the user name
-     */
     public User(String firstName, String lastName, String userName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -167,7 +160,25 @@ public class User {
         this.userPassword = userPassword;
     }
 
+    /**
+     * Add role.
+     *
+     * @param role the role
+     */
+    public void addRole(UserRoles role) {
+        userRoles.add(role);
+        role.setUser(this);
+    }
 
+    /**
+     * Remove role.
+     *
+     * @param role the role
+     */
+    public void removeRole(UserRoles role) {
+        userRoles.remove(role);
+        role.setUser(null);
+    }
 
     @Override
     public String toString() {
@@ -184,14 +195,13 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id &&
-                firstName.equals(user.firstName) &&
-                lastName.equals(user.lastName) &&
-                userName.equals(user.userName);
+        return Objects.equals(firstName, user.firstName) &&
+                Objects.equals(lastName, user.lastName) &&
+                Objects.equals(userName, user.userName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, userName);
+        return Objects.hash(firstName, lastName, userName);
     }
 }

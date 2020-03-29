@@ -58,6 +58,7 @@
 - [ ] Build the view schedules and leagues jsp
 - [ ] Create db on AWS
 - [ ] Deploy to AWS for first time
+
 ### Week 8
 
 - [ ] Weekly journal entry

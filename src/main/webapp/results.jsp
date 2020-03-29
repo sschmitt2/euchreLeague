@@ -8,13 +8,7 @@
 </script>
 
 <html>
-<head>
-    <title>Form-Based Authentication Example</title>
-</head>
 <body>
-<ul>
-    <li><a href="login.jsp">Take me to the Admin Page</a></li>
-</ul>
 
 <div class="container-fluid">
     <h2>Search Results: </h2>

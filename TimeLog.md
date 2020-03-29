@@ -42,3 +42,5 @@
 | 3/04/20 | Made changes final changes for checkpoint 2 based on instructor feedback. Implemented .equals in the User and User Roles | 1.5 | |
 | 3/16/20 | Implemented week 7 exercise into indie project | 6 | Forgot to log time spent previously for week 7 |
 | 3/21/20 | Completed the readings, videos, activities and exercise for week 8 | 5 | |
+| 3/22/20 | Created jsps for indie project | 2 | The jsps are not returning data yet|
+| 3/28/20 | Zoom meeting with team to discuss team project details, started working on the api request | 6 | |

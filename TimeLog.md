@@ -45,3 +45,4 @@
 | 3/22/20 | Created jsps for indie project | 2 | The jsps are not returning data yet|
 | 3/28/20 | Zoom meeting with team to discuss team project details, started working on the api request, created project plan | 6 | |
 | 3/29/20 | Continued working on the api request for our team project | 3 | Still need to complete checkpoint 3 |
+| 3/29/20 | Added professional development feedback for Kelly's presentation | .5 | |

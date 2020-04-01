@@ -34,11 +34,11 @@ class UserDaoTest {
      */
     @BeforeEach
     void setUp() {
-
-        Database database = Database.getInstance();
-        database.runSQL("cleandb.sql");
         userDao = new UserDao();
         userRolesDao = new UserRolesDao();
+        Database database = Database.getInstance();
+        database.runSQL("cleandb.sql");
+
     }
 
     /**

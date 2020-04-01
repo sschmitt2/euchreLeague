@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -85,19 +86,21 @@ public class UserDao {
      *
      * @return the all
      */
-    public List<UserRoles> getAll() {
+    public List<User> getAll() {
 
         Session session = sessionFactory.openSession();
 
         CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<UserRoles> query = builder.createQuery( UserRoles.class );
-        Root<UserRoles> root = query.from( UserRoles.class );
-        List<UserRoles> userRoles = session.createQuery( query ).getResultList();
+        CriteriaQuery<User> query = builder.createQuery( User.class );
+        Root<User> root = query.from( User.class );
+        CriteriaQuery<User> criteriaQuery = query.select(root);
+        TypedQuery<User> allQuery = session.createQuery(criteriaQuery);
+        List<User> users = allQuery.getResultList();
 
-        logger.debug("The list of users " + userRoles);
+        logger.debug("The list of users " + users);
         session.close();
 
-        return userRoles;
+        return users;
     }
 
 }

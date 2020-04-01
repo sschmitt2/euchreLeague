@@ -1,14 +1,9 @@
 <%@include file="taglib.jsp"%>
-<c:set var="title" value="Search Results" />
-
-<script type="text/javascript" class="init">
-    $(document).ready( function () {
-        $('#userTable').DataTable();
-    } );
-</script>
+<%@include file="head.jsp"%>
 
 <html>
 <body>
+
 
 <div class="container-fluid">
     <h2>Search Results: </h2>
@@ -20,7 +15,7 @@
         <th>Username</th>
         </thead>
         <tbody>
-        <c:forEach var="user" items="${user}">
+        <c:forEach var="user" items="${users}">
             <tr>
                 <td>${user.firstName}</td>
                 <td>${user.lastName}</td>
@@ -31,6 +26,7 @@
     </table>
 
 </div>
+
 
 </body>
 </html>

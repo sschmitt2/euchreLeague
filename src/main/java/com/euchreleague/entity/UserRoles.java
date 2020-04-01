@@ -25,10 +25,8 @@ public class UserRoles {
     @Column(name = "user_name")
     private String userName;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id",
-            foreignKey = @ForeignKey(name = "user_roles_user_id_fk")
-    )
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
     /**

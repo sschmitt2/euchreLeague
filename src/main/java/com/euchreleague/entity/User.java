@@ -195,13 +195,14 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(firstName, user.firstName) &&
-                Objects.equals(lastName, user.lastName) &&
-                Objects.equals(userName, user.userName);
+        return id == user.id &&
+                firstName.equals(user.firstName) &&
+                lastName.equals(user.lastName) &&
+                userName.equals(user.userName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, userName);
+        return Objects.hash(id, firstName, lastName, userName);
     }
 }

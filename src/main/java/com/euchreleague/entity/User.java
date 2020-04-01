@@ -16,6 +16,8 @@ import java.util.Objects;
 @Table(name = "user")
 public class User {
 
+    //TODO - finish project plan for the rest of the semester
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native" , strategy = "native")

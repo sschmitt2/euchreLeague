@@ -39,12 +39,27 @@
 - [X] Prepare for Checkpoint 2: Database designed and created, at least one DAO implemented with Hibernate, DAO is unit tested, Log4J is implemented (no System.out.printlns), class design and any other diagrams you plan to use have been created. 
 
 
-#####Still need to complete Plan for the rest of the weeks
+
 ### Week 7
 
 - [X] Weekly Time Log
 - [X] Set up authentication locally
 - [X] Set up authentication on AWS
+- [X] Deploy to AWS for first time
+- [X] Create the user and userRole dao
+- [X] Create the user and userRole dao unit tests
+
+### Week 8
+
+- [X] Weekly Time Log
+- [X] Create user and user_roles table (test, dev and prod dbs)
+- [X] Build the results, login, admin, index, and failedLogin jsp
+- [X] Prepare for Checkpoint 3: Deployed to AWS, at least one JSP that displays data from the database is implemented. 
+
+
+#####Still need to complete Plan for the rest of the weeks - put a TODO in my User class
+### Week 9
+- [ ] Build the trail report crud jsps
 - [ ] Add the Trail Type and Grooming Tables, populate with data, (test, dev and prod dbs)
 - [ ] Create the Trail Type and Grooming entities
 - [ ] Update Trail and Trail report to use trail type and grooming
@@ -57,36 +72,15 @@
 - [ ] Build the view scores jsp
 - [ ] Build the view schedules and leagues jsp
 - [ ] Create db on AWS
-- [ ] Deploy to AWS for first time
-
-### Week 8
-
-- [ ] Weekly journal entry
-- [ ] Integration with google maps api
-- [ ] Create trail report table (test, dev and prod dbs)
-- [ ] Add the trail report entity
-- [ ] Create the trail report dao
-- [ ] Create the trail report dao unit tests
-- [ ] Build the trail report search jsp
-- [ ] Build the trail report crud jsps
-- [ ] Prepare for Checkpoint 3: Deployed to AWS, at least one JSP that displays data from the database is implemented. 
-
-### Week 9
 - [ ] Create the template for all jsps using bootstrap or materialize
 - [ ] Add a jsp to display user and role
 - [ ] Add jsp to add a user
-- [ ] Weekly journal entry
+- [ ] Weekly Time Log
 - [ ] Integration with weather service and/or snow depth data
 - [ ] Review and incorporate feedback from Checkpoint 3.
 - [ ] Carefully review code for standards and best practices - use a code quality tool? 
-
-### Week 8
-- [ ] Weekly journal entry
 - [ ] Implement paging of search results
 - [ ] Code review
-
-### Week 9
-- [ ] Weekly journal entry
 - [ ] Add password reset/reminder functionality
 
 ### Week 10

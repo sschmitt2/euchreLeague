@@ -18,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 // Javadoc comments
 class UserDaoTest {
 
+    //TODO - Generic dao
     /**
      * The User dao.
      */

@@ -46,3 +46,5 @@
 | 3/28/20 | Zoom meeting with team to discuss team project details, started working on the api request, created project plan | 6 | |
 | 3/29/20 | Continued working on the api request for our team project | 3 | Still need to complete checkpoint 3 |
 | 3/29/20 | Added professional development feedback for Kelly's presentation | .5 | |
+| 3/30/20 | Team discussion for group project | .75 | |
+| 3/31/20 | Researched displaying the data from database to browser, finished checkpoint 3 | 4 | |

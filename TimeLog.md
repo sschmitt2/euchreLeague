@@ -48,3 +48,4 @@
 | 3/29/20 | Added professional development feedback for Kelly's presentation | .5 | |
 | 3/30/20 | Team discussion for group project | .75 | |
 | 3/31/20 | Researched displaying the data from database to browser, finished checkpoint 3 | 4 | |
+| 4/01/20 | Added a detailed project plan for week 10 | 1.5 ||

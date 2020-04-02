@@ -56,9 +56,21 @@
 - [X] Build the results, login, admin, index, and failedLogin jsp
 - [X] Prepare for Checkpoint 3: Deployed to AWS, at least one JSP that displays data from the database is implemented. 
 
+### Week 9
+- [X] Weekly Time Log
+
+### Week 10
+- [ ] Add team and match table to database
+- [ ] Review completed database
+- [ ] Add Classes for Team and Matches
+- [ ] Implement generic dao
+- [ ] Write unit tests for Team and Matches
+- [ ] Complete the user and user_role tests(more complete testing)
+- [ ] Implement the JavaMail API into project
+- [ ] Weekly Time Log
 
 #####Still need to complete Plan for the rest of the weeks - put a TODO in my User class
-### Week 9
+### Week 11 - Team project work week
 - [ ] Build the trail report crud jsps
 - [ ] Add the Trail Type and Grooming Tables, populate with data, (test, dev and prod dbs)
 - [ ] Create the Trail Type and Grooming entities
@@ -82,12 +94,8 @@
 - [ ] Implement paging of search results
 - [ ] Code review
 - [ ] Add password reset/reminder functionality
-
-### Week 10
 - [ ] Weekly journal entry
 - [ ] Unit test all api integrations
-
-### Week 11 - Team project work week
 - [ ] Weekly journal entry
 
 ### Week 12 - Team project due

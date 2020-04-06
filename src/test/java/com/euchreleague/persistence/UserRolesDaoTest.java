@@ -65,7 +65,7 @@ class UserRolesDaoTest {
         assertNotEquals(0, userId);
 
         String roleName = "admin";
-        UserRoles role = new UserRoles(roleName, newUserName, newUser);
+        UserRoles role = new UserRoles(roleName, newUser);
         newUser.addRole(role);
 
         int id = userRolesDao.insert(role);

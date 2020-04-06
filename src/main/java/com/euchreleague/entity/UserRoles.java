@@ -22,9 +22,6 @@ public class UserRoles {
     @Column(name = "role_name")
     private String roleName;
 
-    @Column(name = "user_name")
-    private String userName;
-
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
@@ -39,31 +36,11 @@ public class UserRoles {
      * Instantiates a new User roles.
      *
      * @param roleName the role name
-     * @param userName the user name
      * @param user     the user
      */
-    public UserRoles(String roleName, String userName, User user) {
+    public UserRoles(String roleName, User user) {
         this.roleName = roleName;
-        this.userName = userName;
         this.user = user;
-    }
-
-    /**
-     * Gets user name.
-     *
-     * @return the user name
-     */
-    public String getUserName() {
-        return userName;
-    }
-
-    /**
-     * Sets user name.
-     *
-     * @param userName the user name
-     */
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
     /**
@@ -125,7 +102,6 @@ public class UserRoles {
         return "UserRoles{" +
                 "id=" + id +
                 ", roleName='" + roleName + '\'' +
-                ", userName='" + userName + '\'' +
                 '}';
     }
 
@@ -135,12 +111,12 @@ public class UserRoles {
         if (o == null || getClass() != o.getClass()) return false;
         UserRoles userRoles = (UserRoles) o;
         return id == userRoles.id &&
-                Objects.equals(roleName, userRoles.roleName) &&
-                Objects.equals(userName, userRoles.userName);
+                roleName.equals(userRoles.roleName) &&
+                user.equals(userRoles.user);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, roleName, userName);
+        return Objects.hash(id, roleName, user);
     }
 }

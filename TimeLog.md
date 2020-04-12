@@ -49,3 +49,8 @@
 | 3/30/20 | Team discussion for group project | .75 | |
 | 3/31/20 | Researched displaying the data from database to browser, finished checkpoint 3 | 4 | |
 | 4/01/20 | Added a detailed project plan for week 10 | 1.5 ||
+| 4/04/20 | Team Meeting, started styling | 4 ||
+| 4/04/20 | Team Meeting, continued styling | 3 ||
+| 4/10/20 | finished styling | 1 ||
+| 4/11/20 | Team meeting, running into issue with 500 error | 2.5 ||
+| 4/12/20 | Figured out 500 error issue FINALLY :(. Fixed template name issue for team project | 7 ||

@@ -53,4 +53,4 @@
 | 4/04/20 | Team Meeting, continued styling | 3 ||
 | 4/10/20 | finished styling | 1 ||
 | 4/11/20 | Team meeting, running into issue with 500 error | 2.5 ||
-| 4/12/20 | Figured out 500 error issue FINALLY :(. Fixed template name issue for team project | 7 |Still need to watch Sam's presentation and give feedback|
+| 4/12/20 | Figured out 500 error issue FINALLY :(. Fixed template name issue for team project, team meeting, started on POST and PUT methods | 10 |Still need to watch Sam's presentation and give feedback|

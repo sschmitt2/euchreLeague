@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+//TODO - finish project plan for the rest of the semester
 /**
  * A class to represent a user.
  *
@@ -15,8 +16,6 @@ import java.util.Objects;
 @Entity(name = "User")
 @Table(name = "user")
 public class User {
-
-    //TODO - finish project plan for the rest of the semester
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")

@@ -5,6 +5,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * A class to represent a team.
@@ -26,16 +27,30 @@ public class Team {
     @Column(name = "player2_id")
     private int playerTwoId;
 
-    @OneToOne
-    @JoinColumn(name = "id",
-            foreignKey = @ForeignKey(name = "teams_player1_id_fk")
-    )
+    @ManyToOne
+    @JoinColumns({
+            @JoinColumn(name = "id", referencedColumnName = "player1_id"),
+            @JoinColumn(name = "id", referencedColumnName = "player2_id")
+    })
     private User user;
 
     /**
      * Instantiates a new Team.
      */
     public Team() {
+    }
+
+    /**
+     * Instantiates a new Team.
+     *
+     * @param playerOneId the player one id
+     * @param playerTwoId the player two id
+     * @param user        the user
+     */
+    public Team(int playerOneId, int playerTwoId, User user) {
+        this.playerOneId = playerOneId;
+        this.playerTwoId = playerTwoId;
+        this.user = user;
     }
 
     /**
@@ -108,5 +123,30 @@ public class Team {
      */
     public void setUser(User user) {
         this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "id=" + id +
+                ", playerOneId=" + playerOneId +
+                ", playerTwoId=" + playerTwoId +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Team team = (Team) o;
+        return id == team.id &&
+                playerOneId == team.playerOneId &&
+                playerTwoId == team.playerTwoId &&
+                user.equals(team.user);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, playerOneId, playerTwoId, user);
     }
 }

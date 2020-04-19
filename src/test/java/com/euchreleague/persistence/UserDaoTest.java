@@ -19,6 +19,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserDaoTest {
 
     //TODO - Generic dao
+
+    GenericDao dao;
     /**
      * The User dao.
      */
@@ -35,11 +37,10 @@ class UserDaoTest {
      */
     @BeforeEach
     void setUp() {
-        userDao = new UserDao();
-        userRolesDao = new UserRolesDao();
+
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
-
+        dao = new GenericDao(User.class);
     }
 
     /**
@@ -50,7 +51,7 @@ class UserDaoTest {
         String firstName = "John";
         String lastName = "Doe";
         String userName = "jdoe";
-        User retrievedUser = userDao.getById(1);
+        User retrievedUser = (User)dao.getById(1);
         assertEquals(firstName, retrievedUser.getFirstName());
         assertEquals(lastName, retrievedUser.getLastName());
         assertEquals(userName, retrievedUser.getUserName());
@@ -64,12 +65,12 @@ class UserDaoTest {
         String newFirstName = "Sarah";
         String newLastName = "Schmitt";
         String newUserName = "sschmitt";
-        User userToUpdate = userDao.getById(1);
+        User userToUpdate = (User)dao.getById(1);
         userToUpdate.setFirstName(newFirstName);
         userToUpdate.setLastName(newLastName);
         userToUpdate.setUserName(newUserName);
-        userDao.saveOrUpdate(userToUpdate);
-        User retrievedUser = userDao.getById(1);
+        dao.saveOrUpdate(userToUpdate);
+        User retrievedUser = (User)dao.getById(1);
         assertEquals(userToUpdate, retrievedUser);
     }
 
@@ -83,9 +84,9 @@ class UserDaoTest {
         String newUserName = "bbuilder";
 
         User newUser = new User(newFirstName, newLastName, newUserName);
-        int id = userDao.insert(newUser);
+        int id = dao.insert(newUser);
         assertNotEquals(0,id);
-        User insertedUser = userDao.getById(id);
+        User insertedUser = (User) dao.getById(id);
         assertEquals(newUser, insertedUser);
     }
 
@@ -94,9 +95,9 @@ class UserDaoTest {
      */
     @Test
     void delete() {
-        User retrievedUser = userDao.getById(1);
+        User retrievedUser = (User) dao.getById(1);
         assertNotNull(retrievedUser);
-        userDao.delete(retrievedUser);
+        dao.delete(retrievedUser);
 
     }
 
@@ -105,7 +106,8 @@ class UserDaoTest {
      */
     @Test
     void getAll() {
-        List<UserRoles> userRoles = userRolesDao.getAll();
+        dao = new GenericDao(UserRoles.class);
+        List<UserRoles> userRoles = dao.getAll();
         assertEquals(1, userRoles.size());
     }
 }

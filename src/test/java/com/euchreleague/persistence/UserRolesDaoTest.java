@@ -19,15 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 // Update the tests to account for the new author class
 class UserRolesDaoTest {
 
-    //TODO - Generic dao
-    /**
-     * The Book dao.
-     */
-    UserRolesDao userRolesDao;
-
-    UserDao userDao;
-
-
+    GenericDao dao;
 
     /**
      * Run set up tasks before each test:
@@ -36,11 +28,10 @@ class UserRolesDaoTest {
      */
     @BeforeEach
     void setUp() {
-        userDao = new UserDao();
-        userRolesDao = new UserRolesDao();
+
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
-
+        dao = new GenericDao(UserRoles.class);
     }
 
     /**
@@ -49,7 +40,7 @@ class UserRolesDaoTest {
     @Test
     void getByIdSuccess() {
         String roleName = "admin";
-        UserRoles retrievedUser = userRolesDao.getById(1);
+        UserRoles retrievedUser = (UserRoles) dao.getById(1);
         assertEquals(roleName, retrievedUser.getRoleName());
     }
 
@@ -61,18 +52,18 @@ class UserRolesDaoTest {
 
         String newUserName = "rgourlie";
         User newUser = new User("Roger", "Gourlie", newUserName);
-        int userId = userDao.insert(newUser);
+        int userId = dao.insert(newUser);
         assertNotEquals(0, userId);
 
         String roleName = "admin";
         UserRoles role = new UserRoles(roleName, newUser);
         newUser.addRole(role);
 
-        int id = userRolesDao.insert(role);
+        int id = dao.insert(role);
 
         assertNotEquals(0, id);
 
-        UserRoles insertedRole = userRolesDao.getById(id);
+        UserRoles insertedRole = (UserRoles) dao.getById(id);
         assertEquals(roleName, insertedRole.getRoleName());
         assertNotNull(insertedRole.getUser());
         assertEquals(role, insertedRole);
@@ -84,7 +75,7 @@ class UserRolesDaoTest {
      */
     @Test
     void getAllSuccess() {
-        List<UserRoles> users = userRolesDao.getAll();
+        List<UserRoles> users = dao.getAll();
         assertEquals(1, users.size());
     }
 
@@ -94,10 +85,10 @@ class UserRolesDaoTest {
     @Test
     void updateSuccess() {
         String newRole = "player";
-        UserRoles roleToUpdate = userRolesDao.getById(1);
+        UserRoles roleToUpdate = (UserRoles) dao.getById(1);
         roleToUpdate.setRoleName(newRole);
-        userRolesDao.saveOrUpdate(roleToUpdate);
-        UserRoles roleAfterUpdate = userRolesDao.getById(1);
+        dao.saveOrUpdate(roleToUpdate);
+        UserRoles roleAfterUpdate = (UserRoles) dao.getById(1);
         assertEquals(roleToUpdate, roleAfterUpdate);
     }
 
@@ -106,9 +97,9 @@ class UserRolesDaoTest {
      */
     @Test
     void deleteSuccess() {
-        UserRoles retrievedRoleToDelete = userRolesDao.getById(1);
+        UserRoles retrievedRoleToDelete = (UserRoles) dao.getById(1);
         assertNotNull(retrievedRoleToDelete);
-        userRolesDao.delete(retrievedRoleToDelete);
+        dao.delete(retrievedRoleToDelete);
     }
 
 

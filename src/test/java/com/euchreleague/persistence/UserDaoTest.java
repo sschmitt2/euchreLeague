@@ -18,19 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 // Javadoc comments
 class UserDaoTest {
 
-    //TODO - Generic dao
-
     GenericDao dao;
-    /**
-     * The User dao.
-     */
-    UserDao userDao;
-
-    /**
-     * The User roles dao.
-     */
-    UserRolesDao userRolesDao;
-
 
     /**
      * Sets up the User and User Role table with fresh data and creates database instance

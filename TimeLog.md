@@ -56,3 +56,4 @@
 | 4/12/20 | Figured out 500 error issue FINALLY :(. Fixed template name issue for team project, team meeting, started on POST and PUT methods | 10 |Still need to watch Sam's presentation and give feedback -done|
 | 4/13/20 | Team project quick meeting, fixed my login issue(server time zone switched somehow?), added a servlet to team project to be able to update a template | 7 |My eyes hurt|
 | 4/13/20 | team meeting, Finished TemplateActionServlet to be able to add/edit a template and channels, adjusted jsps, team meeting | 9.5 ||
+| 4/19/20 | Adding final java classes for indie project, implemented the generic dao FINALLY! cleandb.sql is not inserting data into two tables | 5.5 ||

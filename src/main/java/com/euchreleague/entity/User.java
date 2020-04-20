@@ -47,10 +47,11 @@ public class User {
     public User() {
     }
 
-    public User(String firstName, String lastName, String userName) {
+    public User(String firstName, String lastName, String userName, String userPassword) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
+        this.userPassword = userPassword;
     }
 
     /**

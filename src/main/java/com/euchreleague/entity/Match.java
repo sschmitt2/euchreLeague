@@ -20,12 +20,6 @@ public class Match {
     @GenericGenerator(name = "native" , strategy = "native")
     private int id;
 
-    @Column(name = "team1_id")
-    private int teamOneId;
-
-    @Column(name = "team2_id")
-    private int teamTwoId;
-
     @Column(name = "score_1_1")
     private int teamOneScoreOne;
 
@@ -47,12 +41,14 @@ public class Match {
     @Column(name = "date_of_play")
     private Date dateOfPlay;
 
-    @OneToMany
-    @JoinColumns({
-            @JoinColumn(name = "id", referencedColumnName = "team1_id"),
-            @JoinColumn(name = "id", referencedColumnName = "team2_id")
-    })
-    private Team team;
+
+    @ManyToOne
+    @JoinColumn(name = "team1_id", referencedColumnName = "id")
+    private Team team1;
+
+    @ManyToOne
+    @JoinColumn(name = "team2_id", referencedColumnName = "id")
+    private Team team2;
 
     /**
      * Instantiates a new Match.
@@ -60,23 +56,7 @@ public class Match {
     public Match() {
     }
 
-    /**
-     * Instantiates a new Match.
-     *
-     * @param teamOneId         the team one id
-     * @param teamTwoId         the team two id
-     * @param teamOneScoreOne   the team one score one
-     * @param teamTwoScoreOne   the team two score one
-     * @param teamOneScoreTwo   the team one score two
-     * @param teamTwoScoreTwo   the team two score two
-     * @param teamOneScoreThree the team one score three
-     * @param teamTwoScoreThree the team two score three
-     * @param dateOfPlay        the date of play
-     * @param team              the team
-     */
-    public Match(int teamOneId, int teamTwoId, int teamOneScoreOne, int teamTwoScoreOne, int teamOneScoreTwo, int teamTwoScoreTwo, int teamOneScoreThree, int teamTwoScoreThree, Date dateOfPlay, Team team) {
-        this.teamOneId = teamOneId;
-        this.teamTwoId = teamTwoId;
+    public Match(int teamOneScoreOne, int teamTwoScoreOne, int teamOneScoreTwo, int teamTwoScoreTwo, int teamOneScoreThree, int teamTwoScoreThree, Date dateOfPlay, Team team1, Team team2) {
         this.teamOneScoreOne = teamOneScoreOne;
         this.teamTwoScoreOne = teamTwoScoreOne;
         this.teamOneScoreTwo = teamOneScoreTwo;
@@ -84,7 +64,8 @@ public class Match {
         this.teamOneScoreThree = teamOneScoreThree;
         this.teamTwoScoreThree = teamTwoScoreThree;
         this.dateOfPlay = dateOfPlay;
-        this.team = team;
+        this.team1 = team1;
+        this.team2 = team2;
     }
 
     /**
@@ -110,35 +91,20 @@ public class Match {
      *
      * @return the team one id
      */
-    public int getTeamOneId() {
-        return teamOneId;
+    public Team getTeam1() {
+        return team1;
     }
 
-    /**
-     * Sets team one id.
-     *
-     * @param teamOneId the team one id
-     */
-    public void setTeamOneId(int teamOneId) {
-        this.teamOneId = teamOneId;
+    public void setTeam1(Team team1) {
+        this.team1 = team1;
     }
 
-    /**
-     * Gets team two id.
-     *
-     * @return the team two id
-     */
-    public int getTeamTwoId() {
-        return teamTwoId;
+    public Team getTeam2() {
+        return team2;
     }
 
-    /**
-     * Sets team two id.
-     *
-     * @param teamTwoId the team two id
-     */
-    public void setTeamTwoId(int teamTwoId) {
-        this.teamTwoId = teamTwoId;
+    public void setTeam2(Team team2) {
+        this.team2 = team2;
     }
 
     /**
@@ -267,30 +233,10 @@ public class Match {
         this.dateOfPlay = dateOfPlay;
     }
 
-    /**
-     * Gets team.
-     *
-     * @return the team
-     */
-    public Team getTeam() {
-        return team;
-    }
-
-    /**
-     * Sets team.
-     *
-     * @param team the team
-     */
-    public void setTeam(Team team) {
-        this.team = team;
-    }
-
     @Override
     public String toString() {
         return "Match{" +
                 "id=" + id +
-                ", teamOneId=" + teamOneId +
-                ", teamTwoId=" + teamTwoId +
                 ", teamOneScoreOne=" + teamOneScoreOne +
                 ", teamTwoScoreOne=" + teamTwoScoreOne +
                 ", teamOneScoreTwo=" + teamOneScoreTwo +
@@ -298,6 +244,8 @@ public class Match {
                 ", teamOneScoreThree=" + teamOneScoreThree +
                 ", teamTwoScoreThree=" + teamTwoScoreThree +
                 ", dateOfPlay=" + dateOfPlay +
+                ", team1=" + team1 +
+                ", team2=" + team2 +
                 '}';
     }
 
@@ -307,8 +255,6 @@ public class Match {
         if (o == null || getClass() != o.getClass()) return false;
         Match match = (Match) o;
         return id == match.id &&
-                teamOneId == match.teamOneId &&
-                teamTwoId == match.teamTwoId &&
                 teamOneScoreOne == match.teamOneScoreOne &&
                 teamTwoScoreOne == match.teamTwoScoreOne &&
                 teamOneScoreTwo == match.teamOneScoreTwo &&
@@ -316,11 +262,12 @@ public class Match {
                 teamOneScoreThree == match.teamOneScoreThree &&
                 teamTwoScoreThree == match.teamTwoScoreThree &&
                 dateOfPlay.equals(match.dateOfPlay) &&
-                team.equals(match.team);
+                team1.equals(match.team1) &&
+                team2.equals(match.team2);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, teamOneId, teamTwoId, teamOneScoreOne, teamTwoScoreOne, teamOneScoreTwo, teamTwoScoreTwo, teamOneScoreThree, teamTwoScoreThree, dateOfPlay, team);
+        return Objects.hash(id, teamOneScoreOne, teamTwoScoreOne, teamOneScoreTwo, teamTwoScoreTwo, teamOneScoreThree, teamTwoScoreThree, dateOfPlay, team1, team2);
     }
 }

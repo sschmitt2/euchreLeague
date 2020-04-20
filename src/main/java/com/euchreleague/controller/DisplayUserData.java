@@ -2,8 +2,8 @@
 package com.euchreleague.controller;
 
 
-import com.euchreleague.persistence.UserDao;
-import com.euchreleague.persistence.UserRolesDao;
+import com.euchreleague.entity.User;
+import com.euchreleague.persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,7 +27,7 @@ public class DisplayUserData extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        UserDao dao = new UserDao();
+        GenericDao dao = new GenericDao(User.class);
 
         req.setAttribute("users", dao.getAll());
 

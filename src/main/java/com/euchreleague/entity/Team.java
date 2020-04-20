@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author sschmitt
  */
 @Entity(name = "Team")
-@Table(name = "team")
+@Table(name = "teams")
 public class Team {
 
     @Id
@@ -21,18 +21,14 @@ public class Team {
     @GenericGenerator(name = "native" , strategy = "native")
     private int id;
 
-    @Column(name = "player1_id")
-    private int playerOneId;
-
-    @Column(name = "player2_id")
-    private int playerTwoId;
 
     @ManyToOne
-    @JoinColumns({
-            @JoinColumn(name = "id", referencedColumnName = "player1_id"),
-            @JoinColumn(name = "id", referencedColumnName = "player2_id")
-    })
-    private User user;
+    @JoinColumn(name = "player1_id", referencedColumnName = "id")
+    private User player1;
+
+    @ManyToOne
+    @JoinColumn(name = "player2_id", referencedColumnName = "id")
+    private User player2;
 
     /**
      * Instantiates a new Team.
@@ -40,97 +36,41 @@ public class Team {
     public Team() {
     }
 
-    /**
-     * Instantiates a new Team.
-     *
-     * @param playerOneId the player one id
-     * @param playerTwoId the player two id
-     * @param user        the user
-     */
-    public Team(int playerOneId, int playerTwoId, User user) {
-        this.playerOneId = playerOneId;
-        this.playerTwoId = playerTwoId;
-        this.user = user;
+    public Team(User player1, User player2) {
+        this.player1 = player1;
+        this.player2 = player2;
     }
 
-    /**
-     * Gets id.
-     *
-     * @return the id
-     */
     public int getId() {
         return id;
     }
 
-    /**
-     * Sets id.
-     *
-     * @param id the id
-     */
     public void setId(int id) {
         this.id = id;
     }
 
-    /**
-     * Gets player one id.
-     *
-     * @return the player one id
-     */
-    public int getPlayerOneId() {
-        return playerOneId;
+    public User getPlayer1() {
+        return player1;
     }
 
-    /**
-     * Sets player one id.
-     *
-     * @param playerOneId the player one id
-     */
-    public void setPlayerOneId(int playerOneId) {
-        this.playerOneId = playerOneId;
+    public void setPlayer1(User player1) {
+        this.player1 = player1;
     }
 
-    /**
-     * Gets player two id.
-     *
-     * @return the player two id
-     */
-    public int getPlayerTwoId() {
-        return playerTwoId;
+    public User getPlayer2() {
+        return player2;
     }
 
-    /**
-     * Sets player two id.
-     *
-     * @param playerTwoId the player two id
-     */
-    public void setPlayerTwoId(int playerTwoId) {
-        this.playerTwoId = playerTwoId;
-    }
-
-    /**
-     * Gets user.
-     *
-     * @return the user
-     */
-    public User getUser() {
-        return user;
-    }
-
-    /**
-     * Sets user.
-     *
-     * @param user the user
-     */
-    public void setUser(User user) {
-        this.user = user;
+    public void setPlayer2(User player2) {
+        this.player2 = player2;
     }
 
     @Override
     public String toString() {
         return "Team{" +
                 "id=" + id +
-                ", playerOneId=" + playerOneId +
-                ", playerTwoId=" + playerTwoId +
+                ", player1=" + player1 +
+                ", player2=" + player2 +
                 '}';
     }
 
@@ -140,13 +80,12 @@ public class Team {
         if (o == null || getClass() != o.getClass()) return false;
         Team team = (Team) o;
         return id == team.id &&
-                playerOneId == team.playerOneId &&
-                playerTwoId == team.playerTwoId &&
-                user.equals(team.user);
+                player1.equals(team.player1) &&
+                player2.equals(team.player2);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, playerOneId, playerTwoId, user);
+        return Objects.hash(id, player1, player2);
     }
 }

@@ -48,7 +48,7 @@ randomized tables where each player must be partners with every player on the le
 * [User Stories](DesignDocuments/userStories.md)
 * [Screen Design](DesignDocuments/wireframes/)
 * [Application Flow](DesignDocuments/applicationFlow.md)
-* [Database Design](DesignDocuments/databaseDiagram.png)TODO
+* [Database Design](DesignDocuments/FinalDatabaseDiagram.png)
 
 ### [Project Plan](ProjectPlan.md)
 

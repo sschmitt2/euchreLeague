@@ -3,9 +3,7 @@ package com.euchreleague.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * A class to represent a team.
@@ -29,6 +27,11 @@ public class Team {
     @JoinColumn(name = "player2_id", referencedColumnName = "id")
     private User player2;
 
+    @OneToMany(mappedBy = "team1", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Match> match1 = new HashSet<>();
+
+    @OneToMany(mappedBy = "team2", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Match> match2 = new HashSet<>();
 
     /**
      * Instantiates a new Team.
@@ -65,6 +68,21 @@ public class Team {
         this.player2 = player2;
     }
 
+    public Set<Match> getMatch1() {
+        return match1;
+    }
+
+    public void setMatch1(Set<Match> match1) {
+        this.match1 = match1;
+    }
+
+    public Set<Match> getMatch2() {
+        return match2;
+    }
+
+    public void setMatch2(Set<Match> match2) {
+        this.match2 = match2;
+    }
 
     @Override
     public String toString() {

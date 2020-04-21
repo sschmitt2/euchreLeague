@@ -57,3 +57,4 @@
 | 4/13/20 | Team project quick meeting, fixed my login issue(server time zone switched somehow?), added a servlet to team project to be able to update a template | 7 |My eyes hurt|
 | 4/13/20 | team meeting, Finished TemplateActionServlet to be able to add/edit a template and channels, adjusted jsps, team meeting | 9.5 ||
 | 4/19/20 | Adding final java classes for indie project, implemented the generic dao FINALLY! cleandb.sql is not inserting data into two tables | 5.5 ||
+| 4/20/20 | Added HashSets for the teams1 and teams2 added logo to homepage | 3 |still need to finish up testing and create either an arraylist or set for matches|

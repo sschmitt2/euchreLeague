@@ -21,7 +21,6 @@ public class Team {
     @GenericGenerator(name = "native" , strategy = "native")
     private int id;
 
-
     @ManyToOne
     @JoinColumn(name = "player1_id", referencedColumnName = "id")
     private User player1;
@@ -29,6 +28,7 @@ public class Team {
     @ManyToOne
     @JoinColumn(name = "player2_id", referencedColumnName = "id")
     private User player2;
+
 
     /**
      * Instantiates a new Team.
@@ -64,6 +64,7 @@ public class Team {
     public void setPlayer2(User player2) {
         this.player2 = player2;
     }
+
 
     @Override
     public String toString() {

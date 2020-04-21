@@ -244,8 +244,6 @@ public class Match {
                 ", teamOneScoreThree=" + teamOneScoreThree +
                 ", teamTwoScoreThree=" + teamTwoScoreThree +
                 ", dateOfPlay=" + dateOfPlay +
-                ", team1=" + team1 +
-                ", team2=" + team2 +
                 '}';
     }
 

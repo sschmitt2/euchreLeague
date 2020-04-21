@@ -7,14 +7,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class TeamDaoTest {
 
     GenericDao dao;
 
-    /**
-     * Sets up the User and User Role table with fresh data and creates database instance
-     */
+
     @BeforeEach
     void setUp() {
         Database database = Database.getInstance();
@@ -37,6 +36,20 @@ public class TeamDaoTest {
     @Test
     void saveOrUpdate() {
 
+    }
+
+    @Test
+    void insert() {
+//        String newFirstName1 = "Bob";
+//        String newLastName1 = "Builder";
+//        String newUserName1 = "bbuilder";
+//        String newPassword1 = "secret";
+//
+//        User newUser = new User(newFirstName1, newLastName1, newUserName1, newPassword1);
+//        int id = dao.insert(newUser);
+//        assertNotEquals(0,id);
+//        User insertedUser = (User) dao.getById(id);
+//        assertEquals(newUser, insertedUser);
     }
 
 }

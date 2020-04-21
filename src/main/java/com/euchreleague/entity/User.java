@@ -3,9 +3,7 @@ package com.euchreleague.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 //TODO - finish project plan for the rest of the semester
 /**
@@ -34,12 +32,17 @@ public class User {
     @Column(name = "user_password")
     private String userPassword;
 
-
     /**
      * The User.
      */
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<UserRoles> userRoles = new ArrayList<>();
+
+    @OneToMany(mappedBy = "player1", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Team> team1 = new HashSet<>();
+
+    @OneToMany(mappedBy = "player2", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Team> team2 = new HashSet<>();
 
     /**
      * Instantiates a new User.
@@ -162,6 +165,22 @@ public class User {
         this.userPassword = userPassword;
     }
 
+    public Set<Team> getTeam1() {
+        return team1;
+    }
+
+    public void setTeam1(Set<Team> team1) {
+        this.team1 = team1;
+    }
+
+    public Set<Team> getTeam2() {
+        return team2;
+    }
+
+    public void setTeam2(Set<Team> team2) {
+        this.team2 = team2;
+    }
+
     /**
      * Add role.
      *
@@ -180,6 +199,19 @@ public class User {
     public void removeRole(UserRoles role) {
         userRoles.remove(role);
         role.setUser(null);
+    }
+
+    public void addTeam(Team team) {
+        team1.add(team);
+        team.setPlayer1(this);
+        team.setPlayer2(this);
+
+    }
+
+    public void removeTeam(Team team) {
+        team1.remove(team);
+        team.setPlayer1(null);
+        team.setPlayer2(null);
     }
 
     @Override

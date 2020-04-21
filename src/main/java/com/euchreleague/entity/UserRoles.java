@@ -22,10 +22,11 @@ public class UserRoles {
     @Column(name = "role_name")
     private String roleName;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id",
-            foreignKey = @ForeignKey(name = "user_roles_user_id")
-    )
+    @Column(name = "user_name")
+    private String userName;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
     /**
@@ -34,14 +35,10 @@ public class UserRoles {
     public UserRoles() {
     }
 
-    /**
-     * Instantiates a new User roles.
-     *
-     * @param roleName the role name
-     * @param user     the user
-     */
-    public UserRoles(String roleName, User user) {
+
+    public UserRoles(String roleName, String userName, User user) {
         this.roleName = roleName;
+        this.userName = userName;
         this.user = user;
     }
 
@@ -99,11 +96,20 @@ public class UserRoles {
         this.roleName = roleName;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     @Override
     public String toString() {
         return "UserRoles{" +
                 "id=" + id +
                 ", roleName='" + roleName + '\'' +
+                ", userName='" + userName + '\'' +
                 '}';
     }
 
@@ -114,11 +120,11 @@ public class UserRoles {
         UserRoles userRoles = (UserRoles) o;
         return id == userRoles.id &&
                 roleName.equals(userRoles.roleName) &&
-                user.equals(userRoles.user);
+                userName.equals(userRoles.userName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, roleName, user);
+        return Objects.hash(id, roleName, userName);
     }
 }

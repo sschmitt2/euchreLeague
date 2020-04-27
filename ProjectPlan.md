@@ -60,10 +60,10 @@
 - [X] Weekly Time Log
 
 ### Week 10
-- [ ] Add team and match table to database
-- [ ] Review completed database
-- [ ] Add Classes for Team and Matches
-- [ ] Implement generic dao
+- [X] Add team and match table to database
+- [X] Review completed database
+- [X] Add Classes for Team and Matches
+- [X] Implement generic dao
 - [ ] Write unit tests for Team and Matches
 - [ ] Complete the user and user_role tests(more complete testing)
 - [ ] Implement the JavaMail API into project

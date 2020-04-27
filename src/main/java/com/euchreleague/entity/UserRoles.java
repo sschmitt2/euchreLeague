@@ -36,6 +36,13 @@ public class UserRoles {
     }
 
 
+    /**
+     * Instantiates a new User roles.
+     *
+     * @param roleName the role name
+     * @param userName the user name
+     * @param user     the user
+     */
     public UserRoles(String roleName, String userName, User user) {
         this.roleName = roleName;
         this.userName = userName;
@@ -96,10 +103,20 @@ public class UserRoles {
         this.roleName = roleName;
     }
 
+    /**
+     * Gets user name.
+     *
+     * @return the user name
+     */
     public String getUserName() {
         return userName;
     }
 
+    /**
+     * Sets user name.
+     *
+     * @param userName the user name
+     */
     public void setUserName(String userName) {
         this.userName = userName;
     }

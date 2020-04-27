@@ -98,6 +98,6 @@ class UserDaoTest {
     void getAll() {
         dao = new GenericDao(UserRoles.class);
         List<UserRoles> userRoles = dao.getAll();
-        assertEquals(2, userRoles.size());
+        assertEquals(4, userRoles.size());
     }
 }

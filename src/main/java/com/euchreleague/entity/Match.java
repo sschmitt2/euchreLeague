@@ -56,6 +56,19 @@ public class Match {
     public Match() {
     }
 
+    /**
+     * Instantiates a new Match.
+     *
+     * @param teamOneScoreOne   the team one score one
+     * @param teamTwoScoreOne   the team two score one
+     * @param teamOneScoreTwo   the team one score two
+     * @param teamTwoScoreTwo   the team two score two
+     * @param teamOneScoreThree the team one score three
+     * @param teamTwoScoreThree the team two score three
+     * @param dateOfPlay        the date of play
+     * @param team1             the team 1
+     * @param team2             the team 2
+     */
     public Match(int teamOneScoreOne, int teamTwoScoreOne, int teamOneScoreTwo, int teamTwoScoreTwo, int teamOneScoreThree, int teamTwoScoreThree, Date dateOfPlay, Team team1, Team team2) {
         this.teamOneScoreOne = teamOneScoreOne;
         this.teamTwoScoreOne = teamTwoScoreOne;
@@ -95,14 +108,29 @@ public class Match {
         return team1;
     }
 
+    /**
+     * Sets team 1.
+     *
+     * @param team1 the team 1
+     */
     public void setTeam1(Team team1) {
         this.team1 = team1;
     }
 
+    /**
+     * Gets team 2.
+     *
+     * @return the team 2
+     */
     public Team getTeam2() {
         return team2;
     }
 
+    /**
+     * Sets team 2.
+     *
+     * @param team2 the team 2
+     */
     public void setTeam2(Team team2) {
         this.team2 = team2;
     }

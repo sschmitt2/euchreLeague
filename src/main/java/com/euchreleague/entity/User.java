@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.util.*;
 
 //TODO - finish project plan for the rest of the semester
+
 /**
  * A class to represent a user.
  *
@@ -50,6 +51,14 @@ public class User {
     public User() {
     }
 
+    /**
+     * Instantiates a new User.
+     *
+     * @param firstName    the first name
+     * @param lastName     the last name
+     * @param userName     the user name
+     * @param userPassword the user password
+     */
     public User(String firstName, String lastName, String userName, String userPassword) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -165,18 +174,38 @@ public class User {
         this.userPassword = userPassword;
     }
 
+    /**
+     * Gets team 1.
+     *
+     * @return the team 1
+     */
     public Set<Team> getTeam1() {
         return team1;
     }
 
+    /**
+     * Sets team 1.
+     *
+     * @param team1 the team 1
+     */
     public void setTeam1(Set<Team> team1) {
         this.team1 = team1;
     }
 
+    /**
+     * Gets team 2.
+     *
+     * @return the team 2
+     */
     public Set<Team> getTeam2() {
         return team2;
     }
 
+    /**
+     * Sets team 2.
+     *
+     * @param team2 the team 2
+     */
     public void setTeam2(Set<Team> team2) {
         this.team2 = team2;
     }
@@ -201,6 +230,11 @@ public class User {
         role.setUser(null);
     }
 
+    /**
+     * Add team.
+     *
+     * @param team the team
+     */
     public void addTeam(Team team) {
         team1.add(team);
         team.setPlayer1(this);
@@ -208,6 +242,11 @@ public class User {
 
     }
 
+    /**
+     * Remove team.
+     *
+     * @param team the team
+     */
     public void removeTeam(Team team) {
         team1.remove(team);
         team.setPlayer1(null);

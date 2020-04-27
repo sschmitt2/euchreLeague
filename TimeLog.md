@@ -58,3 +58,7 @@
 | 4/13/20 | team meeting, Finished TemplateActionServlet to be able to add/edit a template and channels, adjusted jsps, team meeting | 9.5 ||
 | 4/19/20 | Adding final java classes for indie project, implemented the generic dao FINALLY! cleandb.sql is not inserting data into two tables | 5.5 ||
 | 4/20/20 | Added HashSets for the teams1 and teams2 added logo to homepage | 3 |still need to finish up testing and create either an arraylist or set for matches|
+| 4/21/20 | Added league table, added more jsps, styling | 2 ||
+| 4/22/20 | Started reading week 13 articles | 2 ||
+| 4/23/20 | Unwrapped text for week 13 exercise | 1.5 ||
+| 4/26/20 | Finished exercise 13 | 3 ||

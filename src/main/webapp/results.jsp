@@ -1,5 +1,5 @@
-<%@include file="taglib.jsp"%>
-<%@include file="head.jsp"%>
+<%@include file="templates/taglib.jsp"%>
+<%@include file="templates/head.jsp"%>
 
 <html>
 <body>

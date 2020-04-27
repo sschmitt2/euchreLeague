@@ -1,13 +1,11 @@
 package com.euchreleague.persistence;
 
 import com.euchreleague.entity.Team;
-import com.euchreleague.entity.User;
 import com.euchreleague.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class TeamDaoTest {
 

@@ -50,8 +50,8 @@ class UserRolesDaoTest {
     @Test
     void insertSuccess() {
 
-        String newUserName = "rgourlie";
-        User newUser = new User("Roger", "Gourlie", newUserName, "secret");
+        String newUserName = "bgourlie";
+        User newUser = new User("Brian", "Gourlie", newUserName, "secret", "bgourlie@gmail.com");
         int userId = dao.insert(newUser);
         assertNotEquals(0, userId);
 
@@ -76,7 +76,7 @@ class UserRolesDaoTest {
     @Test
     void getAllSuccess() {
         List<UserRoles> users = dao.getAll();
-        assertEquals(2, users.size());
+        assertEquals(4, users.size());
     }
 
     /**

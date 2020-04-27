@@ -33,6 +33,8 @@ public class User {
     @Column(name = "user_password")
     private String userPassword;
 
+    private String email;
+
     /**
      * The User.
      */
@@ -51,19 +53,12 @@ public class User {
     public User() {
     }
 
-    /**
-     * Instantiates a new User.
-     *
-     * @param firstName    the first name
-     * @param lastName     the last name
-     * @param userName     the user name
-     * @param userPassword the user password
-     */
-    public User(String firstName, String lastName, String userName, String userPassword) {
+    public User(String firstName, String lastName, String userName, String userPassword, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.userPassword = userPassword;
+        this.email = email;
     }
 
     /**
@@ -82,6 +77,14 @@ public class User {
      */
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     /**
@@ -260,6 +263,8 @@ public class User {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", userName='" + userName + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 
@@ -271,11 +276,13 @@ public class User {
         return id == user.id &&
                 firstName.equals(user.firstName) &&
                 lastName.equals(user.lastName) &&
-                userName.equals(user.userName);
+                userName.equals(user.userName) &&
+                userPassword.equals(user.userPassword) &&
+                email.equals(user.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, userName);
+        return Objects.hash(id, firstName, lastName, userName, userPassword, email);
     }
 }

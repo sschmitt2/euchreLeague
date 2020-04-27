@@ -1,19 +1,17 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: paulawaite
-  Date: 9/20/15
-  Time: 9:04 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="templates/taglib.jsp"%>
+<c:set var="title" value="Login - Error" />
+<%@include file="templates/head.jsp"%>
 <html>
-<head>
-    <title>Uh-Oh</title>
-</head>
+<body>
+<div class="container-fluid">
+    <%@include file="templates/navmenu.jsp"%>
 
-Invalid userid/password combination. <br />
-<a href="login.jsp">Try again</a>
+    <div class="container">
+        <h2>Login failed.</h2>
+        <p>Please check user login credentials and <a href="login.jsp">try again</a>.</p>
+
+    </div>
+</div>
 </body>
 </html>
-
 

@@ -3,9 +3,9 @@
 <%@include file="templates/head.jsp"%>
 <html>
 <body>
-<%@include file="templates/header.jsp"%>
 
 <div class="container-fluid">
+    <%@include file="templates/header.jsp"%>
 
     <div class="container">
 

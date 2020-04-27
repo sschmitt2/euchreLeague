@@ -137,11 +137,12 @@ public class UserRoles {
         UserRoles userRoles = (UserRoles) o;
         return id == userRoles.id &&
                 roleName.equals(userRoles.roleName) &&
-                userName.equals(userRoles.userName);
+                userName.equals(userRoles.userName) &&
+                user.equals(userRoles.user);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, roleName, userName);
+        return Objects.hash(id, roleName, userName, user);
     }
 }

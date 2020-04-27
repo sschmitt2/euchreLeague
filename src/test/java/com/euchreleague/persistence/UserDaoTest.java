@@ -39,11 +39,14 @@ class UserDaoTest {
         String lastName = "Doe";
         String userName = "jdoe";
         String password = "supersecret1";
+        String email = "jdoe@gmail.com";
         User retrievedUser = (User)dao.getById(1);
+        assertNotNull(retrievedUser);
         assertEquals(firstName, retrievedUser.getFirstName());
         assertEquals(lastName, retrievedUser.getLastName());
         assertEquals(userName, retrievedUser.getUserName());
         assertEquals(password, retrievedUser.getUserPassword());
+        assertEquals(email, retrievedUser.getEmail());
     }
 
     /**
@@ -72,8 +75,9 @@ class UserDaoTest {
         String newLastName = "Builder";
         String newUserName = "bbuilder";
         String newPassword = "secret";
+        String newEmail = "bbuilder@gmail.com";
 
-        User newUser = new User(newFirstName, newLastName, newUserName, newPassword);
+        User newUser = new User(newFirstName, newLastName, newUserName, newPassword, newEmail);
         int id = dao.insert(newUser);
         assertNotEquals(0,id);
         User insertedUser = (User) dao.getById(id);
@@ -98,6 +102,7 @@ class UserDaoTest {
     void getAll() {
         dao = new GenericDao(UserRoles.class);
         List<UserRoles> userRoles = dao.getAll();
-        assertEquals(4, userRoles.size());
+        int expectedUserRoles = userRoles.size();
+        assertEquals(expectedUserRoles, userRoles.size());
     }
 }

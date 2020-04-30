@@ -9,6 +9,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.List;
+import java.util.Set;
 
 /**
  * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
@@ -71,6 +72,7 @@ public class GenericDao<T> {
 
     }
 
+
     /**
      * update entity
      * @param entity  entity to be inserted or updated
@@ -83,27 +85,27 @@ public class GenericDao<T> {
         session.close();
     }
 
-//    /** Get order by property (exact match)
-//     * sample usage: getByPropertyEqual("lastName", "Curry")
-//     *
-//     * @param propertyName entity property to search by
-//     * @param value value of the property to search for
-//     * @return list of orders meeting the criteria search
-//     */
-//    public List<T> getByPropertyEqual(String propertyName, String value) {
-//        Session session = getSession();
-//
-//        logger.debug("Searching for order with " + propertyName + " = " + value);
-//
-//        CriteriaBuilder builder = session.getCriteriaBuilder();
-//        CriteriaQuery<T> query = builder.createQuery( type );
-//        Root<T> root = query.from(type );
-//        query.select(root).where(builder.equal(root.get(propertyName), value));
-//        List<T> entities = session.createQuery( query ).getResultList();
-//
-//        session.close();
-//        return entities;
-//    }
+    /** Get order by property (exact match)
+     * sample usage: getByPropertyEqual("lastName", "Curry")
+     *
+     * @param propertyName entity property to search by
+     * @param value value of the property to search for
+     * @return list of orders meeting the criteria search
+     */
+    public List<T> getByPropertyEqual(String propertyName, String value) {
+        Session session = getSession();
+
+        logger.debug("Searching for order with " + propertyName + " = " + value);
+
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = builder.createQuery( type );
+        Root<T> root = query.from(type );
+        query.select(root).where(builder.equal(root.get(propertyName), value));
+        List<T> entities = session.createQuery( query ).getResultList();
+
+        session.close();
+        return entities;
+    }
 
     /**
      * insert entity

@@ -10,7 +10,7 @@
             </c:if>
             <c:if  test="${!pageContext.request.isUserInRole('user')}">
                 <li class="nav-item">
-                    <a class="btn btn-outline-primary px-3 mx-3" href="login">Log In</a>
+                    <a class="btn btn-outline-primary px-3 mx-3" href="loginAction">Log In</a>
                 </li>
             </c:if>
             <li class="nav-item">

@@ -18,10 +18,6 @@ public class League {
     @GenericGenerator(name = "native" , strategy = "native")
     private int id;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private User league;
-
     private String name;
 
     @Column(name = "start_date")
@@ -39,13 +35,11 @@ public class League {
     /**
      * Instantiates a new League.
      *
-     * @param league    the league
      * @param name      the name
      * @param startDate the start date
      * @param endDate   the end date
      */
-    public League(User league, String name, Date startDate, Date endDate) {
-        this.league = league;
+    public League(String name, Date startDate, Date endDate) {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -67,24 +61,6 @@ public class League {
      */
     public void setId(int id) {
         this.id = id;
-    }
-
-    /**
-     * Gets league.
-     *
-     * @return the league
-     */
-    public User getLeague() {
-        return league;
-    }
-
-    /**
-     * Sets league.
-     *
-     * @param league the league
-     */
-    public void setLeague(User league) {
-        this.league = league;
     }
 
     /**
@@ -145,7 +121,6 @@ public class League {
     public String toString() {
         return "League{" +
                 "id=" + id +
-                ", league=" + league +
                 ", name='" + name + '\'' +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
@@ -156,16 +131,15 @@ public class League {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        League league1 = (League) o;
-        return id == league1.id &&
-                league.equals(league1.league) &&
-                name.equals(league1.name) &&
-                startDate.equals(league1.startDate) &&
-                endDate.equals(league1.endDate);
+        League league = (League) o;
+        return id == league.id &&
+                name.equals(league.name) &&
+                startDate.equals(league.startDate) &&
+                endDate.equals(league.endDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, league, name, startDate, endDate);
+        return Objects.hash(id, name, startDate, endDate);
     }
 }

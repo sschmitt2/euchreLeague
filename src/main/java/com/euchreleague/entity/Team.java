@@ -27,12 +27,6 @@ public class Team {
     @JoinColumn(name = "player2_id", referencedColumnName = "id")
     private User player2;
 
-    @OneToMany(mappedBy = "team1", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Match> match1 = new HashSet<>();
-
-    @OneToMany(mappedBy = "team2", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Match> match2 = new HashSet<>();
-
     /**
      * Instantiates a new Team.
      */
@@ -102,42 +96,6 @@ public class Team {
      */
     public void setPlayer2(User player2) {
         this.player2 = player2;
-    }
-
-    /**
-     * Gets match 1.
-     *
-     * @return the match 1
-     */
-    public Set<Match> getMatch1() {
-        return match1;
-    }
-
-    /**
-     * Sets match 1.
-     *
-     * @param match1 the match 1
-     */
-    public void setMatch1(Set<Match> match1) {
-        this.match1 = match1;
-    }
-
-    /**
-     * Gets match 2.
-     *
-     * @return the match 2
-     */
-    public Set<Match> getMatch2() {
-        return match2;
-    }
-
-    /**
-     * Sets match 2.
-     *
-     * @param match2 the match 2
-     */
-    public void setMatch2(Set<Match> match2) {
-        this.match2 = match2;
     }
 
     @Override

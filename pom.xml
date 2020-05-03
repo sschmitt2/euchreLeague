@@ -107,6 +107,13 @@
             <artifactId>log4j-core</artifactId>
             <version>${log4j-version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
         <!--  next 2 dependencies are for jstl  -->
     </dependencies>
     <build>

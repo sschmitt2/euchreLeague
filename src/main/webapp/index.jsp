@@ -14,5 +14,8 @@
 <ul>
     <li><a href="matches">Take me to the Match Results Page</a></li>
 </ul>
+<ul>
+    <li><a href="leagues">Take me to the League page to join a league</a></li>
+</ul>
 </body>
 </html>

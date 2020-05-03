@@ -7,4 +7,4 @@ INSERT INTO user VALUES (1,'John','Doe','jdoe','supersecret1','jdoe@gmail.com'),
 INSERT INTO user_roles VALUES (1,'admin',1, 'jdoe'),(2,'player',2, 'seklof'),(3,'player',3,'rgourlie'),(4,'player',4,'ss');
 INSERT INTO teams VALUES(1, 1, 2),(2, 3, 4);
 INSERT INTO matches VALUES(1, 1, 2, 9, 10, 8, 10, 7, 10,'1979-08-30');
-INSERT INTO league VALUES(1, 'Spring 2020', '1979-04-30', '1979-08-30', 1),(2, 'Spring 2020', '1979-04-30', '1979-08-30', 2),(3, 'Spring 2020', '1979-04-30', '1979-08-30', 3),(4, 'Spring 2020', '1979-04-30', '1979-08-30', 4);
+INSERT INTO league VALUES(1, 'Spring 2020', '1979-04-30', '1979-08-30'),(2, 'Fall 2020', '1979-09-01', '1979-12-15');

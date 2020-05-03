@@ -41,12 +41,6 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<UserRoles> userRoles = new ArrayList<>();
 
-    @OneToMany(mappedBy = "player1", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Team> team1 = new HashSet<>();
-
-    @OneToMany(mappedBy = "player2", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Team> team2 = new HashSet<>();
-
     /**
      * Instantiates a new User.
      */
@@ -177,41 +171,6 @@ public class User {
         this.userPassword = userPassword;
     }
 
-    /**
-     * Gets team 1.
-     *
-     * @return the team 1
-     */
-    public Set<Team> getTeam1() {
-        return team1;
-    }
-
-    /**
-     * Sets team 1.
-     *
-     * @param team1 the team 1
-     */
-    public void setTeam1(Set<Team> team1) {
-        this.team1 = team1;
-    }
-
-    /**
-     * Gets team 2.
-     *
-     * @return the team 2
-     */
-    public Set<Team> getTeam2() {
-        return team2;
-    }
-
-    /**
-     * Sets team 2.
-     *
-     * @param team2 the team 2
-     */
-    public void setTeam2(Set<Team> team2) {
-        this.team2 = team2;
-    }
 
     /**
      * Add role.
@@ -231,29 +190,6 @@ public class User {
     public void removeRole(UserRoles role) {
         userRoles.remove(role);
         role.setUser(null);
-    }
-
-    /**
-     * Add team.
-     *
-     * @param team the team
-     */
-    public void addTeam(Team team) {
-        team1.add(team);
-        team.setPlayer1(this);
-        team.setPlayer2(this);
-
-    }
-
-    /**
-     * Remove team.
-     *
-     * @param team the team
-     */
-    public void removeTeam(Team team) {
-        team1.remove(team);
-        team.setPlayer1(null);
-        team.setPlayer2(null);
     }
 
     @Override

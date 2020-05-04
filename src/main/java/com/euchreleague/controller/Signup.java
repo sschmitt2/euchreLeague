@@ -1,4 +1,4 @@
-package com.slack2slack.controller;
+package com.euchreleague.controller;
 
 
 import com.euchreleague.entity.User;

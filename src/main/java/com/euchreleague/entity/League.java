@@ -1,9 +1,13 @@
 package com.euchreleague.entity;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -26,23 +30,21 @@ public class League {
     @Column(name = "end_date")
     private Date endDate;
 
+    @ManyToMany(mappedBy = "leagues")
+    @LazyCollection(LazyCollectionOption.FALSE)
+    private List<User> users = new ArrayList<>();
+
     /**
      * Instantiates a new League.
      */
     public League() {
     }
 
-    /**
-     * Instantiates a new League.
-     *
-     * @param name      the name
-     * @param startDate the start date
-     * @param endDate   the end date
-     */
-    public League(String name, Date startDate, Date endDate) {
+    public League(String name, Date startDate, Date endDate, List<User> users) {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.users = users;
     }
 
     /**
@@ -115,6 +117,14 @@ public class League {
      */
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 
     @Override

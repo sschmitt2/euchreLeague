@@ -7,20 +7,21 @@
 <div class="container-fluid">
     <%@include file="templates/header.jsp"%>
 
-    <h2>Upcoming Leagues: </h2>
-    // TODO need to display each league only once
-    <table id="leagueTable" class="display" cellspacing="0" width="100%">
-        <thead>
-        <th>Leagues</th>
-        </thead>
-        <tbody>
-        <c:forEach var="league" items="${leagues}">
-            <tr>
-                <td>${league.name}</td>
-            </tr>
-        </c:forEach>
-        </tbody>
-    </table>
+    <h2>Join a league: </h2>
+
+        <div class="row col-6">
+
+            <form action="leagues" method="POST" class="form">
+
+                <c:forEach var="league" items="${upcomingLeagues}">
+                <div class="form-check">
+
+                    <label><input type="checkbox" class="form-check-input" name="leagues" value="${league.id}">${league.name}</label>
+                </div>
+                </c:forEach>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
 
 </div>
 

@@ -1,6 +1,8 @@
 package com.euchreleague.entity;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
 import java.util.*;
@@ -35,6 +37,14 @@ public class User {
 
     private String email;
 
+    @ManyToMany(cascade = { CascadeType.ALL })
+    @LazyCollection(LazyCollectionOption.FALSE)
+    @JoinTable(
+            name = "user_league",
+            joinColumns = { @JoinColumn(name = "user_id", referencedColumnName = "id") },
+            inverseJoinColumns = { @JoinColumn(name = "league_id", referencedColumnName = "id") }
+    )
+    private List<League> leagues = new ArrayList<>();
     /**
      * The User.
      */
@@ -171,6 +181,13 @@ public class User {
         this.userPassword = userPassword;
     }
 
+    public List<League> getLeagues() {
+        return leagues;
+    }
+
+    public void setLeagues(List<League> leagues) {
+        this.leagues = leagues;
+    }
 
     /**
      * Add role.
@@ -190,6 +207,14 @@ public class User {
     public void removeRole(UserRoles role) {
         userRoles.remove(role);
         role.setUser(null);
+    }
+
+    public void addLeague(League league) {
+        leagues.add(league);
+    }
+
+    public void removeLeague(League league) {
+        leagues.remove(league);
     }
 
     @Override

@@ -16,11 +16,11 @@
 
                 <form class="form" action="signup" method="post">
                     <div class="form-group">
-                        <label for="email">First Name: </label>
+                        <label for="firstName">First Name: </label>
                         <input class="form-control" type="text" name="firstName" id="firstName" required pattern="[a-zA-Z0-9]{1}[a-zA-Z0-9_]{0,29}"  maxlength="30">
                     </div>
                     <div class="form-group">
-                        <label for="email">Last Name: </label>
+                        <label for="lastName">Last Name: </label>
                         <input class="form-control" type="text" name="lastName" id="lastName" required pattern="[a-zA-Z0-9]{1}[a-zA-Z0-9_]{0,29}"  maxlength="30">
                     </div>
                     <div class="form-group">

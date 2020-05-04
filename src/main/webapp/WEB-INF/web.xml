@@ -29,5 +29,20 @@
         <role-name>admin</role-name>
     </security-role>
 
+    <!-- Protect the user login page -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>login</web-resource-name>
+            <url-pattern>/index.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>player</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-role>
+        <role-name>player</role-name>
+    </security-role>
+
 </web-app>
 

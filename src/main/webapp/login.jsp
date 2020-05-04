@@ -13,7 +13,7 @@
     <div class="container">
         <h2>Sign In</h2>
         <div class="row col-6">
-            <FORM id="loginForm" action="<%=request.getRemoteUser()%>/j_security_check" METHOD="POST">
+            <FORM id="loginForm" action="j_security_check" METHOD="POST">
                 <div>
                     <div class="form-group">
                         <input type="TEXT" placeholder="User name" class="form-control" id="username" name="j_username">

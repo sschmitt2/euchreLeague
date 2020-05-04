@@ -2,6 +2,11 @@
 <c:set var="title" value="Matches" />
 <%@include file="templates/head.jsp"%>
 
+<script type="text/javascript" class="init">
+    $(document).ready( function () {
+        $('#userTable').DataTable();
+    } );
+</script>
 <html>
 <body>
 
@@ -10,20 +15,27 @@
 
     <h2>Match Results: </h2>
 
-    <table id="matchesTable" class="display" cellspacing="0" width="100%">
+    <table id="userTable" class="display" cellspacing="0" width="100%">
         <thead>
-        <th>Team 1 Id</th>
-        <th>Team 2 Id</th>
-        <th>Team 1 Match 1 Score</th>
-        <th>Team 2 Match 1 Score</th>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Game 1</th>
+        <th>Game 2</th>
+        <th>Game 3</th>
         </thead>
         <tbody>
-        <c:forEach var="match" items="${matches}">
+        <c:forEach var="user" items="${users}">
             <tr>
-                <td>${match.team1}</td>
-                <td>${match.team2}</td>
-                <td>${match.teamOneScoreOne}</td>
-                <td>${match.teamTwoScoreOne}</td>
+                <td>${user.id}</td>
+                <td>${user.firstName}</td>
+                <td>${user.lastName}</td>
+
+        </c:forEach>
+        <c:forEach var="match" items="${matches}">
+                <td>${match.teamOneScoreOne}${match.teamTwoScoreOne}</td>
+                <td>${match.teamOneScoreTwo}${match.teamTwoScoreTwo}</td>
+                <td>${match.teamOneScoreThree}${match.teamTwoScoreThree}</td>
             </tr>
         </c:forEach>
         </tbody>

@@ -12,8 +12,7 @@
             <form-error-page>/failedLogin.jsp</form-error-page>
         </form-login-config>
     </login-config>
-    
-    
+
     <!-- Protect the user login page -->
     <security-constraint>
         <web-resource-collection>

@@ -15,7 +15,7 @@
 
 ### Admin
 
-| MVP | 
+| Stretch Goal | 
 |------|
 | Add/Edit League|
 | Add/Edit Scores|

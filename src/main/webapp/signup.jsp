@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-6 offset-3">
 
-                <form class="form" action="signup" method="post">
+                <form class="form" action="signup" method="POST">
                     <div class="form-group">
                         <label for="firstName">First Name: </label>
                         <input class="form-control" type="text" name="firstName" id="firstName" required pattern="[a-zA-Z0-9]{1}[a-zA-Z0-9_]{0,29}"  maxlength="30">

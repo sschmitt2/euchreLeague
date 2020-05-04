@@ -47,7 +47,7 @@ public class Signup extends HttpServlet {
         );
 
         UserRoles userRoles = new UserRoles();
-        userRoles.setRoleName("user");
+        userRoles.setRoleName("player");
         userRoles.setUserName(user.getUserName());
         user.addRole(userRoles);
 

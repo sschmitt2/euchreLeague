@@ -9,11 +9,12 @@
 </script>
 <html>
 <body>
+<%@include file="templates/navmenuUserLoggedIn.jsp"%>
 
 <div class="container-fluid">
     <%@include file="templates/header.jsp"%>
 
-    <h2>Match Results: </h2>
+    <h2>Match Score Results: </h2>
 
 
     <table id="matchTable" class="display" cellspacing="0" width="100%">

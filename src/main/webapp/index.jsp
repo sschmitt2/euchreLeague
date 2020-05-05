@@ -3,7 +3,7 @@
 <%@include file="templates/head.jsp"%>
 <html>
 <body>
-<%@include file="templates/navmenu.jsp"%>
+<%@include file="templates/navmenuUserLoggedIn.jsp"%>
 <%@include file="templates/header.jsp"%>
 <ul>
     <li><a href="admin.jsp">Take me to the Admin Page</a></li>

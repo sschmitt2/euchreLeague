@@ -8,11 +8,11 @@
 </script>
 <html>
 <body>
-
+<%@include file="templates/navmenuUserLoggedIn.jsp"%>
 <div class="container-fluid">
     <%@include file="templates/header.jsp"%>
 
-    <h2>Search Results: </h2>
+    <h2>Euchre League Players: </h2>
 
     <table id="userTable" class="display" cellspacing="0" width="100%">
         <thead>

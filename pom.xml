@@ -108,9 +108,16 @@
             <version>${log4j-version}</version>
         </dependency>
 
+        <!-- next 2 dependencies are for javamail  -->
         <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
             <version>1.6.2</version>
         </dependency>
 

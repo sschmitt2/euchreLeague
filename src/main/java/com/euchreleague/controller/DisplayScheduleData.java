@@ -1,10 +1,6 @@
-
 package com.euchreleague.controller;
 
-
-import com.euchreleague.entity.Match;
 import com.euchreleague.entity.Team;
-import com.euchreleague.entity.User;
 import com.euchreleague.persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
@@ -18,26 +14,20 @@ import java.util.List;
 
 
 @WebServlet(
-        urlPatterns = {"/matches"}
+        urlPatterns = {"/schedules"}
 )
 
-public class DisplayMatchData extends HttpServlet {
+public class DisplayScheduleData extends HttpServlet {
 
-    GenericDao<Match> matchDao = new GenericDao(Match.class);
     GenericDao<Team> teamDao = new GenericDao(Team.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        List<Team> pretendTeams = teamDao.getAll();
+        req.setAttribute("team1", pretendTeams.get(0));
+        req.setAttribute("team2", pretendTeams.get(1));
 
-        List<Match> pretendMatches = matchDao.getAll();
-
-        List<Team> teams = teamDao.getAll();
-
-        req.setAttribute("match1", pretendMatches.get(0));
-        req.setAttribute("team1", teams.get(0));
-        req.setAttribute("team2", teams.get(1));
-
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/matches.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/schedules.jsp");
         dispatcher.forward(req, resp);
     }
 }

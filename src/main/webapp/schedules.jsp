@@ -1,11 +1,12 @@
 <%@include file="templates/taglib.jsp"%>
-<c:set var="title" value="Matches" />
+<c:set var="title" value="Schedules" />
 <%@include file="templates/head.jsp"%>
 
 <script type="text/javascript" class="init">
     $(document).ready( function () {
-        $('#matchTable').DataTable();
+        $('#team1Table').DataTable();
     } );
+
 </script>
 <html>
 <body>
@@ -13,34 +14,23 @@
 <div class="container-fluid">
     <%@include file="templates/header.jsp"%>
 
-    <h2>Match Results: </h2>
 
-
-    <table id="matchTable" class="display" cellspacing="0" width="100%">
+    <table id="team1Table" class="display" cellspacing="0" width="100%">
         <thead>
         <th>Team ID</th>
         <th>Player1 Name</th>
         <th>Player2 Name</th>
-        <th>Game 1</th>
-        <th>Game 2</th>
-        <th>Game 3</th>
         </thead>
         <tbody>
         <tr>
-            <td>${match1.team1.id}</td>
+            <td>${team1.id}</td>
             <td>${team1.player1.firstName} ${team1.player1.lastName}</td>
             <td>${team1.player2.firstName} ${team1.player2.lastName}</td>
-            <td>${match1.teamOneScoreOne}</td>
-            <td>${match1.teamOneScoreTwo}</td>
-            <td>${match1.teamOneScoreThree}</td>
         </tr>
         <tr>
-            <td>${match1.team2.id}</td>
+            <td>${team2.id}</td>
             <td>${team2.player1.firstName} ${team2.player1.lastName}</td>
             <td>${team2.player2.firstName} ${team2.player2.lastName}</td>
-            <td>${match1.teamTwoScoreOne}</td>
-            <td>${match1.teamTwoScoreTwo}</td>
-            <td>${match1.teamTwoScoreThree}</td>
         </tr>
         </tbody>
     </table>

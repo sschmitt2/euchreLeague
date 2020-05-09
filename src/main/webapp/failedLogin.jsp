@@ -3,8 +3,9 @@
 <%@include file="templates/head.jsp"%>
 <html>
 <body>
+<%@include file="templates/navmenu.jsp"%>
 <div class="container-fluid">
-    <%@include file="templates/navmenu.jsp"%>
+
 
     <div class="container">
         <h2>Login failed.</h2>

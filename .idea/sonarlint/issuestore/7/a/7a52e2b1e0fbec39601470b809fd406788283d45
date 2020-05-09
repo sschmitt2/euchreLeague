@@ -1,7 +1,13 @@
 
-C
-java:S3740"/Provide the parametrized type for this generic.(åëô¸
-C
-java:S3740"/Provide the parametrized type for this generic.(åëô¸
+Q
+java:S3740"/Provide the parametrized type for this generic.(œ»üøÿÿÿÿ8Œ‚°.
+V
+java:S1128"9Remove this unused import 'com.euchreleague.entity.User'.(ØĞ±×8áñ¯.
+z
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(œ»üøÿÿÿÿ8çÀ°.
+~
+java:S1989,"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8çÀ°.
 u
-java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(şû³Å8çÀ°.
+L
+java:S3740"/Provide the parametrized type for this generic.(şû³Å8áñ¯.

@@ -43,6 +43,22 @@
             <td>${match1.teamTwoScoreTwo}</td>
             <td>${match1.teamTwoScoreThree}</td>
         </tr>
+        <tr>
+            <td>${match2.team1.id}</td>
+            <td>${team3.player1.firstName} ${team3.player1.lastName}</td>
+            <td>${team3.player2.firstName} ${team3.player2.lastName}</td>
+            <td>${match2.teamOneScoreOne}</td>
+            <td>${match2.teamOneScoreTwo}</td>
+            <td>${match2.teamOneScoreThree}</td>
+        </tr>
+        <tr>
+            <td>${match2.team2.id}</td>
+            <td>${team4.player1.firstName} ${team4.player1.lastName}</td>
+            <td>${team4.player2.firstName} ${team4.player2.lastName}</td>
+            <td>${match2.teamTwoScoreOne}</td>
+            <td>${match2.teamTwoScoreTwo}</td>
+            <td>${match2.teamTwoScoreThree}</td>
+        </tr>
         </tbody>
     </table>
 

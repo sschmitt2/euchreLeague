@@ -7,17 +7,17 @@
 |------|
 | Create Account|
 | Login|
-| Edit Profile|
+| Logout|
 | Join Upcoming Leagues|
 | View Schedules|
 | View Scores|
-| View Stats|
 
 ### Admin
 
 | Stretch Goal | 
 |------|
-| Add/Edit League|
-| Add/Edit Scores|
-| Add/Edit Players|
-
+| admin - Add/Edit League|
+| admin - Add/Edit Scores|
+| admin - Add/Edit Players|
+| View Stats|
+| Edit Profile|

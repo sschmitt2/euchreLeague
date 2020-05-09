@@ -21,7 +21,6 @@
         <mapping class="com.euchreleague.entity.Team"/>
         <mapping class="com.euchreleague.entity.Match"/>
         <mapping class="com.euchreleague.entity.League"/>
-<!--        <mapping class="com.euchreleague.entity.UserLeague"/>-->
 
 
     </session-factory>

@@ -3,6 +3,7 @@
 <%@include file="templates/head.jsp"%>
 <html>
 <body>
+<%@include file="templates/navmenuUserLoggedIn.jsp"%>
 
 <div class="container-fluid">
     <%@include file="templates/header.jsp"%>

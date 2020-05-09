@@ -34,8 +34,11 @@ public class DisplayMatchData extends HttpServlet {
         List<Team> teams = teamDao.getAll();
 
         req.setAttribute("match1", pretendMatches.get(0));
+        req.setAttribute("match2", pretendMatches.get(1));
         req.setAttribute("team1", teams.get(0));
         req.setAttribute("team2", teams.get(1));
+        req.setAttribute("team3", teams.get(2));
+        req.setAttribute("team4", teams.get(3));
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/matches.jsp");
         dispatcher.forward(req, resp);

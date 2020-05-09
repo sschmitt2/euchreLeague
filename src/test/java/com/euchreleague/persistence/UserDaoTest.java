@@ -18,7 +18,8 @@ import static org.junit.jupiter.api.Assertions.*;
 // Javadoc comments
 class UserDaoTest {
 
-    GenericDao dao;
+    GenericDao<User> dao;
+    GenericDao<UserRoles> roleDao;
 
     /**
      * Sets up the User and User Role table with fresh data and creates database instance
@@ -28,6 +29,7 @@ class UserDaoTest {
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
         dao = new GenericDao(User.class);
+        roleDao = new GenericDao(UserRoles.class);
     }
 
     /**
@@ -40,7 +42,7 @@ class UserDaoTest {
         String userName = "jdoe";
         String password = "supersecret1";
         String email = "jdoe@gmail.com";
-        User retrievedUser = (User)dao.getById(1);
+        User retrievedUser = dao.getById(1);
         assertNotNull(retrievedUser);
         assertEquals(firstName, retrievedUser.getFirstName());
         assertEquals(lastName, retrievedUser.getLastName());
@@ -57,12 +59,12 @@ class UserDaoTest {
         String newFirstName = "Sarah";
         String newLastName = "Schmitt";
         String newUserName = "sschmitt";
-        User userToUpdate = (User)dao.getById(1);
+        User userToUpdate = dao.getById(1);
         userToUpdate.setFirstName(newFirstName);
         userToUpdate.setLastName(newLastName);
         userToUpdate.setUserName(newUserName);
         dao.saveOrUpdate(userToUpdate);
-        User retrievedUser = (User)dao.getById(1);
+        User retrievedUser = dao.getById(1);
         assertEquals(userToUpdate, retrievedUser);
     }
 
@@ -80,7 +82,7 @@ class UserDaoTest {
         User newUser = new User(newFirstName, newLastName, newUserName, newPassword, newEmail);
         int id = dao.insert(newUser);
         assertNotEquals(0,id);
-        User insertedUser = (User) dao.getById(id);
+        User insertedUser = dao.getById(id);
         assertEquals(newUser, insertedUser);
     }
 
@@ -89,7 +91,7 @@ class UserDaoTest {
      */
     @Test
     void delete() {
-        User retrievedUser = (User) dao.getById(1);
+        User retrievedUser = dao.getById(1);
         assertNotNull(retrievedUser);
         dao.delete(retrievedUser);
 
@@ -100,8 +102,7 @@ class UserDaoTest {
      */
     @Test
     void getAll() {
-        dao = new GenericDao(UserRoles.class);
-        List<UserRoles> userRoles = dao.getAll();
+        List<UserRoles> userRoles = roleDao.getAll();
         int expectedUserRoles = userRoles.size();
         assertEquals(expectedUserRoles, userRoles.size());
     }

@@ -11,6 +11,7 @@
 | Join Upcoming Leagues|
 | View Schedules|
 | View Scores|
+| admin - confirm entered players for League|
 
 ### Admin
 

@@ -2,6 +2,7 @@
 package com.euchreleague.controller;
 
 
+import com.euchreleague.entity.League;
 import com.euchreleague.entity.Match;
 import com.euchreleague.entity.Team;
 import com.euchreleague.entity.User;
@@ -25,6 +26,7 @@ public class DisplayMatchData extends HttpServlet {
 
     GenericDao<Match> matchDao = new GenericDao(Match.class);
     GenericDao<Team> teamDao = new GenericDao(Team.class);
+    GenericDao<League> leagueDao = new GenericDao(League.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

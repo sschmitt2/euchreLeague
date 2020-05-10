@@ -3,7 +3,7 @@
         <ul class="navbar-nav ml-auto">
 
 
-            <c:if  test="${!pageContext.request.isUserInRole('user')}">
+            <c:if  test="${!pageContext.request.isUserInRole('player')}">
                 <li class="nav-item">
                     <a class="btn btn-outline-primary px-3 mx-3" href="login">Log In</a>
                 </li>

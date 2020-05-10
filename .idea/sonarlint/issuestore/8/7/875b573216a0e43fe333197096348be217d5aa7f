@@ -1,22 +1,22 @@
 
-Y
-java:S1155">Use isEmpty() to check whether the collection is empty or not.(¦ÍªË8‰›ä„.
-M
-java:S1135"2Complete the task associated to this TODO comment.(ÅÿÊ8‰›ä„.
-]
-java:S1854"=Remove this useless assignment to local variable "newUserId".(ÔşÊ÷ÿÿÿÿÿ8‰›ä„.
-E
-java:S1068"*Remove this unused "logger" private field.(æ×âÁ8‰›ä„.
-V	java:S125"<This block of commented-out lines of code should be removed.(—Ë½ç8‰›ä„.
+z
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ê««Šøÿÿÿÿ8Œ¾ôÚŸ.
+ƒ
+java:S1989E"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(”†Î‹ıÿÿÿÿ8‰›ä„.
+G
+java:S1068"*Remove this unused "logger" private field.(æ×âÁ8‰›ä„.
+_
+java:S1854>"=Remove this useless assignment to local variable "newUserId".(ÔşÊ÷ÿÿÿÿÿ8‰›ä„.
 O
-java:S3740"/Provide the parametrized type for this generic.(Ôİôöùÿÿÿÿ8‰›ä„.
-[	java:S125"<This block of commented-out lines of code should be removed.(Ş¾¡»şÿÿÿÿ8‰›ä„.
-
-java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(”†Î‹ıÿÿÿÿ8‰›ä„.
-I
-java:S1481".Remove this unused "newUserId" local variable.(•Ò³È8‰›ä„.
-i
-java:S1192"IDefine a constant instead of duplicating this literal "userName" 3 times.(Ü‹­”şÿÿÿÿ8‰›ä„.
-V	java:S125"<This block of commented-out lines of code should be removed.(¬‡Åı8‰›ä„.
-O
-java:S3740"/Provide the parametrized type for this generic.(Ôİôöùÿÿÿÿ8ş¦ĞŠ.
+java:S1135"2Complete the task associated to this TODO comment.(ÅÿÊ8‰›ä„.
+[
+java:S1155;">Use isEmpty() to check whether the collection is empty or not.(¦ÍªË8‰›ä„.
+X	java:S125B"<This block of commented-out lines of code should be removed.(—Ë½ç8‰›ä„.
+K
+java:S14819".Remove this unused "newUserId" local variable.(•Ò³È8‰›ä„.
+Q
+java:S3740"/Provide the parametrized type for this generic.(ê««Šøÿÿÿÿ8Œ¾ôÚŸ.
+k
+java:S1192,"IDefine a constant instead of duplicating this literal "userName" 3 times.(Ü‹­”şÿÿÿÿ8‰›ä„.
+X	java:S125?"<This block of commented-out lines of code should be removed.(¬‡Åı8‰›ä„.
+]	java:S125"<This block of commented-out lines of code should be removed.(Ş¾¡»şÿÿÿÿ8‰›ä„.

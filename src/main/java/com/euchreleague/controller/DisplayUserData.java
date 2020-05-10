@@ -24,10 +24,10 @@ import java.io.IOException;
 )
 
 public class DisplayUserData extends HttpServlet {
+    GenericDao<User> dao = new GenericDao(User.class);
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        GenericDao dao = new GenericDao(User.class);
 
         req.setAttribute("users", dao.getAll());
 

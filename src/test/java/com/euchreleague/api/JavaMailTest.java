@@ -12,7 +12,7 @@ public class JavaMailTest {
     @Test
     public void testJavaMail() {
         final String username = "madtowneuchreleague@gmail.com";
-        final String password = "";
+        final String password = ""; // add password. DO NOT push to github
 
         Properties prop = new Properties();
 

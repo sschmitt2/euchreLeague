@@ -6,26 +6,14 @@
     <title>Admin</title>
 </head>
 <body>
-<%@include file="templates/navmenu.jsp"%>
+<%@include file="templates/navmenuUserLoggedIn.jsp"%>
 <%@include file="templates/header.jsp"%>
 
-<div class="container-fluid">
-    <div class="container">
-        <h2>Sign In</h2>
-        <div class="row col-6">
-            <FORM id="loginForm" action="j_security_check" METHOD="POST">
-                <div>
-                    <div class="form-group">
-                        <input type="TEXT" placeholder="User name" class="form-control" id="username" name="j_username">
-                    </div>
-                    <div class="form-group">
-                        <input type="PASSWORD" placeholder="Password" class="form-control" id="password" name="j_password">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </div>
-            </FORM>
-        </div>
-    </div>
-</div>
+<c:forEach var="league" items="${upcomingLeagues}">
+    <ul>
+        <li><a href="/displayleague?leagueid=${league.id}">${league.name}</a></li>
+    </ul>
+</c:forEach>
+
 </body>
 </html>

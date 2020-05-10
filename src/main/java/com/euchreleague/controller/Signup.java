@@ -21,6 +21,7 @@ import java.util.List;
 public class Signup extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
+    GenericDao<User> userDao = new GenericDao(User.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -35,7 +36,7 @@ public class Signup extends HttpServlet {
 //        credentialHandler.setEncoding("UTF-8");
 //        String hashedPassword = credentialHandler.mutate(plainTextPassword);
 
-        GenericDao userDao = new GenericDao(User.class);
+
 
         User user = new User(
                 req.getParameter("firstName"),
@@ -52,7 +53,7 @@ public class Signup extends HttpServlet {
         user.addRole(userRoles);
 
         // Check if username already in database
-        List<UserRoles> users = userDao.getByPropertyEqual("userName", req.getParameter("userName"));
+        List<User> users = userDao.getByPropertyEqual("userName", req.getParameter("userName"));
         int newUserId = 0;
         String errorMessage = null;
         if (users.size() > 0) {

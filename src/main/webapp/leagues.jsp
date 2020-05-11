@@ -8,7 +8,7 @@
 <div class="container-fluid">
     <%@include file="templates/header.jsp"%>
 
-    <h2>Join a league: </h2>
+    <h2>Join an Upcoming League: </h2>
 
         <div class="row col-6">
 

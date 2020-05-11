@@ -11,7 +11,7 @@
 
 <c:forEach var="league" items="${upcomingLeagues}">
     <ul>
-        <li><a href="/displayleague?leagueid=${league.id}">${league.name}</a></li>
+        <li><a href="/euchreLeague/displayleague?leagueid=${league.id}">${league.name}</a></li>
     </ul>
 </c:forEach>
 

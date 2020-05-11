@@ -34,17 +34,21 @@ public class League {
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<User> users = new ArrayList<>();
 
+    @OneToMany(mappedBy = "league", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<Match> matches = new ArrayList<>();
+
     /**
      * Instantiates a new League.
      */
     public League() {
     }
 
-    public League(String name, Date startDate, Date endDate, List<User> users) {
+    public League(String name, Date startDate, Date endDate, List<User> users, List<Match> matches) {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
         this.users = users;
+        this.matches = matches;
     }
 
     /**
@@ -125,6 +129,14 @@ public class League {
 
     public void setUsers(List<User> users) {
         this.users = users;
+    }
+
+    public List<Match> getMatches() {
+        return matches;
+    }
+
+    public void setMatches(List<Match> matches) {
+        this.matches = matches;
     }
 
     @Override

@@ -50,26 +50,17 @@ public class Match {
     @JoinColumn(name = "team2_id", referencedColumnName = "id")
     private Team team2;
 
+    @ManyToOne
+    @JoinColumn(name = "league_id", referencedColumnName = "id")
+    private League league;
+
     /**
      * Instantiates a new Match.
      */
     public Match() {
     }
 
-    /**
-     * Instantiates a new Match.
-     *
-     * @param teamOneScoreOne   the team one score one
-     * @param teamTwoScoreOne   the team two score one
-     * @param teamOneScoreTwo   the team one score two
-     * @param teamTwoScoreTwo   the team two score two
-     * @param teamOneScoreThree the team one score three
-     * @param teamTwoScoreThree the team two score three
-     * @param dateOfPlay        the date of play
-     * @param team1             the team 1
-     * @param team2             the team 2
-     */
-    public Match(int teamOneScoreOne, int teamTwoScoreOne, int teamOneScoreTwo, int teamTwoScoreTwo, int teamOneScoreThree, int teamTwoScoreThree, Date dateOfPlay, Team team1, Team team2) {
+    public Match(int teamOneScoreOne, int teamTwoScoreOne, int teamOneScoreTwo, int teamTwoScoreTwo, int teamOneScoreThree, int teamTwoScoreThree, Date dateOfPlay, Team team1, Team team2, League league) {
         this.teamOneScoreOne = teamOneScoreOne;
         this.teamTwoScoreOne = teamTwoScoreOne;
         this.teamOneScoreTwo = teamOneScoreTwo;
@@ -79,6 +70,7 @@ public class Match {
         this.dateOfPlay = dateOfPlay;
         this.team1 = team1;
         this.team2 = team2;
+        this.league = league;
     }
 
     /**
@@ -133,6 +125,14 @@ public class Match {
      */
     public void setTeam2(Team team2) {
         this.team2 = team2;
+    }
+
+    public League getLeague() {
+        return league;
+    }
+
+    public void setLeague(League league) {
+        this.league = league;
     }
 
     /**

@@ -14,13 +14,22 @@ import java.io.IOException;
 import java.util.List;
 
 
+/**
+ * The type Display schedule data.
+ */
 @WebServlet(
         urlPatterns = {"/schedules"}
 )
 
 public class DisplayScheduleData extends HttpServlet {
 
+    /**
+     * The Team dao.
+     */
     GenericDao<Team> teamDao = new GenericDao(Team.class);
+    /**
+     * The League dao.
+     */
     GenericDao<League> leagueDao = new GenericDao(League.class);
 
     @Override

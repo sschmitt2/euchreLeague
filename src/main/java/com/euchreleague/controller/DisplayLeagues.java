@@ -1,4 +1,3 @@
-
 package com.euchreleague.controller;
 
 
@@ -18,14 +17,21 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * The type Display leagues.
+ */
 @WebServlet(
         urlPatterns = {"/leagues"}
 )
-
 public class DisplayLeagues extends HttpServlet {
     private final Logger logger = LogManager.getLogger(this.getClass());
+    /**
+     * The League dao.
+     */
     GenericDao<League> leagueDao = new GenericDao(League.class);
+    /**
+     * The User dao.
+     */
     GenericDao<User> userDao = new GenericDao(User.class);
 
     @Override

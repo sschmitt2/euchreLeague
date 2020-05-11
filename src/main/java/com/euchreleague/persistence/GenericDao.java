@@ -9,7 +9,6 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.List;
-import java.util.Set;
 
 /**
  * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com

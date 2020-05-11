@@ -1,11 +1,6 @@
-
 package com.euchreleague.controller;
 
-
-import com.euchreleague.entity.League;
 import com.euchreleague.entity.Match;
-import com.euchreleague.entity.Team;
-import com.euchreleague.entity.User;
 import com.euchreleague.persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
@@ -17,16 +12,19 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-
+/**
+ * The type Display match data.
+ */
 @WebServlet(
         urlPatterns = {"/matches"}
 )
 
 public class DisplayMatchData extends HttpServlet {
 
+    /**
+     * The Match dao.
+     */
     GenericDao<Match> matchDao = new GenericDao(Match.class);
-    GenericDao<Team> teamDao = new GenericDao(Team.class);
-    GenericDao<League> leagueDao = new GenericDao(League.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

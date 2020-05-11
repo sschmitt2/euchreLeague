@@ -43,6 +43,15 @@ public class League {
     public League() {
     }
 
+    /**
+     * Instantiates a new League.
+     *
+     * @param name      the name
+     * @param startDate the start date
+     * @param endDate   the end date
+     * @param users     the users
+     * @param matches   the matches
+     */
     public League(String name, Date startDate, Date endDate, List<User> users, List<Match> matches) {
         this.name = name;
         this.startDate = startDate;
@@ -123,18 +132,38 @@ public class League {
         this.endDate = endDate;
     }
 
+    /**
+     * Gets users.
+     *
+     * @return the users
+     */
     public List<User> getUsers() {
         return users;
     }
 
+    /**
+     * Sets users.
+     *
+     * @param users the users
+     */
     public void setUsers(List<User> users) {
         this.users = users;
     }
 
+    /**
+     * Gets matches.
+     *
+     * @return the matches
+     */
     public List<Match> getMatches() {
         return matches;
     }
 
+    /**
+     * Sets matches.
+     *
+     * @param matches the matches
+     */
     public void setMatches(List<Match> matches) {
         this.matches = matches;
     }

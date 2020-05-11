@@ -57,6 +57,15 @@ public class User {
     public User() {
     }
 
+    /**
+     * Instantiates a new User.
+     *
+     * @param firstName    the first name
+     * @param lastName     the last name
+     * @param userName     the user name
+     * @param userPassword the user password
+     * @param email        the email
+     */
     public User(String firstName, String lastName, String userName, String userPassword, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -83,10 +92,20 @@ public class User {
         this.userName = userName;
     }
 
+    /**
+     * Gets email.
+     *
+     * @return the email
+     */
     public String getEmail() {
         return email;
     }
 
+    /**
+     * Sets email.
+     *
+     * @param email the email
+     */
     public void setEmail(String email) {
         this.email = email;
     }
@@ -181,10 +200,20 @@ public class User {
         this.userPassword = userPassword;
     }
 
+    /**
+     * Gets leagues.
+     *
+     * @return the leagues
+     */
     public List<League> getLeagues() {
         return leagues;
     }
 
+    /**
+     * Sets leagues.
+     *
+     * @param leagues the leagues
+     */
     public void setLeagues(List<League> leagues) {
         this.leagues = leagues;
     }
@@ -209,10 +238,20 @@ public class User {
         role.setUser(null);
     }
 
+    /**
+     * Add league.
+     *
+     * @param league the league
+     */
     public void addLeague(League league) {
         leagues.add(league);
     }
 
+    /**
+     * Remove league.
+     *
+     * @param league the league
+     */
     public void removeLeague(League league) {
         leagues.remove(league);
     }

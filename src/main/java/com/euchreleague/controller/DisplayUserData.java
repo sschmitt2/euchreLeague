@@ -1,4 +1,3 @@
-
 package com.euchreleague.controller;
 
 
@@ -15,15 +14,15 @@ import java.io.IOException;
 
 
 /**
- * A simple servlet to welcome the user.
- * @author pwaite
+ * The type Display user data.
  */
-
 @WebServlet(
         urlPatterns = {"/results"}
 )
-
 public class DisplayUserData extends HttpServlet {
+    /**
+     * The Dao.
+     */
     GenericDao<User> dao = new GenericDao(User.class);
 
     @Override

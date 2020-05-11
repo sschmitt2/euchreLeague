@@ -60,6 +60,20 @@ public class Match {
     public Match() {
     }
 
+    /**
+     * Instantiates a new Match.
+     *
+     * @param teamOneScoreOne   the team one score one
+     * @param teamTwoScoreOne   the team two score one
+     * @param teamOneScoreTwo   the team one score two
+     * @param teamTwoScoreTwo   the team two score two
+     * @param teamOneScoreThree the team one score three
+     * @param teamTwoScoreThree the team two score three
+     * @param dateOfPlay        the date of play
+     * @param team1             the team 1
+     * @param team2             the team 2
+     * @param league            the league
+     */
     public Match(int teamOneScoreOne, int teamTwoScoreOne, int teamOneScoreTwo, int teamTwoScoreTwo, int teamOneScoreThree, int teamTwoScoreThree, Date dateOfPlay, Team team1, Team team2, League league) {
         this.teamOneScoreOne = teamOneScoreOne;
         this.teamTwoScoreOne = teamTwoScoreOne;
@@ -127,10 +141,20 @@ public class Match {
         this.team2 = team2;
     }
 
+    /**
+     * Gets league.
+     *
+     * @return the league
+     */
     public League getLeague() {
         return league;
     }
 
+    /**
+     * Sets league.
+     *
+     * @param league the league
+     */
     public void setLeague(League league) {
         this.league = league;
     }

@@ -4,6 +4,7 @@ package com.euchreleague.controller;
 import com.euchreleague.entity.User;
 import com.euchreleague.entity.UserRoles;
 import com.euchreleague.persistence.GenericDao;
+import org.apache.catalina.realm.MessageDigestCredentialHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 @WebServlet (
@@ -25,18 +27,6 @@ public class Signup extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // TODO: uncomment lines here and in context.xml to implement password hashing
-//        String plainTextPassword = req.getParameter("password");
-//        MessageDigestCredentialHandler credentialHandler = new MessageDigestCredentialHandler();
-//        try {
-//            credentialHandler.setAlgorithm("SHA-256");
-//        } catch (NoSuchAlgorithmException e) {
-//            logger.error("Algorithm {} could not be found", "SHA-256");
-//        }
-//        credentialHandler.setEncoding("UTF-8");
-//        String hashedPassword = credentialHandler.mutate(plainTextPassword);
-
-
 
         User user = new User(
                 req.getParameter("firstName"),
@@ -44,7 +34,6 @@ public class Signup extends HttpServlet {
                 req.getParameter("userName"),
                 req.getParameter("password"),
                 req.getParameter("email")
-//              ,hashedPassword // use this line instead once password hashing is re-implemented
         );
 
         UserRoles userRoles = new UserRoles();

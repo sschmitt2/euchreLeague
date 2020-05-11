@@ -8,12 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * Logs in the user and gets their dashboard display data.
- *
- * @author Elspeth Stalter-Clouse
- */
 
+/**
+ * The type Logout.
+ */
 @WebServlet(
         urlPatterns = {"/logout"}
 )

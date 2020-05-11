@@ -12,10 +12,11 @@
 | View Schedules|
 | View Scores|
 | admin - confirm entered players for League|
+| admin - generate match tables for league |
 
-### Admin
+### Stretch Goals
 
-| Stretch Goal | 
+| Stretch| 
 |------|
 | admin - Add/Edit League|
 | admin - Add/Edit Scores|

@@ -13,8 +13,8 @@
 
 1. User chooses login on the menu (available on homepage)
 1. User enters username and password on form and submits. 
-1. If user is authenticated, the server will handle allowing access to edit 
-pages.  JDBCRealm used for authentication (users, users_roles, and roles table).
+1. If user is authenticated, the server will handle allowing access to view
+pages.  JDBCRealm used for authentication (users and users_roles).
 1. If authentication fails, show error message/page.
 
 ##### Please note: Users must be logged in to see schedules, scores, stats, and leagues
@@ -42,19 +42,6 @@ is sent.
 1. Consider paging results so page does not get super long and too much data 
 is sent.
 
-### View Stats
-
-1. Page sends a request to view stat servlet along with criteria
-(League, Table, id, first name, last name, week, total score, total points).
-1. Servlet uses the leagues dao to select stats according to the criteria
-1. Dao performs select and creates stat objects from results.
-1. Dao returns list of stats matching criteria to servlet.
-1. Servlet sends list back to stats jsp.
-1. Stats jsp displays the stats according to the criteria.
-1. Consider paging results so page does not get super long and too much data 
-is sent.
-
-
 ### Leagues
 
 1. Page sends a request to view league servlet along with criteria
@@ -66,16 +53,6 @@ is sent.
 1. Leagues jsp displays the leagues according to the criteria.
 1. Consider paging results so page does not get super long and too much data 
 is sent.
-
-### Add Scores
-1. Option only available to logged in users with proper role(admin)
-1. User selects week# to report scores on
-1. User enters score details
-1. Details are sent to Add Scores servlet
-1. Servlet creates score object
-1. Servlet sends object to dao
-1. Dao adds scores to the database
-1. Servlet sends confirmation to score page that scores has been added.
 
 ### Add Leagues
 1. Option only available to logged in users with proper role

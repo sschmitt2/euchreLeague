@@ -10,6 +10,10 @@ view schedules, scores and stats.
 
 As a registered user I want to log in so that I can join a new league and see current league information.
 
+### Logout
+
+As a registered user I want be able to logout when finished viewing league info. 
+
 ### View Schedules
 
 As a user of a specific league, I want to be able to find schedule information about the leagues.
@@ -17,10 +21,6 @@ As a user of a specific league, I want to be able to find schedule information a
 ### View Scores
 
 As a user of a specific league, I want to be able to see score information for all players in the league.
-
-### View Stats
-
-As a user of a specific league, I want to be able to see stat information for all players in the league.
 
 ### Join Leagues
 

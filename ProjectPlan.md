@@ -23,8 +23,6 @@
 - [X] Set up logging
 - [X] Prepare for Week 5 peer design/code review
 
-
-
 ### Week 5
 - [X] Weekly Time Log
 - [X] Add the role table
@@ -32,13 +30,10 @@
 - [X] Create the role dao
 - [X] Create the role dao unit tests
 
-
 ### Week 6
 - [X] Create class uml diagram
 - [X] Weekly Time Log
 - [X] Prepare for Checkpoint 2: Database designed and created, at least one DAO implemented with Hibernate, DAO is unit tested, Log4J is implemented (no System.out.printlns), class design and any other diagrams you plan to use have been created. 
-
-
 
 ### Week 7
 
@@ -64,60 +59,47 @@
 - [X] Review completed database
 - [X] Add Classes for Team and Matches
 - [X] Implement generic dao
-- [ ] Write unit tests for Team and Matches
-- [ ] Complete the user and user_role tests(more complete testing)
-- [ ] Implement the JavaMail API into project
-- [ ] Weekly Time Log
+- [X] Weekly Time Log
 
-#####Still need to complete Plan for the rest of the weeks - put a TODO in my User class
 ### Week 11 - Team project work week
-- [ ] Build the trail report crud jsps
-- [ ] Add the Trail Type and Grooming Tables, populate with data, (test, dev and prod dbs)
-- [ ] Create the Trail Type and Grooming entities
-- [ ] Update Trail and Trail report to use trail type and grooming
-- [ ] Update Trail and Trail report tests to be sure they work with the new relationships
-- [ ] Review and incorporate any feedback from Checkpoint 2.
-- [ ] Create league table
-- [ ] Add the league entity (test, dev and prod dbs)
-- [ ] Realize that these daos are repetitive. Refactor into a generic dao!
-- [ ] Add update and delete functionality in jsp for user and role
-- [ ] Build the view scores jsp
-- [ ] Build the view schedules and leagues jsp
-- [ ] Create db on AWS
-- [ ] Create the template for all jsps using bootstrap or materialize
-- [ ] Add a jsp to display user and role
-- [ ] Add jsp to add a user
-- [ ] Weekly Time Log
-- [ ] Integration with weather service and/or snow depth data
-- [ ] Review and incorporate feedback from Checkpoint 3.
-- [ ] Carefully review code for standards and best practices - use a code quality tool? 
-- [ ] Implement paging of search results
-- [ ] Code review
-- [ ] Add password reset/reminder functionality
-- [ ] Weekly journal entry
-- [ ] Unit test all api integrations
-- [ ] Weekly journal entry
+- [X] Create league table
+- [X] Realize that these daos are repetitive. Refactor into a generic dao!
+- [X] Add update and delete functionality in jsp for user and role
+- [X] Build the view scores jsp
+- [X] Build the view schedules and leagues jsp
+- [X] Create the template for all jsps using bootstrap or materialize
+- [X] Add a jsp to display users
+- [X] Add jsp to add a user
+- [X] Weekly Time Log
+- [X] Review and incorporate feedback from Checkpoint 3.
 
 ### Week 12 - Team project due
-- [ ] Weekly journal entry
-- [ ] Review indie project and create list of todos
+- [X] Weekly Time Log
+- [X] Review indie project and create list of todos
 
 ### Week 13
-- [ ] Weekly journal entry
-- [ ] Complete todos identified in week 12
-- [ ] Prepare for week 13 peer code reviews
-- [ ] Code quality check
-- [ ] Review rubric to make sure I'm on target
+- [X] Weekly Time Log
+- [X] Prepare for week 13 peer code reviews
+- [X] Code quality check
+- [X] Review rubric to make sure I'm on target
 
 ### Week 14
-- [ ] Weekly journal entry
-- [ ] Create final presentation
+- [X] Implement the JavaMail API into project
+- [X] Weekly Time Log
+- [X] Implement admin functionality 
+- [X] Carefully review code for standards and best practices - use a code quality tool? 
+- [X] Implement paging of search results
+- [ ] Unit test all api integrations
+- [ ] Create db on AWS
 
 ### Week 15
+- [ ] Create final presentation
 - [ ] Final Presentation
 - [ ] Create video
 - [ ] Finalize all documentation
 - [ ] Code quality check
+- [ ] Write unit tests for Team and Matches
+- [ ] Complete the user and user_role tests(more complete testing)
 
 ### Week 16
 - [ ] Weekly journal entry

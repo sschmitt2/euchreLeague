@@ -9,18 +9,18 @@ current standings on a google doc spreadsheet.
 With the growing trend of the euchre league, I would like to create an application that will store
 player, schedule and score data into the database. The application will allow you to create a league
 from the players in the database. Once the leagues players have been added, the application will generate 
-randomized tables where each player must be partners with every player on the league at least once.
+randomized tables for the league.
 
 ### Project Technologies/Techniques 
 
 * Security/Authentication
   * Tomcat's JDBC Realm Authentication
   * Admin role: create/read/update/delete (crud) of all data
-  * User role: view schedules, view score data, view stat data
+  * User role: login, sign up, logout, view schedules, view score data, view stat data
 * Database
   * MySQL
   * Store users and roles
-  * Store all data for the leagues
+  * Store all data for the leagues (Matches, Teams, League)
 * ORM Framework
   * Hibernate 5
 * Dependency Management

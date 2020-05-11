@@ -28,26 +28,25 @@
         </thead>
 
         <tbody>
-        <c:forEach var="match" items="${matches}">
-        <tr>
-            <td>${match.team1.id}</td>
-            <td>${match.team1.player1.firstName} ${match.team1.player1.lastName}</td>
-            <td>${match.team1.player2.firstName} ${match.team1.player2.lastName}</td>
-            <td>${match.teamOneScoreOne}</td>
-            <td>${match.teamOneScoreTwo}</td>
-            <td>${match.teamOneScoreThree}</td>
-        </tr>
-        <tr>
-            <td>${match.team2.id}</td>
-            <td>${match.team2.player1.firstName} ${match.team2.player1.lastName}</td>
-            <td>${match.team2.player2.firstName} ${match.team2.player2.lastName}</td>
-            <td>${match.teamTwoScoreOne}</td>
-            <td>${match.teamTwoScoreTwo}</td>
-            <td>${match.teamTwoScoreThree}</td>
-        </tr>
-        </c:forEach>
+            <c:forEach var="match" items="${matches}">
+            <tr>
+                <td>${match.team1.id}</td>
+                <td>${match.team1.player1.firstName} ${match.team1.player1.lastName}</td>
+                <td>${match.team1.player2.firstName} ${match.team1.player2.lastName}</td>
+                <td>${match.teamOneScoreOne}</td>
+                <td>${match.teamOneScoreTwo}</td>
+                <td>${match.teamOneScoreThree}</td>
+            </tr>
+            <tr>
+                <td>${match.team2.id}</td>
+                <td>${match.team2.player1.firstName} ${match.team2.player1.lastName}</td>
+                <td>${match.team2.player2.firstName} ${match.team2.player2.lastName}</td>
+                <td>${match.teamTwoScoreOne}</td>
+                <td>${match.teamTwoScoreTwo}</td>
+                <td>${match.teamTwoScoreThree}</td>
+            </tr>
+            </c:forEach>
         </tbody>
-
     </table>
 
 </div>

@@ -62,3 +62,13 @@
 | 4/22/20 | Started reading week 13 articles | 2 ||
 | 4/23/20 | Unwrapped text for week 13 exercise | 1.5 ||
 | 4/26/20 | Finished exercise 13 | 3 ||
+| 4/29/20 | Indie project | 3.75| I really should have updated this sooner so I can remember what specifically I did :/|
+| 4/30/20 | Indie project | 5||
+| 5/01/20 | Indie project | 6||
+| 5/03/20 | Indie project | 5||
+| 5/04/20 | Indie project | 5||
+| 5/06/20 | Indie project | 6||
+| 5/07/20 | Indie project | 7||
+| 5/08/20 | Indie project | 4.75||
+| 5/09/20 | Indie project - finally got javamail implemented | 7||
+| 5/10/20 | Indie project - continued working on admin functionality | 5.5||

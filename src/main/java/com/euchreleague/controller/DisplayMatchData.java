@@ -31,16 +31,9 @@ public class DisplayMatchData extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        List<Match> pretendMatches = matchDao.getAll();
+        List<Match> matches = matchDao.getAll();
 
-        List<Team> teams = teamDao.getAll();
-
-        req.setAttribute("match1", pretendMatches.get(0));
-        req.setAttribute("match2", pretendMatches.get(1));
-        req.setAttribute("team1", teams.get(0));
-        req.setAttribute("team2", teams.get(1));
-        req.setAttribute("team3", teams.get(2));
-        req.setAttribute("team4", teams.get(3));
+        req.setAttribute("matches", matches);
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/matches.jsp");
         dispatcher.forward(req, resp);

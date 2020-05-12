@@ -4,7 +4,7 @@
 
 <script type="text/javascript" class="init">
     $(document).ready( function () {
-        $('.match').DataTable();
+        $('#scores').DataTable();
     } );
 </script>
 <html>
@@ -16,10 +16,13 @@
 
     <h2>Team Score Results: </h2>
 
-    <c:forEach var="match" items="${matches}">
 
-    <table class="match" cellspacing="0" width="100%">
+
+    <table id="scores" class="display" cellspacing="0" width="100%">
         <thead>
+        <th>League</th>
+        <th>Date</th>
+        <th>Table #</th>
         <th>Team</th>
         <th>Game 1</th>
         <th>Game 2</th>
@@ -27,21 +30,33 @@
         </thead>
         <tbody>
 
+        <c:forEach var="match" items="${matches}">
             <tr>
+                <td>${match.league.name}</td>
+                <%-- https://stackoverflow.com/questions/6162401/convert-and-format-a-date-in-jsp--%>
+                <%-- https://stackoverflow.com/questions/13428788/according-to-tld-or-attribute-directive-in-tag-file-attribute-items-does-not-ac--%>
+                <td><fmt:formatDate value="${match.dateOfPlay}" pattern="MM/dd/yy" /></td>
+                <td>${match.tableNumber}</td>
                 <td>${match.team1.player1.firstName} ${match.team1.player1.lastName} & ${match.team1.player2.firstName} ${match.team1.player2.lastName} </td>
                 <td>${match.teamOneScoreOne}</td>
                 <td>${match.teamOneScoreTwo}</td>
                 <td>${match.teamOneScoreThree}</td>
             </tr>
             <tr>
+                <td>${match.league.name}</td>
+                <%-- https://stackoverflow.com/questions/6162401/convert-and-format-a-date-in-jsp--%>
+                <%-- https://stackoverflow.com/questions/13428788/according-to-tld-or-attribute-directive-in-tag-file-attribute-items-does-not-ac--%>
+                <td><fmt:formatDate value="${match.dateOfPlay}" pattern="MM/dd/yy" /></td>
+                <td>${match.tableNumber}</td>
                 <td>${match.team2.player1.firstName} ${match.team2.player1.lastName} & ${match.team2.player2.firstName} ${match.team2.player2.lastName}</td>
                 <td>${match.teamTwoScoreOne}</td>
                 <td>${match.teamTwoScoreTwo}</td>
                 <td>${match.teamTwoScoreThree}</td>
             </tr>
+        </c:forEach>
         </tbody>
     </table>
-    </c:forEach>
+
 
 </div>
 

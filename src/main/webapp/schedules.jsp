@@ -31,6 +31,8 @@
 
         <tr>
             <td>${team.league.name}</td>
+            <%-- https://stackoverflow.com/questions/6162401/convert-and-format-a-date-in-jsp--%>
+            <%-- https://stackoverflow.com/questions/13428788/according-to-tld-or-attribute-directive-in-tag-file-attribute-items-does-not-ac--%>
             <td><fmt:formatDate value="${team.dateOfPlay}" pattern="MM/dd/yy" /></td>
             <td>${team.tableNumber}</td>
             <td>${team.team1.player1.firstName} ${team.team1.player1.lastName} & ${team.team1.player2.firstName} ${team.team1.player2.lastName}</td>

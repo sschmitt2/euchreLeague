@@ -1,3 +1,4 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@include file="templates/taglib.jsp"%>
 <c:set var="title" value="Schedules" />
 <%@include file="templates/head.jsp"%>
@@ -16,6 +17,8 @@
     <%@include file="templates/header.jsp"%>
 
 
+
+
     <table id="teamTable" class="display" cellspacing="0" width="100%">
         <thead>
         <th>League Name</th>
@@ -26,9 +29,10 @@
         </thead>
         <tbody>
         <c:forEach var="team" items="${matches}">
+
         <tr>
             <td>${team.league.name}</td>
-            <td>${team.dateOfPlay}</td>
+            <td><fmt:formatDate value="${team.dateOfPlay}" pattern="MM/dd/yy" /></td>
             <td>${team.tableNumber}</td>
             <td>${team.team1.player1.firstName} ${team.team1.player1.lastName} & ${team.team1.player2.firstName} ${team.team1.player2.lastName}</td>
             <td>${team.team2.player1.firstName} ${team.team2.player1.lastName} & ${team.team2.player2.firstName} ${team.team2.player2.lastName}</td>

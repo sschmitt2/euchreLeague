@@ -2,6 +2,8 @@ package com.euchreleague.controller;
 
 import com.euchreleague.entity.*;
 import com.euchreleague.persistence.GenericDao;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,6 +19,8 @@ import java.util.*;
         urlPatterns = {"/displayleague"}
 )
 public class AdminDisplayLeagues extends HttpServlet {
+
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
     GenericDao<League> leagueDao = new GenericDao<>(League.class);
     GenericDao<Team> teamDao = new GenericDao<>(Team.class);
@@ -54,6 +58,7 @@ public class AdminDisplayLeagues extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int leagueId = Integer.parseInt(req.getParameter("leagueid"));
         League league = leagueDao.getById(leagueId);
+        logger.debug("league id: ", league);
 
         List<User> users = league.getUsers();
 

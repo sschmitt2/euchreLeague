@@ -21,6 +21,25 @@ CREATE TABLE `user_roles` (
   CONSTRAINT `role_user_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
+
+
+CREATE TABLE `league` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) DEFAULT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL,
+  PRIMARY KEY (`id`)
+)
+CREATE TABLE `user_league` (
+  `user_id` int DEFAULT NULL,
+  `league_id` int DEFAULT NULL,
+  KEY `user_league_user_id_fk` (`user_id`),
+  KEY `user_league_league_id_fk` (`league_id`),
+  CONSTRAINT `user_league_league_id_fk` FOREIGN KEY (`league_id`) REFERENCES `league` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `user_league_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+
 CREATE TABLE `teams` (
   `id` int NOT NULL AUTO_INCREMENT,
   `player1_id` int NOT NULL,
@@ -30,14 +49,6 @@ CREATE TABLE `teams` (
   KEY `teams_user_id_fk_2` (`player2_id`),
   CONSTRAINT `teams_user_id_fk` FOREIGN KEY (`player1_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `teams_user_id_fk_2` FOREIGN KEY (`player2_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-)
-
-CREATE TABLE `league` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(30) DEFAULT NULL,
-  `start_date` date NOT NULL,
-  `end_date` date NOT NULL,
-  PRIMARY KEY (`id`)
 )
 
 CREATE TABLE `matches` (
@@ -62,11 +73,3 @@ CREATE TABLE `matches` (
   CONSTRAINT `matches_teams_id_fk_2` FOREIGN KEY (`team2_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
-CREATE TABLE `user_league` (
-  `user_id` int DEFAULT NULL,
-  `league_id` int DEFAULT NULL,
-  KEY `user_league_user_id_fk` (`user_id`),
-  KEY `user_league_league_id_fk` (`league_id`),
-  CONSTRAINT `user_league_league_id_fk` FOREIGN KEY (`league_id`) REFERENCES `league` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `user_league_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-)

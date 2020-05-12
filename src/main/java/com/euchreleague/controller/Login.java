@@ -26,7 +26,7 @@ public class Login extends HttpServlet {
     /**
      * The User dao.
      */
-    GenericDao<User> userDao = new GenericDao(User.class);
+    private static final GenericDao<User> userDao = new GenericDao<>(User.class);
 
 
     @Override

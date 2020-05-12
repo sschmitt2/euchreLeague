@@ -20,7 +20,7 @@
     <%@include file="templates/header.jsp"%>
 
         <table id="leagueTable" class="display" cellspacing="0" width="100%">
-            <h2>League Name: ${league.name}</h2>
+            <h2>League Name: ${league.name}</h2><br>
             <thead>
             <th>Players in League: </th>
             </thead>

@@ -19,7 +19,7 @@ public class TeamDaoTest {
     void setUp() {
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
-        dao = new GenericDao(Team.class);
+        dao = new GenericDao<>(Team.class);
     }
 
     /**

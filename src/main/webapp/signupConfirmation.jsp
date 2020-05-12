@@ -16,7 +16,7 @@
                     <c:when test = "${errorMessage == null}">
                         <div class="alert alert-success" role="alert">
                             <span class="text-bold">New User Signup -- Success</span>.
-                            Head to the <a href="login">login page</a> to get started.
+                            Head to the <a href="login.jsp">login page</a> to get started.
                         </div>
                     </c:when>
                     <c:otherwise>

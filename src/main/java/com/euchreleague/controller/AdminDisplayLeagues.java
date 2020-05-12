@@ -1,6 +1,9 @@
 package com.euchreleague.controller;
 
-import com.euchreleague.entity.*;
+import com.euchreleague.entity.League;
+import com.euchreleague.entity.Match;
+import com.euchreleague.entity.Team;
+import com.euchreleague.entity.User;
 import com.euchreleague.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,8 +15,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.List;
 
 @WebServlet(
         urlPatterns = {"/displayleague"}
@@ -22,9 +26,9 @@ public class AdminDisplayLeagues extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    GenericDao<League> leagueDao = new GenericDao<>(League.class);
-    GenericDao<Team> teamDao = new GenericDao<>(Team.class);
-    GenericDao<Match> matchDao = new GenericDao<>(Match.class);
+    private static final GenericDao<League> leagueDao = new GenericDao<>(League.class);
+    private static final GenericDao<Team> teamDao = new GenericDao<>(Team.class);
+    private static final GenericDao<Match> matchDao = new GenericDao<>(Match.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -58,7 +62,7 @@ public class AdminDisplayLeagues extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int leagueId = Integer.parseInt(req.getParameter("leagueid"));
         League league = leagueDao.getById(leagueId);
-        logger.debug("league id: ", league);
+
 
         List<User> users = league.getUsers();
 
@@ -77,7 +81,7 @@ public class AdminDisplayLeagues extends HttpServlet {
                 Team team2 = new Team();
 
                 match.setDateOfPlay(date.getTime());
-                team1.setPlayer1(users.get(0 + matchCounter * 4));
+                team1.setPlayer1(users.get(matchCounter * 4));
                 team1.setPlayer2(users.get(1 + matchCounter * 4));
                 team2.setPlayer1(users.get(2 + matchCounter * 4));
                 team2.setPlayer2(users.get(3 + matchCounter * 4));

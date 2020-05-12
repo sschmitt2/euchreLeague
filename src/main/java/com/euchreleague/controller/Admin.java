@@ -24,11 +24,11 @@ public class Admin extends HttpServlet {
     /**
      * The User dao.
      */
-    GenericDao<User> userDao = new GenericDao(User.class);
+    private static final GenericDao<User> userDao = new GenericDao<>(User.class);
     /**
      * The League dao.
      */
-    GenericDao<League> leagueDao = new GenericDao(League.class);
+    private static final GenericDao<League> leagueDao = new GenericDao<>(League.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -40,12 +40,13 @@ public class Admin extends HttpServlet {
         for (UserRoles role : user.getUserRoles()) {
             if (role.getRoleName().equals("admin")) {
                 userIsAdmin = true;
+                break;
             }
         }
 
         RequestDispatcher dispatcher;
 
-        if (userIsAdmin == true) {
+        if (userIsAdmin) {
             req.setAttribute("upcomingLeagues",leagueDao.getAll());
             dispatcher = req.getRequestDispatcher("/admin.jsp");
         } else {

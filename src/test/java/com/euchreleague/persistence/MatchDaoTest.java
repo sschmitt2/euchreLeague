@@ -19,7 +19,7 @@ public class MatchDaoTest {
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
-        dao = new GenericDao(Match.class);
+        dao = new GenericDao<>(Match.class);
     }
 
     @Test

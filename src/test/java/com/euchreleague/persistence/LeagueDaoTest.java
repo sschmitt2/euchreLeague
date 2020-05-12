@@ -17,7 +17,7 @@ public class LeagueDaoTest {
     void setUp() {
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
-        dao = new GenericDao(League.class);
+        dao = new GenericDao<>(League.class);
     }
 
     /**

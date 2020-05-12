@@ -12,6 +12,7 @@ import java.util.Objects;
 
 /**
  * The type League.
+ * @author sschmitt
  */
 @Entity(name = "League")
 @Table(name = "league")

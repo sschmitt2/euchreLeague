@@ -1,8 +1,6 @@
 package com.euchreleague.controller;
 
-import com.euchreleague.entity.League;
 import com.euchreleague.entity.Match;
-import com.euchreleague.entity.Team;
 import com.euchreleague.persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
@@ -27,7 +25,7 @@ public class DisplayScheduleData extends HttpServlet {
     /**
      * The Team dao.
      */
-    GenericDao<Match> matchDao = new GenericDao<>(Match.class);
+    private static final GenericDao<Match> matchDao = new GenericDao<>(Match.class);
 
 
     @Override

@@ -28,8 +28,8 @@ class UserDaoTest {
     void setUp() {
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
-        dao = new GenericDao(User.class);
-        roleDao = new GenericDao(UserRoles.class);
+        dao = new GenericDao<>(User.class);
+        roleDao = new GenericDao<>(UserRoles.class);
     }
 
     /**

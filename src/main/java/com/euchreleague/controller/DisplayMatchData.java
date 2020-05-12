@@ -24,7 +24,7 @@ public class DisplayMatchData extends HttpServlet {
     /**
      * The Match dao.
      */
-    GenericDao<Match> matchDao = new GenericDao(Match.class);
+    private static final GenericDao<Match> matchDao = new GenericDao<>(Match.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

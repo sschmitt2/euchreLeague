@@ -23,10 +23,12 @@ import java.util.List;
 public class Signup extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
-    GenericDao<User> userDao = new GenericDao(User.class);
+    private static final GenericDao<User> userDao = new GenericDao<>(User.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+
 
         User user = new User(
                 req.getParameter("firstName"),
@@ -49,7 +51,7 @@ public class Signup extends HttpServlet {
             errorMessage = "Username already exists. Please try a different name.";
         } else {
             newUserId = userDao.insert(user);
-//            logger.debug("New user with id {} created", newUserId);
+            logger.debug("New user with id {} created", newUserId);
         }
 
 //        logger.debug("Error message: {}", errorMessage);

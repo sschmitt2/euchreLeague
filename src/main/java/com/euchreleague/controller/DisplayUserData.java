@@ -23,7 +23,7 @@ public class DisplayUserData extends HttpServlet {
     /**
      * The Dao.
      */
-    GenericDao<User> dao = new GenericDao(User.class);
+    private static final GenericDao<User> dao = new GenericDao<>(User.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

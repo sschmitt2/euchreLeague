@@ -28,11 +28,11 @@ public class DisplayLeagues extends HttpServlet {
     /**
      * The League dao.
      */
-    GenericDao<League> leagueDao = new GenericDao(League.class);
+    private static final GenericDao<League> leagueDao = new GenericDao<>(League.class);
     /**
      * The User dao.
      */
-    GenericDao<User> userDao = new GenericDao(User.class);
+    private static final GenericDao<User> userDao = new GenericDao<>(User.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -61,6 +61,7 @@ public class DisplayLeagues extends HttpServlet {
         }
 
         userDao.saveOrUpdate(user);
+        logger.debug("entered user", user);
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
         dispatcher.forward(req, resp);

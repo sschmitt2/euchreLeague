@@ -6,14 +6,18 @@
         $('#leagueTable').DataTable();
     } );
 </script>
+
+<script type="text/javascript" class="init">
+    $(document).ready( function () {
+        $('#teamTable').DataTable();
+    } );
+</script>
 <html>
 <body>
 <%@include file="templates/navmenuUserLoggedIn.jsp"%>
 
 <div class="container-fluid">
     <%@include file="templates/header.jsp"%>
-
-
 
         <table id="leagueTable" class="display" cellspacing="0" width="100%">
             <h2>League Name: ${league.name}</h2>
@@ -33,30 +37,30 @@
 
     <c:choose>
         <c:when test="${hasMatches}">
-            This league has matches scheduled
+            This league has matches scheduled<br>
             <h2>Schedule</h2>
 
+            <table id="teamTable" class="display" cellspacing="0" width="100%">
+                <thead>
+                <th>League Name</th>
+                <th>Date</th>
+                <th>Table #</th>
+                <th>Team 1</th>
+                <th>Team 2</th>
+                </thead>
+                <tbody>
                 <c:forEach var="match" items="${league.matches}">
-                    <h5>Date: ${match.dateOfPlay}</h5>
-                    <h6>Table ${match.tableNumber}</h6>
-                    <table class="match" cellspacing="0" width="100%">
-                    <thead>
-                    <th>Team 1</th>
-                    <th>Team 2</th>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>${match.team1.player1.firstName} ${match.team1.player1.lastName}</td>
-                        <td>${match.team2.player1.firstName} ${match.team2.player1.lastName}</td>
 
-                    </tr>
                     <tr>
-                        <td>${match.team1.player2.firstName} ${match.team1.player2.lastName}</td>
-                        <td>${match.team2.player2.firstName} ${match.team2.player2.lastName}</td>
+                        <td>${match.league.name}</td>
+                        <td><fmt:formatDate value="${match.dateOfPlay}" pattern="MM/dd/yy" /></td>
+                        <td>${match.tableNumber}</td>
+                        <td>${match.team1.player1.firstName} ${match.team1.player1.lastName} & ${match.team1.player2.firstName} ${match.team1.player2.lastName}</td>
+                        <td>${match.team2.player1.firstName} ${match.team2.player1.lastName} & ${match.team2.player2.firstName} ${match.team2.player2.lastName}</td>
                     </tr>
-                    </tbody>
-                    </table>
                 </c:forEach>
+                </tbody>
+            </table>
 
         </c:when>
         <c:otherwise>
@@ -74,9 +78,6 @@
             </c:choose>
         </c:otherwise>
     </c:choose>
-
-
-
 
 </div>
 

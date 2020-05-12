@@ -1,4 +1,3 @@
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@include file="templates/taglib.jsp"%>
 <c:set var="title" value="Schedules" />
 <%@include file="templates/head.jsp"%>

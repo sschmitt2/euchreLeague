@@ -1,0 +1,13 @@
+
+s Web:TableHeaderHasIdOrScopeCheck(";Add either an 'id' or a 'scope' attribute to this <th> tag.(Çœ×Ÿşÿÿÿÿ8Ã²Ü‡ .
+NWeb:TableWithoutCaptionCheck" Add a description to this table.(µ™88¡„Å .
+J	Web:S1827$")Remove this deprecated "width" attribute.(Ğ½ˆìÿÿÿÿÿ8Ã²Ü‡ .
+n Web:TableHeaderHasIdOrScopeCheck'";Add either an 'id' or a 'scope' attribute to this <th> tag.(€ù¡8Ã²Ü‡ .
+D	Web:S1827")Remove this deprecated "width" attribute.(µ™88¡„Å .
+P	Web:S1827$"/Remove this deprecated "cellspacing" attribute.(Ğ½ˆìÿÿÿÿÿ8Ã²Ü‡ .
+PWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(œ÷Ãûÿÿÿÿ8€—ˆ .
+TWeb:TableWithoutCaptionCheck$" Add a description to this table.(Ğ½ˆìÿÿÿÿÿ8Ã²Ü‡ .
+J	Web:S1827"/Remove this deprecated "cellspacing" attribute.(µ™88¡„Å .
+a	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ8ÕÖ ßŸ.
+s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ò¥™§øÿÿÿÿ8³ƒ©… .
+jWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷Ãûÿÿÿÿ8ÕÖ ßŸ.

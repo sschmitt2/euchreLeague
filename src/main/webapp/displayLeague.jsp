@@ -1,6 +1,11 @@
 <%@include file="templates/taglib.jsp"%>
 <c:set var="title" value="Admin - Leagues" />
 <%@include file="templates/head.jsp"%>
+<script type="text/javascript" class="init">
+    $(document).ready( function () {
+        $('#leagueTable').DataTable();
+    } );
+</script>
 <html>
 <body>
 <%@include file="templates/navmenuUserLoggedIn.jsp"%>
@@ -32,17 +37,22 @@
             <h2>Schedule</h2>
 
                 <c:forEach var="match" items="${league.matches}">
-                    <h4>Date: ${match.dateOfPlay}</h4>
-                    <table id="matches" class="display" cellspacing="0" width="100%">
-
+                    <h5>Date: ${match.dateOfPlay}</h5>
+                    <h6>Table ${match.tableNumber}</h6>
+                    <table class="match" cellspacing="0" width="100%">
                     <thead>
                     <th>Team 1</th>
                     <th>Team 2</th>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>${match.team1.player1.firstName} ${match.team1.player1.lastName} & ${match.team1.player2.firstName} ${match.team1.player2.lastName}</td>
-                        <td>${match.team2.player1.firstName} ${match.team2.player1.lastName} & ${match.team2.player2.firstName} ${match.team2.player2.lastName}</td>
+                        <td>${match.team1.player1.firstName} ${match.team1.player1.lastName}</td>
+                        <td>${match.team2.player1.firstName} ${match.team2.player1.lastName}</td>
+
+                    </tr>
+                    <tr>
+                        <td>${match.team1.player2.firstName} ${match.team1.player2.lastName}</td>
+                        <td>${match.team2.player2.firstName} ${match.team2.player2.lastName}</td>
                     </tr>
                     </tbody>
                     </table>
@@ -53,10 +63,13 @@
             <p>This league does not have any matches scheduled yet</p>
             <c:choose>
                 <c:when test="${canBeScheduled}">
-                  <button type="submit">Generate Schedule</button>
+                    <form class="form" action="displayleague" method="POST">
+                        <input type="hidden" name="leagueid" value="${league.id}"/>
+                        <button type="submit">Generate Schedule</button>
+                    </form>
                 </c:when>
                 <c:otherwise>
-                    <p>You need 16 players in the league before you can schedule matches</p>
+                    <p id="needExactNumOfPlayersAlert">You need exactly 16 players in the league before you can schedule matches</p>
                 </c:otherwise>
             </c:choose>
         </c:otherwise>

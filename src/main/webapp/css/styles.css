@@ -8,3 +8,7 @@ body {
     margin-right: auto;
     padding-bottom: 1em;
 }
+
+#needExactNumOfPlayersAlert {
+    color: red;
+}

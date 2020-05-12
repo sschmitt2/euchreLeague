@@ -41,6 +41,9 @@ public class Match {
     @Column(name = "date_of_play")
     private Date dateOfPlay;
 
+    @Column(name = "table_number")
+    private int tableNumber;
+
 
     @ManyToOne
     @JoinColumn(name = "team1_id", referencedColumnName = "id")
@@ -70,11 +73,12 @@ public class Match {
      * @param teamOneScoreThree the team one score three
      * @param teamTwoScoreThree the team two score three
      * @param dateOfPlay        the date of play
+     * @param tableNumber       the table number
      * @param team1             the team 1
      * @param team2             the team 2
      * @param league            the league
      */
-    public Match(int teamOneScoreOne, int teamTwoScoreOne, int teamOneScoreTwo, int teamTwoScoreTwo, int teamOneScoreThree, int teamTwoScoreThree, Date dateOfPlay, Team team1, Team team2, League league) {
+    public Match(int teamOneScoreOne, int teamTwoScoreOne, int teamOneScoreTwo, int teamTwoScoreTwo, int teamOneScoreThree, int teamTwoScoreThree, Date dateOfPlay, int tableNumber, Team team1, Team team2, League league) {
         this.teamOneScoreOne = teamOneScoreOne;
         this.teamTwoScoreOne = teamTwoScoreOne;
         this.teamOneScoreTwo = teamOneScoreTwo;
@@ -82,6 +86,7 @@ public class Match {
         this.teamOneScoreThree = teamOneScoreThree;
         this.teamTwoScoreThree = teamTwoScoreThree;
         this.dateOfPlay = dateOfPlay;
+        this.tableNumber = tableNumber;
         this.team1 = team1;
         this.team2 = team2;
         this.league = league;
@@ -112,6 +117,24 @@ public class Match {
      */
     public Team getTeam1() {
         return team1;
+    }
+
+    /**
+     * Gets table number.
+     *
+     * @return the table number
+     */
+    public int getTableNumber() {
+        return tableNumber;
+    }
+
+    /**
+     * Sets table number.
+     *
+     * @param tableNumber the table number
+     */
+    public void setTableNumber(int tableNumber) {
+        this.tableNumber = tableNumber;
     }
 
     /**
@@ -296,6 +319,7 @@ public class Match {
                 ", teamOneScoreThree=" + teamOneScoreThree +
                 ", teamTwoScoreThree=" + teamTwoScoreThree +
                 ", dateOfPlay=" + dateOfPlay +
+                ", tableNumber=" + tableNumber +
                 '}';
     }
 

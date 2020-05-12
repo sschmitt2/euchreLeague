@@ -1,17 +1,7 @@
 
-u
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(şû³Å8ÏÿãÚŸ.
-L
-java:S3740"/Provide the parametrized type for this generic.(şû³Å8ÏÿãÚŸ.
-V
-java:S1128"9Remove this unused import 'com.euchreleague.entity.User'.(ØĞ±×8ÏÿãÚŸ.
-~
-java:S1989."aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8ÏÿãÚŸ.
-Q
-java:S3740"/Provide the parametrized type for this generic.(œ»üøÿÿÿÿ8ÏÿãÚŸ.
-z
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(œ»üøÿÿÿÿ8ÏÿãÚŸ.
-L
-java:S3740"/Provide the parametrized type for this generic.(’Ù›Â8ñ˜ìÚŸ.
-u
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(’Ù›Â8ñ˜ìÚŸ.
+s
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(şû³Å8ó§¥ .
+J
+java:S3740"/Provide the parametrized type for this generic.(şû³Å8ó§¥ .
+|
+java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8ó§¥ .

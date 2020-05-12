@@ -79,7 +79,22 @@ f
 6src/test/java/com/euchreleague/test/util/Database.java,1/4/1407ab940126337c68bd56a3dcc3230d00b1f28d
 d
 4src/test/java/com/euchreleague/api/JavaMailTest.java,a/1/a14cdcf3ebfc344dcd222298e5420993a684f20c
-H
-src/main/webapp/home.jsp,6/8/6853166b9553bb500860233db274f93560c021c5
-j
-:src/main/java/com/euchreleague/controller/DisplayHome.java,2/6/264193801509eb6894cc57da1233697761e527ec
+Q
+!src/main/webapp/displayLeague.jsp,6/6/66663e66337bd8cf8b12465b0c0fdd570d1804a9
+:
+
+TimeLog.md,9/c/9c5ce5185c75d478653cfefe009b7778d7a8c1eb
+N
+DesignDocuments/userStories.md,e/d/ed3f1716c2f28c1c6de38222e66bcdcc93e1c06b
+>
+ProjectPlan.md,4/7/47c8807b701cb1ff63e138026af70bc3904578b8
+R
+"DesignDocuments/applicationFlow.md,3/d/3d56b34c3ce74b16ef41507b8d3cdef48f3ddf90
+d
+4src/main/java/com/euchreleague/controller/Admin.java,c/7/c7655eacedc4a560526cec45fbb70753bf354007
+v
+Fsrc/main/java/com/euchreleague/persistence/SessionFactoryProvider.java,2/8/287339b9eef42ebd88b8fb92270a1b4b9f41f4a9
+r
+Bsrc/main/java/com/euchreleague/controller/AdminDisplayLeagues.java,6/5/654055c986611d92e75f1884a8d1278f99aaa4b5
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

@@ -1,17 +1,17 @@
 
 E
 java:S1068"*Remove this unused "logger" private field.(ζΧβΑ8ργ΅―.
-s
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(’Ω›Β8ργ΅―.
-O
-java:S3740"/Provide the parametrized type for this generic.(κ««ψÿÿÿÿ8ργ΅―.
-J
-java:S3740"/Provide the parametrized type for this generic.(’Ω›Β8ργ΅―.
 x
 java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(κ««ψÿÿÿÿ8ργ΅―.
-|
-java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ςψ½8ργ΅―.
+O
+java:S3740"/Provide the parametrized type for this generic.(κ««ψÿÿÿÿ8ργ΅―.
 |
 java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ςψ½8ργ΅―.
 s
 java:S1989"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(χ©8ργ΅―.
+s
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(’Ω›Β8ργ΅―.
+J
+java:S3740"/Provide the parametrized type for this generic.(’Ω›Β8ργ΅―.
+|
+java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ςψ½8ργ΅―.

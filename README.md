@@ -28,7 +28,7 @@ randomized tables for the league.
 * Web Services consumed using Java
   * JavaMail
 * CSS 
-  * Bootstrap or Materialize
+  * Bootstrap
 * Data Validation
   * Bootstrap Validator for front end
   * Explore Hibernate's validation
@@ -37,8 +37,6 @@ randomized tables for the league.
 * Hosting
   * AWS
 * Independent Research Topic/s
-  * AWS Cognito 
-* Project Lombok to eliminate boilerplate code like getters/setters/equals
 * Unit Testing
   * JUnit tests to achieve 80%+ code coverage 
 * IDE: IntelliJ IDEA

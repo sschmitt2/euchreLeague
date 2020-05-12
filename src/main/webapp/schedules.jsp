@@ -4,7 +4,7 @@
 
 <script type="text/javascript" class="init">
     $(document).ready( function () {
-        $('#team1Table').DataTable();
+        $('#teamTable').DataTable();
     } );
 
 </script>
@@ -16,23 +16,24 @@
     <%@include file="templates/header.jsp"%>
 
 
-    <table id="team1Table" class="display" cellspacing="0" width="100%">
+    <table id="teamTable" class="display" cellspacing="0" width="100%">
         <thead>
-        <th>Team ID</th>
-        <th>Player1 Name</th>
-        <th>Player2 Name</th>
+        <th>League Name</th>
+        <th>Date</th>
+        <th>Table #</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
         </thead>
         <tbody>
+        <c:forEach var="team" items="${matches}">
         <tr>
-            <td>${team1.id}</td>
-            <td>${team1.player1.firstName} ${team1.player1.lastName}</td>
-            <td>${team1.player2.firstName} ${team1.player2.lastName}</td>
+            <td>${team.league.name}</td>
+            <td>${team.dateOfPlay}</td>
+            <td>${team.tableNumber}</td>
+            <td>${team.team1.player1.firstName} ${team.team1.player1.lastName} & ${team.team1.player2.firstName} ${team.team1.player2.lastName}</td>
+            <td>${team.team2.player1.firstName} ${team.team2.player1.lastName} & ${team.team2.player2.firstName} ${team.team2.player2.lastName}</td>
         </tr>
-        <tr>
-            <td>${team2.id}</td>
-            <td>${team2.player1.firstName} ${team2.player1.lastName}</td>
-            <td>${team2.player2.firstName} ${team2.player2.lastName}</td>
-        </tr>
+        </c:forEach>
         </tbody>
     </table>
 

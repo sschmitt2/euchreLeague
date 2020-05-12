@@ -2,9 +2,6 @@
 <c:set var="title" value="Login" />
 <%@include file="templates/head.jsp"%>
 <html>
-<head>
-    <title>Welcome</title>
-</head>
 <body>
 <%@include file="templates/navmenu.jsp"%>
 <%@include file="templates/header.jsp"%>

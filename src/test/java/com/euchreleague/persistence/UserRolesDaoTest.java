@@ -76,7 +76,7 @@ class UserRolesDaoTest {
     @Test
     void getAllSuccess() {
         List<UserRoles> users = dao.getAll();
-        assertEquals(8, users.size());
+        assertEquals(17, users.size());
     }
 
     /**

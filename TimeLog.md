@@ -73,4 +73,4 @@
 | 5/09/20 | Indie project - finally got javamail implemented | 7||
 | 5/10/20 | Indie project - continued working on admin functionality | 5.5||
 | 5/11/20 | Indie project - continued working on admin functionality and jsps | 6.5||
-| 5/12/20 | Indie project - Getting project ready for demo | ||
+| 5/12/20 | Indie project - Getting project ready for demo |9||

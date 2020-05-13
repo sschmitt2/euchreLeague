@@ -1,0 +1,2 @@
+[DEBUG] 2020-05-13 10:19:42.800 [http-nio-8080-exec-8] GenericDao - Searching for order with userName = jdoe
+[INFO ] 2020-05-13 10:19:52.263 [http-nio-8080-exec-10] JavaMail - Email successfully sent

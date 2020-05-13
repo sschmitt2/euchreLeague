@@ -52,6 +52,7 @@ public class AdminDisplayLeagues extends HttpServlet implements PropertiesLoader
 
         if (league.getMatches().size() > 0) {
             hasMatches = true;
+            logger.debug("has matches:" + hasMatches);
         }
 
         boolean canBeScheduled = false;

@@ -37,6 +37,7 @@ public class Login extends HttpServlet {
         int userId = 0;
         List<User> user = userDao.getByPropertyEqual("userName", req.getRemoteUser());
 
+        logger.debug("user " + user);
 
         if (user.size() == 1) {
             userId = user.get(0).getId();

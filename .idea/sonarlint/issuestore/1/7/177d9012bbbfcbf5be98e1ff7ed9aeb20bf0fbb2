@@ -1,13 +1,14 @@
 
-Q
-java:S1128"6Remove this unused import 'javax.ws.rs.client.Client'.(ΘΔ8”²λέ .
-U
-java:S1161":Add the "@Override" annotation above this method signature(‡θϊΧ8¥λ©ή .
-R
-java:S1128"7Remove this unused import 'javax.ws.rs.core.MediaType'.(±‹΅8”²λέ .
-C
-java:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8¥λ©ή .
-Y
-java:S1128"9Remove this unused import 'javax.ws.rs.client.WebTarget'.(‘Κώÿÿÿÿ8”²λέ .
-X
-java:S1128"=Remove this unused import 'javax.ws.rs.client.ClientBuilder'.(—γΠϋ8”²λέ .
+W
+java:S1161":Add the "@Override" annotation above this method signature(‡θϊΧ8¥λ©ή .
+Z
+java:S1128
+"=Remove this unused import 'javax.ws.rs.client.ClientBuilder'.(—γΠϋ8”²λέ .
+T
+java:S1128"7Remove this unused import 'javax.ws.rs.core.MediaType'.(±‹΅8”²λέ .
+E
+java:S11484"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8¥λ©ή .
+[
+java:S1128"9Remove this unused import 'javax.ws.rs.client.WebTarget'.(‘Κώÿÿÿÿ8”²λέ .
+S
+java:S1128	"6Remove this unused import 'javax.ws.rs.client.Client'.(ΘΔ8”²λέ .

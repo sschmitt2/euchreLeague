@@ -77,8 +77,6 @@ p
 @src/test/java/com/euchreleague/persistence/UserRolesDaoTest.java,6/d/6d5a2cf375e598c77c7d744f234af069f95fd556
 f
 6src/test/java/com/euchreleague/test/util/Database.java,1/4/1407ab940126337c68bd56a3dcc3230d00b1f28d
-d
-4src/test/java/com/euchreleague/api/JavaMailTest.java,a/1/a14cdcf3ebfc344dcd222298e5420993a684f20c
 Q
 !src/main/webapp/displayLeague.jsp,6/6/66663e66337bd8cf8b12465b0c0fdd570d1804a9
 :

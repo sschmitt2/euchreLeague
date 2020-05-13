@@ -58,10 +58,11 @@ public class DisplayLeagues extends HttpServlet {
             League league = leagueDao.getById(id);
             leagues.add(league);
             user.addLeague(league);
+            logger.debug("added league " + league);
         }
 
         userDao.saveOrUpdate(user);
-        logger.debug("entered user", user);
+
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
         dispatcher.forward(req, resp);

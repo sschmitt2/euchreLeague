@@ -1,0 +1,9 @@
+[DEBUG] 2020-05-13 10:21:39.718 [http-nio-8080-exec-5] GenericDao - Searching for order with userName = jdoe
+[DEBUG] 2020-05-13 10:24:24.275 [http-nio-8080-exec-4] GenericDao - Searching for order with userName = jdoe
+[DEBUG] 2020-05-13 10:24:24.378 [http-nio-8080-exec-4] DisplayLeagues - entered user
+[DEBUG] 2020-05-13 10:25:18.454 [http-nio-8080-exec-9] GenericDao - Searching for order with userName = jdoe
+[DEBUG] 2020-05-13 10:27:42.137 [http-nio-8080-exec-6] GenericDao - Searching for order with userName = jdoe
+[INFO ] 2020-05-13 10:27:50.452 [http-nio-8080-exec-10] JavaMail - Email successfully sent
+[DEBUG] 2020-05-13 10:27:50.534 [http-nio-8080-exec-10] AdminDisplayLeagues - has matches:true
+[DEBUG] 2020-05-13 10:33:26.660 [http-nio-8080-exec-10] GenericDao - Searching for order with userName = ss
+[DEBUG] 2020-05-13 10:33:26.769 [http-nio-8080-exec-10] DisplayLeagues - added league League{id=3, name='Winter 2020', startDate=2020-12-22 00:00:00.0, endDate=2021-02-16 00:00:00.0}

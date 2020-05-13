@@ -1,12 +1,12 @@
 
-c
-java:S1128"CRemove this unused import 'java.security.NoSuchAlgorithmException'.(ŒòÍ¾þÿÿÿÿ8ÒÖ°¥ .
-
-java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(”†Î‹ýÿÿÿÿ8îŸ°¥ .
-Y
-java:S1155">Use isEmpty() to check whether the collection is empty or not.(¦ÍªË8½ÿâØ .
-p
-java:S1128"URemove this unused import 'org.apache.catalina.realm.MessageDigestCredentialHandler'.(ë‰‚Ì8ÒÖ°¥ .
-i
-java:S1192"IDefine a constant instead of duplicating this literal "userName" 3 times.(Ü‹­”þÿÿÿÿ8’ÅêØ .
-V	java:S125"<This block of commented-out lines of code should be removed.(—Ë½ç8îŸ°¥ .
+k
+java:S1192$"IDefine a constant instead of duplicating this literal "userName" 3 times.(Ü‹­”þÿÿÿÿ8’ÅêØ .
+[
+java:S11552">Use isEmpty() to check whether the collection is empty or not.(¦ÍªË8½ÿâØ .
+ƒ
+java:S1989<"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(”†Î‹ýÿÿÿÿ8îŸ°¥ .
+X	java:S1259"<This block of commented-out lines of code should be removed.(—Ë½ç8îŸ°¥ .
+r
+java:S1128"URemove this unused import 'org.apache.catalina.realm.MessageDigestCredentialHandler'.(ë‰‚Ì8ÒÖ°¥ .
+e
+java:S1128"CRemove this unused import 'java.security.NoSuchAlgorithmException'.(ŒòÍ¾þÿÿÿÿ8ÒÖ°¥ .

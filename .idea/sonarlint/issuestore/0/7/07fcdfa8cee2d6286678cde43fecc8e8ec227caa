@@ -1,9 +1,9 @@
 
-R
-java:S2629a"7Use the built-in formatting to construct this argument.(‘¤¶´ýÿÿÿÿ
-N
-java:S1854C"8Remove this useless assignment to local variable "root".(áÚƒ»
 ?
 java:S1481C")Remove this unused "root" local variable.(áÚƒ»
+N
+java:S1854C"8Remove this useless assignment to local variable "root".(áÚƒ»
+R
+java:S2629a"7Use the built-in formatting to construct this argument.(‘¤¶´ýÿÿÿÿ
 \
 java:S3457a"AFormat specifiers should be used instead of string concatenation.(‘¤¶´ýÿÿÿÿ

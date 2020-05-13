@@ -1,5 +1,7 @@
 # Sarah Schmitt Individual Project
 
+Walk through Indie Project demo video - https://youtu.be/NTjyoEM6Bow
+
 ### Problem Statement
 For the last two years, my friends and I have been playing on a euchre league. The league has grown
 tremendously over the last two years, with many new people joining each new season. Currently, we are 

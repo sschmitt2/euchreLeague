@@ -107,3 +107,5 @@ B
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 i
 9src/main/java/com/euchreleague/util/PropertiesLoader.java,8/1/819699cf8ca4e321d8aadc1f3f32f27d9922deab
+E
+logs/euchreLeague.log,2/f/2f45245d879884487174e9ed56a9aa03af325d87

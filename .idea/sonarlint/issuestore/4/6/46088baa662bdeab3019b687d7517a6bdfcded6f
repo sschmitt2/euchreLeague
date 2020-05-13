@@ -1,9 +1,11 @@
 
 ~
-java:S1989C"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8ñã¡¯.
+java:S1989D"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8ñã¡¯.
+c
+java:S3457="AFormat specifiers should be used instead of string concatenation.(Ûè´ùÿÿÿÿ8ˆã©õ .
+Y
+java:S2629="7Use the built-in formatting to construct this argument.(Ûè´ùÿÿÿÿ8ˆã©õ .
 ~
 java:S1989+"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8ñã¡¯.
 u
 java:S19899"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(÷©Œ8ñã¡¯.
-G
-java:S3457@"%String contains no format specifiers.(‹Ş“œÿÿÿÿÿ8úÀÖ .

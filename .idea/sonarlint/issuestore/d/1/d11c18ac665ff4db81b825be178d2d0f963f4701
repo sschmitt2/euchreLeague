@@ -1,5 +1,7 @@
 
-G
-java:S1068"*Remove this unused "logger" private field.(æ×âÁ8¦íÇÕ .
 ~
-java:S19892"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8¦íÇÕ .
+java:S19893"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8õøêô .
+Y
+java:S2629("7Use the built-in formatting to construct this argument.(†øÍóşÿÿÿÿ8Ã¹ õ .
+c
+java:S3457("AFormat specifiers should be used instead of string concatenation.(†øÍóşÿÿÿÿ8Ã¹ õ .

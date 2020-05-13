@@ -74,3 +74,4 @@
 | 5/10/20 | Indie project - continued working on admin functionality | 5.5||
 | 5/11/20 | Indie project - continued working on admin functionality and jsps | 6.5||
 | 5/12/20 | Indie project - Getting project ready for demo |9||
+| 5/13/20 | Indie project - demo video and presentation |||

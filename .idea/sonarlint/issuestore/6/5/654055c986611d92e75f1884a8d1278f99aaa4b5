@@ -1,18 +1,20 @@
 
-`
-java:S11555">Use isEmpty() to check whether the collection is empty or not.(Ü»ê™ûÿÿÿÿ8ÇÚñŞ .
-G
-java:S1068 "*Remove this unused "logger" private field.(æ×âÁ8ÇÚñŞ .
-~
-java:S1989E"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8ÇÚñŞ .
 u
-java:S19890"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(›çûv8ÇÚñŞ .
+java:S1989L"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(›çûv8™ºõ .
+~
+java:S1989F"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8™ºõ .
+u
+java:S19890"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(›çûv8™ºõ .
+c
+java:S34577"AFormat specifiers should be used instead of string concatenation.(òˆŠıÿÿÿÿ8Õ§“õ .
+`
+java:S11555">Use isEmpty() to check whether the collection is empty or not.(Ü»ê™ûÿÿÿÿ8™ºõ .
+s
+java:S1128"VRemove this unused import 'org.apache.logging.log4j.core.layout.StringBuilderEncoder'.(•şÁª8™ºõ .
+Y
+java:S26297"7Use the built-in formatting to construct this argument.(òˆŠıÿÿÿÿ8Õ§“õ .
+
+java:S1989"_Handle the following exceptions that could be thrown by "doGet": ServletException, IOException.(—ôÖ¢øÿÿÿÿ8™ºõ .
 f
 java:S1128
-"DRemove this unused import 'com.mysql.cj.x.protobuf.MysqlxDatatypes'.(Ê‹êıÿÿÿÿ8­±§ß .
-
-java:S1989~"_Handle the following exceptions that could be thrown by "doGet": ServletException, IOException.(—ôÖ¢øÿÿÿÿ8ÇÚñŞ .
-u
-java:S1989K"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(›çûv8ÇÚñŞ .
-s
-java:S1128"VRemove this unused import 'org.apache.logging.log4j.core.layout.StringBuilderEncoder'.(•şÁª8õ€‡ß .
+"DRemove this unused import 'com.mysql.cj.x.protobuf.MysqlxDatatypes'.(Ê‹êıÿÿÿÿ8™ºõ .

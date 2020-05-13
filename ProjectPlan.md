@@ -89,18 +89,17 @@
 - [X] Implement admin functionality 
 - [X] Carefully review code for standards and best practices - use a code quality tool? 
 - [X] Implement paging of search results
-- [ ] Unit test all api integrations
-- [ ] Create db on AWS
+- [X] Create db on AWS
 
 ### Week 15
-- [ ] Create final presentation
-- [ ] Final Presentation
-- [ ] Create video
-- [ ] Finalize all documentation
-- [ ] Code quality check
-- [ ] Write unit tests for Team and Matches
-- [ ] Complete the user and user_role tests(more complete testing)
+- [X] Create final presentation
+- [X] Weekly Time Log
+- [X] Finalize all documentation
+- [X] Code quality check
+
 
 ### Week 16
-- [ ] Weekly journal entry
-- [ ] Final touches before code complete
+- [X] Final Presentation
+- [X] Create video
+- [X] Weekly Time Log
+- [X] Final touches before code complete

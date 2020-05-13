@@ -1,23 +1,12 @@
 
-Q
-java:S3740"/Provide the parametrized type for this generic.(ê««Šøÿÿÿÿ8îŸ°¥ .
-[
-java:S11550">Use isEmpty() to check whether the collection is empty or not.(¦ÍªË8îŸ°¥ .
-X	java:S1257"<This block of commented-out lines of code should be removed.(—Ë½ç8îŸ°¥ .
-z
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ê««Šøÿÿÿÿ8îŸ°¥ .
-K
-java:S1481.".Remove this unused "newUserId" local variable.(•Ò³È8îŸ°¥ .
-k
-java:S1192""IDefine a constant instead of duplicating this literal "userName" 3 times.(Ü‹­”þÿÿÿÿ8Ø´°¥ .
-_
-java:S18543"=Remove this useless assignment to local variable "newUserId".(ÔþÊ÷ÿÿÿÿÿ8îŸ°¥ .
-ƒ
-java:S1989:"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(”†Î‹ýÿÿÿÿ8îŸ°¥ .
-X	java:S1254"<This block of commented-out lines of code should be removed.(¬‡Åý8îŸ°¥ .
-r
-java:S1128"URemove this unused import 'org.apache.catalina.realm.MessageDigestCredentialHandler'.(ë‰‚Ì8ÒÖ°¥ .
-e
-java:S1128"CRemove this unused import 'java.security.NoSuchAlgorithmException'.(ŒòÍ¾þÿÿÿÿ8ÒÖ°¥ .
-G
-java:S1068"*Remove this unused "logger" private field.(æ×âÁ8ÒÖ°¥ .
+c
+java:S1128"CRemove this unused import 'java.security.NoSuchAlgorithmException'.(ŒòÍ¾þÿÿÿÿ8ÒÖ°¥ .
+
+java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(”†Î‹ýÿÿÿÿ8îŸ°¥ .
+Y
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(¦ÍªË8½ÿâØ .
+p
+java:S1128"URemove this unused import 'org.apache.catalina.realm.MessageDigestCredentialHandler'.(ë‰‚Ì8ÒÖ°¥ .
+i
+java:S1192"IDefine a constant instead of duplicating this literal "userName" 3 times.(Ü‹­”þÿÿÿÿ8’ÅêØ .
+V	java:S125"<This block of commented-out lines of code should be removed.(—Ë½ç8îŸ°¥ .

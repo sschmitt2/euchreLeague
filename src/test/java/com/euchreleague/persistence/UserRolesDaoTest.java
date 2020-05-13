@@ -51,7 +51,7 @@ class UserRolesDaoTest {
     void insertSuccess() {
 
         String newUserName = "bgourlie";
-        User newUser = new User("Brian", "Gourlie", newUserName, "secret", "bgourlie@gmail.com");
+        User newUser = new User("Brian", "Gourlie", newUserName, "secret", "bg@gmail.com");
         int userId = dao.insert(newUser);
         assertNotEquals(0, userId);
 

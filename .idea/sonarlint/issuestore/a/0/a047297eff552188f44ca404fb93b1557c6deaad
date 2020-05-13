@@ -1,12 +1,12 @@
 
-a	Web:S5254	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ8‘³µ°.
-TWeb:TableWithoutCaptionCheck" Add a description to this table.(õäßïûÿÿÿÿ8‘³µ°.
-n Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(„Ã¼î8‘³µ°.
-PWeb:PageWithoutTitleCheck	"Add a <title> tag to this page.(œ÷Ãûÿÿÿÿ8‘³µ°.
-n Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(î”Ï8‘³µ°.
-s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(Ÿ÷¸şıÿÿÿÿ8‘³µ°.
-J	Web:S1827")Remove this deprecated "width" attribute.(õäßïûÿÿÿÿ8‘³µ°.
-s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ßæ¸âüÿÿÿÿ8‘³µ°.
-jWeb:DoctypePresenceCheck	":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷Ãûÿÿÿÿ8‘³µ°.
-P	Web:S1827"/Remove this deprecated "cellspacing" attribute.(õäßïûÿÿÿÿ8‘³µ°.
-n Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ßÏàÉ8‘³µ°.
+hWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷Ãûÿÿÿÿ8ÔªòØ .
+_	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ8ÔªòØ .
+RWeb:TableWithoutCaptionCheck" Add a description to this table.(õäßïûÿÿÿÿ8ÔªòØ .
+N	Web:S1827"/Remove this deprecated "cellspacing" attribute.(õäßïûÿÿÿÿ8ÔªòØ .
+H	Web:S1827")Remove this deprecated "width" attribute.(õäßïûÿÿÿÿ8ÔªòØ .
+q Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(Ÿ÷¸şıÿÿÿÿ8ÔªòØ .
+l Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ßÏàÉ8ÔªòØ .
+l Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(„Ã¼î8ÔªòØ .
+l Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(î”Ï8ÔªòØ .
+q Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ßæ¸âüÿÿÿÿ8ÔªòØ .
+NWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(œ÷Ãûÿÿÿÿ8ÔªòØ .

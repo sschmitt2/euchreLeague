@@ -1,9 +1,5 @@
 
-|
-java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8Ìù‚ˆ.
-E
-java:S1068"*Remove this unused "logger" private field.(æ×âÁ8Ìù‚ˆ.
-O
-java:S3740"/Provide the parametrized type for this generic.(ê««Šøÿÿÿÿ8Ìù‚ˆ.
-x
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ê««Šøÿÿÿÿ8Ìù‚ˆ.
+G
+java:S1068"*Remove this unused "logger" private field.(æ×âÁ8¦íÇÕ .
+~
+java:S19892"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8¦íÇÕ .

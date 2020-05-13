@@ -1,19 +1,18 @@
 
-x
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ê««Šøÿÿÿÿ8˜œßŸ.
-J
-java:S3740"/Provide the parametrized type for this generic.(’Ù›Â8ø³ˆ‚ .
-K
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¢ªÌ‚ .
-O
-java:S3740"/Provide the parametrized type for this generic.(ê««Šøÿÿÿÿ8ø³ˆ‚ .
+f
+java:S1128
+"DRemove this unused import 'com.mysql.cj.x.protobuf.MysqlxDatatypes'.(Ê‹êýÿÿÿÿ8­±§ß .
+G
+java:S1068 "*Remove this unused "logger" private field.(æ×âÁ8ÇÚñÞ .
+~
+java:S1989E"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8ÇÚñÞ .
 s
-java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(’Ù›Â8˜œßŸ.
-|
-java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(òø½8äñ¶‚ .
-K
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8¢ªÌ‚ .
-s
-java:S1989"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(›çûv8ÓÙ“… .
-^
-java:S1155">Use isEmpty() to check whether the collection is empty or not.(Ü»ê™ûÿÿÿÿ8ú–¬† .
+java:S1128"VRemove this unused import 'org.apache.logging.log4j.core.layout.StringBuilderEncoder'.(•þÁª8õ€‡ß .
+
+java:S1989~"_Handle the following exceptions that could be thrown by "doGet": ServletException, IOException.(—ôÖ¢øÿÿÿÿ8ÇÚñÞ .
+u
+java:S1989K"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(›çûv8ÇÚñÞ .
+u
+java:S19890"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(›çûv8ÇÚñÞ .
+`
+java:S11555">Use isEmpty() to check whether the collection is empty or not.(Ü»ê™ûÿÿÿÿ8ÇÚñÞ .

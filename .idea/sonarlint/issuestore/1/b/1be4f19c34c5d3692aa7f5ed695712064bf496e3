@@ -1,10 +1,12 @@
 
-s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(“½²όÿÿÿÿ8σαϋ―.
+OWeb:TableWithoutCaptionCheck" Add a description to this table.(ήξτ8σαϋ―.
+s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(Το­ϊύÿÿÿÿ8ΊΌΟ .
 a	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(χΓϋÿÿÿÿ8σαϋ―.
-jWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(χΓϋÿÿÿÿ8σαϋ―.
-OWeb:TableWithoutCaptionCheck" Add a description to this table.(€β‚υ8σαϋ―.
-E	Web:S1827")Remove this deprecated "width" attribute.(€β‚υ8σαϋ―.
-s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.( Θ€ϋÿÿÿÿ8σαϋ―.
+m Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(‹ΪΨT8Γ―‡Ο .
+E	Web:S1827")Remove this deprecated "width" attribute.(ήξτ8σαϋ―.
+s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ΗΧώÿÿÿÿ8σαϋ―.
+n Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(€ω΅8σαϋ―.
+K	Web:S1827"/Remove this deprecated "cellspacing" attribute.(ήξτ8σαϋ―.
 PWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(χΓϋÿÿÿÿ8σαϋ―.
-K	Web:S1827"/Remove this deprecated "cellspacing" attribute.(€β‚υ8σαϋ―.
-n Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(φψΓ 8σαϋ―.
+jWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(χΓϋÿÿÿÿ8σαϋ―.
+s Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(πγφ™όÿÿÿÿ8σαϋ―.

@@ -1,12 +1,16 @@
 package com.euchreleague.controller;
 
+import com.euchreleague.api.JavaMail;
 import com.euchreleague.entity.League;
 import com.euchreleague.entity.Match;
 import com.euchreleague.entity.Team;
 import com.euchreleague.entity.User;
 import com.euchreleague.persistence.GenericDao;
+import com.euchreleague.util.PropertiesLoader;
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.layout.StringBuilderEncoder;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,17 +22,25 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
+import java.util.Properties;
 
 @WebServlet(
         urlPatterns = {"/displayleague"}
 )
-public class AdminDisplayLeagues extends HttpServlet {
+public class AdminDisplayLeagues extends HttpServlet implements PropertiesLoader  {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     private static final GenericDao<League> leagueDao = new GenericDao<>(League.class);
     private static final GenericDao<Team> teamDao = new GenericDao<>(Team.class);
     private static final GenericDao<Match> matchDao = new GenericDao<>(Match.class);
+
+    private final JavaMail javaMail;
+
+    public AdminDisplayLeagues() throws Exception {
+        Properties properties = loadProperties("/javamail.properties");
+        javaMail = new JavaMail(properties);
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -63,8 +75,16 @@ public class AdminDisplayLeagues extends HttpServlet {
         int leagueId = Integer.parseInt(req.getParameter("leagueid"));
         League league = leagueDao.getById(leagueId);
 
-
         List<User> users = league.getUsers();
+
+        StringBuilder emailBuilder = new StringBuilder();
+
+        // Building the list of recipients
+        for (User user : users) {
+            emailBuilder.append(user.getFirstName() + " " + user.getLastName() + " <" + user.getEmail() + ">,");
+        }
+
+        StringBuilder bodyBuilder = new StringBuilder();
 
         Calendar date = Calendar.getInstance();
 
@@ -95,9 +115,13 @@ public class AdminDisplayLeagues extends HttpServlet {
                 match.setTableNumber(matchCounter + 1);
 
                 matchDao.insert(match);
+
+                bodyBuilder.append(match.toString() + "\n");
             }
             date.add(Calendar.DATE, 7);
         }
+
+        javaMail.sendEmail(emailBuilder.toString(), league.getName(), bodyBuilder.toString());
 
         doGet(req, resp);
 

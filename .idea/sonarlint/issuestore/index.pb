@@ -98,3 +98,14 @@ r
 Bsrc/main/java/com/euchreleague/controller/AdminDisplayLeagues.java,6/5/654055c986611d92e75f1884a8d1278f99aaa4b5
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+8
+dump.sql,0/2/02eef0ed60c297d501f32b53c4d11f9feb05c169
+k
+;src/test/java/com/euchreleague/persistence/TeamDaoTest.java,2/b/2b6f9cfe4a58e053056e0bfc99efd179134755b6
+B
+logs/hibernate.log,9/0/90a1b32fd50d04814dffa07f00c7d4ad83616cbd
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+i
+9src/main/java/com/euchreleague/util/PropertiesLoader.java,8/1/819699cf8ca4e321d8aadc1f3f32f27d9922deab

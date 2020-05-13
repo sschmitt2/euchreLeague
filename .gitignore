@@ -51,3 +51,7 @@ fabric.properties
 # Database Properties File
 /src/main/resources/database.properties
 /src/main/resources/
+/src/main/resources/javamail.properties
+
+/src/test/resources/database.properties
+/src/test/resources/javamail.properties

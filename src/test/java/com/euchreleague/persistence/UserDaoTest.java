@@ -41,7 +41,7 @@ class UserDaoTest {
         String lastName = "Doe";
         String userName = "jdoe";
         String password = "supersecret1";
-        String email = "jdoe@gmail.com";
+        String email = "sschmitt07+jdoe@gmail.com";
         User retrievedUser = dao.getById(1);
         assertNotNull(retrievedUser);
         assertEquals(firstName, retrievedUser.getFirstName());
